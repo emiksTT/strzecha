@@ -1,1 +1,53 @@
+// broker : MQTTBroker
 
+// Sonoff Basic Korytarz_Pasek_LED 192.168.10.201
+Switch Korytarz_Pasek_LED                       "Korytarz Pasek LED" <light> (Sonoff,EveningLighting)                   {mqtt=">[MQTTBroker:Korytarz_Pasek_LED/cmnd/POWER:command:*:default], <[MQTTBroker:Korytarz_Pasek_LED/stat/POWER:state:default]"}
+Number Korytarz_Pasek_LED_RSSI                  "Korytarz Pasek LED RSSI [%d %%]" (RSSI_Group)                          {mqtt="<[MQTTBroker:Korytarz_Pasek_LED/tele/STATE:state:JSONPATH($.Wifi.RSSI)]"}
+Switch Korytarz_Pasek_LED_Unreach               "Korytarz Pasek LED unreachable" <siren> (Unreach_Group)                {mqtt="<[MQTTBroker:Korytarz_Pasek_LED/tele/LWT:state:MAP(unreach.map)]"}
+//Number Korytarz_Pasek_LED_Power               "Korytarz Pasek LED efficiency [%.0f W]" <energy> (Wattages)
+
+
+// Sonoff Basic Kuchnia_Pasek_LED 192.168.10.202
+Switch Kuchnia_Pasek_LED                        "Kuchnia Pasek LED" <light> (Sonoff,EveningLighting)                    {mqtt=">[MQTTBroker:Kuchnia_Pasek_LED/cmnd/POWER:command:*:default], <[MQTTBroker:Kuchnia_Pasek_LED/stat/POWER:state:default]"}
+Number Kuchnia_Pasek_LED_RSSI                   "Kuchnia Pasek LED RSSI [%d %%]" (RSSI_Group)                           {mqtt="<[MQTTBroker:Kuchnia_Pasek_LED/tele/STATE:state:JSONPATH($.Wifi.RSSI)]"}
+Switch Kuchnia_Pasek_LED_Unreach                "Kuchnia Pasek LED unreachable" <siren> (Unreach_Group)                 {mqtt="<[MQTTBroker:Kuchnia_Pasek_LED/tele/LWT:state:MAP(unreach.map)]"}
+//Number Kuchnia_Pasek_LED_Power                "Kuchnia Pasek LED efficiency [%.0f W]" <energy> (Wattages)
+
+
+// Sonoff Basic Salon_Lampa_LED 192.168.10.203
+Switch Salon_Lampa_LED                          "Salon Lampa LED" <light> (Sonoff)                                      {mqtt=">[MQTTBroker:Salon_Lampa_LED/cmnd/POWER:command:*:default], <[MQTTBroker:Salon_Lampa_LED/stat/POWER:state:default]"}
+Number Salon_Lampa_LED_RSSI                     "Salon Lampa LED RSSI [%d %%]" (RSSI_Group)                             {mqtt="<[MQTTBroker:Salon_Lampa_LED/tele/STATE:state:JSONPATH($.Wifi.RSSI)]"}
+Switch Salon_Lampa_LED_Unreach                  "Salon Lampa LED unreachable" <siren> (Unreach_Group)                   {mqtt="<[MQTTBroker:Salon_Lampa_LED/tele/LWT:state:MAP(unreach.map)]"}
+//Number Salon_Lampa_LED_Power                  "Salon Lampa LED efficiency [%.0f W]" <energy> (Wattages)
+
+// Sonoff Basic Salon_Lampka_LED 192.168.10.204
+Switch Salon_Lampka_LED                         "Salon Lampka LED" <light> (Sonoff)                                     {mqtt=">[MQTTBroker:Salon_Lampka_LED/cmnd/POWER:command:*:default], <[MQTTBroker:Salon_Lampka_LED/stat/POWER:state:default]"}
+Number Salon_Lampka_LED_RSSI                    "Salon Lampka LED RSSI [%d %%]" (RSSI_Group)                            {mqtt="<[MQTTBroker:Salon_Lampka_LED/tele/STATE:state:JSONPATH($.Wifi.RSSI)]"}
+Switch Salon_Lampka_LED_Unreach                 "Salon Lampka LED unreachable" <siren> (Unreach_Group)                  {mqtt="<[MQTTBroker:Salon_Lampka_LED/tele/LWT:state:MAP(unreach.map)]"}
+//Number Salon_Lampka_LED_Power                 "Salon Lampka LED efficiency [%.0f W]" <energy> (Wattages)
+
+// Sonoff Basic Sypialnia_Pasek_LED 192.168.10.205
+Switch Sypialnia_Pasek_LED                      "Sypialnia Pasek LED" <light> (Sonoff)                                  {mqtt=">[MQTTBroker:Sypialnia_Pasek_LED/cmnd/POWER:command:*:default], <[MQTTBroker:Sypialnia_Pasek_LED/stat/POWER:state:default]"}
+Number Sypialnia_Pasek_LED_RSSI                 "Sypialnia Pasek LED RSSI [%d %%]" (RSSI_Group)                         {mqtt="<[MQTTBroker:Sypialnia_Pasek_LED/tele/STATE:state:JSONPATH($.Wifi.RSSI)]"}
+Switch Sypialnia_Pasek_LED_Unreach              "Sypialnia Pasek LED unreachable" <siren> (Unreach_Group)               {mqtt="<[MQTTBroker:Sypialnia_Pasek_LED/tele/LWT:state:MAP(unreach.map)]"}
+//Number Sypialnia_Pasek_LED_Power              "Sypialnia Pasek LED efficiency [%.0f W]" <energy> (Wattages)
+
+// Sonoff Basic Sypialnia_Pasek_LED 192.168.10.205
+Switch Sypialnia_Pasek_LED                      "Sypialnia Pasek LED" <light> (Sonoff)                                  {mqtt=">[MQTTBroker:Sypialnia_Pasek_LED/cmnd/POWER:command:*:default], <[MQTTBroker:Sypialnia_Pasek_LED/stat/POWER:state:default]"}
+Number Sypialnia_Pasek_LED_RSSI                 "Sypialnia Pasek LED RSSI [%d %%]" (RSSI_Group)                         {mqtt="<[MQTTBroker:Sypialnia_Pasek_LED/tele/STATE:state:JSONPATH($.Wifi.RSSI)]"}
+Switch Sypialnia_Pasek_LED_Unreach              "Sypialnia Pasek LED unreachable" <siren> (Unreach_Group)               {mqtt="<[MQTTBroker:Sypialnia_Pasek_LED/tele/LWT:state:MAP(unreach.map)]"}
+//Number Sypialnia_Pasek_LED_Power              "Sypialnia Pasek LED efficiency [%.0f W]" <energy> (Wattages)
+
+/*
+// Sonoff Basic xxxxxxxx 192.168.10.206
+Switch xxxxxxxxx                                "xxxxxxxxx" <switch> (Sonoff,Music)                                     {mqtt=">[MQTTBroker:xxxxxxxxx/cmnd/POWER:command:*:default], <[MQTTBroker:xxxxxxxxx/stat/POWER:state:default]"}
+Number xxxxxxxxx_RSSI                           "xxxxxxxxx RSSI [%d %%]" (RSSI_Group)                                   {mqtt="<[MQTTBroker:xxxxxxxxx/tele/STATE:state:JSONPATH($.Wifi.RSSI)]"}
+Switch xxxxxxxxx_Unreach                        "xxxxxxxxx unreachable" <siren> (Unreach_Group)                         {mqtt="<[MQTTBroker:xxxxxxxxx/tele/LWT:state:MAP(unreach.map)]"}
+//Number xxxxxxxxx_Power                        "xxxxxxxxx efficiency [%.0f W]" <energy> (Wattages)
+*/
+
+// Sonoff Basic Subwoofer 192.168.10.207
+Switch Subwoofer                                "Subwoofer" <switch> (Sonoff,Music)                                     {mqtt=">[MQTTBroker:Subwoofer/cmnd/POWER:command:*:default], <[MQTTBroker:Subwoofer/stat/POWER:state:default]"}
+Number Subwoofer_RSSI                           "Subwoofer RSSI [%d %%]" (RSSI_Group)                                   {mqtt="<[MQTTBroker:Subwoofer/tele/STATE:state:JSONPATH($.Wifi.RSSI)]"}
+Switch Subwoofer_Unreach                        "Subwoofer unreachable" <siren> (Unreach_Group)                         {mqtt="<[MQTTBroker:Subwoofer/tele/LWT:state:MAP(unreach.map)]"}
+//Number Subwoofer_Power                        "Subwoofer efficiency [%.0f W]" <energy> (Wattages)
