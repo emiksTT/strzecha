@@ -43,13 +43,13 @@ Number Sypialnia_Pasek_LED_RSSI                 "Sypialnia Pasek LED RSSI [%d %%
 //Switch Sypialnia_Pasek_LED_Unreach            "Sypialnia Pasek LED unreachable" <siren> (Unreach_Group)                      {mqtt="<[MQTTBroker:Sypialnia_Pasek_LED/tele/LWT:state:MAP(unreach.map)]"}
 //Number Sypialnia_Pasek_LED_Power              "Sypialnia Pasek LED efficiency [%.0f W]" <energy> (Wattages)
 
-/*
+
 // Sonoff Basic Salon_Barek_LED 192.168.10.206
 Switch Salon_Barek_LED                          "Salon Barek LED" <switch> (Sonoff,Music)                   [ "Lighting" ]     {mqtt=">[MQTTBroker:Salon_Barek_LED/cmnd/POWER:command:*:default], <[MQTTBroker:Salon_Barek_LED/stat/POWER:state:default]"}
 Number Salon_Barek_LED_RSSI                     "Salon Barek LED RSSI [%d %%]" (RSSI_Group)                                    {mqtt="<[MQTTBroker:Salon_Barek_LED/tele/STATE:state:JSONPATH($.Wifi.RSSI)]"}
 //Switch Salon_Barek_LED_Unreach                "Salon Barek LED unreachable" <siren> (Unreach_Group)                          {mqtt="<[MQTTBroker:Salon_Barek_LED/tele/LWT:state:MAP(unreach.map)]"}
 //Number Salon_Barek_LED_Power                  "Salon Barek LED efficiency [%.0f W]" <energy> (Wattages)
-*/
+
 
 // Sonoff Basic Subwoofer 192.168.10.207
 Switch Subwoofer                                "Subwoofer" <switch> (Sonoff,Music)                         [ "Switchable" ]   {mqtt=">[MQTTBroker:Subwoofer/cmnd/POWER:command:*:default], <[MQTTBroker:Subwoofer/stat/POWER:state:default]"}
