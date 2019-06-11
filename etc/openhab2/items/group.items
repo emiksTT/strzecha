@@ -1,0 +1,11 @@
+Group All
+Group gSonoff              "All Sonoff Devices"                                   (All)
+Group gEveningLighting     "Lightning after Sunset"                               (All)
+Group gAirSensor           "Air temperature, humidity and quality sensors"        (All)
+Group gWaterSensor         "Kitchen, Toilet, Bathroom water sensor"               (All)
+Group gMagneticSensor      "Door, Window, Fridge Sensor"                          (All)
+Group g433RF               "All Devices 433MHz Frequence"                         (All)
+Group gCamera              "All Cameras"                                          (All)
+Group gPIR                 "All Motion Detection Devices"                         (All)
+Group gTV                  "All TV`s"                                             (All)
+Group gMusic               "All Music PLayer"                                     (All)
