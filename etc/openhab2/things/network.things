@@ -1,0 +1,7 @@
+// Strzecha Network Device
+
+Thing   network:pingdevice:Modem      [ hostname="192.168.0.0", retry=1, timeout=5000, refreshInterval=60000 ]
+Thing   network:pingdevice:Router     [ hostname="192.168.10.1", retry=1, timeout=5000, refreshInterval=60000 ]
+Thing   network:pingdevice:NAS        [ hostname="192.168.10.14",  retry=1, timeout=5000, refreshInterval=10000 ] 
+
+// vim: syntax=Xtend
