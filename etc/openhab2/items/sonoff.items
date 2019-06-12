@@ -7,101 +7,101 @@
 
 
 // Sonoff Basic Korytarz_Pasek_LED 192.168.10.201
-Switch Korytarz_Pasek_LED                       "Korytarz Pasek LED" <light> (Sonoff,EveningLighting)       [ "Lighting" ]     {mqtt=">[MQTTBroker:Korytarz_Pasek_LED/cmnd/POWER:command:*:default], <[MQTTBroker:Korytarz_Pasek_LED/stat/POWER:state:default]"}
-Number Korytarz_Pasek_LED_RSSI                  "Korytarz Pasek LED RSSI [%d %%]" (RSSI_Group)                                 {mqtt="<[MQTTBroker:Korytarz_Pasek_LED/tele/STATE:state:JSONPATH($.Wifi.RSSI)]"}
-//Switch Korytarz_Pasek_LED_Unreach             "Korytarz Pasek LED unreachable" <siren> (Unreach_Group)                       {mqtt="<[MQTTBroker:Korytarz_Pasek_LED/tele/LWT:state:MAP(unreach.map)]"}
+Switch Korytarz_Pasek_LED                       "Korytarz Pasek LED" <light> (Sonoff,EveningLighting)                          [ "Lighting" ]     {mqtt=">[MQTTBroker:Korytarz_Pasek_LED/cmnd/POWER:command:*:default], <[MQTTBroker:Korytarz_Pasek_LED/stat/POWER:state:default]"}
+Number Korytarz_Pasek_LED_RSSI                  "Korytarz Pasek LED RSSI [%d %%]" (RSSI_Group)                                                    {mqtt="<[MQTTBroker:Korytarz_Pasek_LED/tele/STATE:state:JSONPATH($.Wifi.RSSI)]"}
+//Switch Korytarz_Pasek_LED_Unreach             "Korytarz Pasek LED unreachable" <siren> (Unreach_Group)                                          {mqtt="<[MQTTBroker:Korytarz_Pasek_LED/tele/LWT:state:MAP(unreach.map)]"}
 //Number Korytarz_Pasek_LED_Power               "Korytarz Pasek LED efficiency [%.0f W]" <energy> (Wattages)
 
 
 // Sonoff Basic Kuchnia_Pasek_LED 192.168.10.202
-Switch Kuchnia_Pasek_LED                        "Kuchnia Pasek LED" <light> (Sonoff,EveningLighting)        [ "Lighting" ]     {mqtt=">[MQTTBroker:Kuchnia_Pasek_LED/cmnd/POWER:command:*:default], <[MQTTBroker:Kuchnia_Pasek_LED/stat/POWER:state:default]"}
-Number Kuchnia_Pasek_LED_RSSI                   "Kuchnia Pasek LED RSSI [%d %%]" (RSSI_Group)                                  {mqtt="<[MQTTBroker:Kuchnia_Pasek_LED/tele/STATE:state:JSONPATH($.Wifi.RSSI)]"}
-//Switch Kuchnia_Pasek_LED_Unreach              "Kuchnia Pasek LED unreachable" <siren> (Unreach_Group)                        {mqtt="<[MQTTBroker:Kuchnia_Pasek_LED/tele/LWT:state:MAP(unreach.map)]"}
+Switch Kuchnia_Pasek_LED                        "Kuchnia Pasek LED" <light> (Sonoff,EveningLighting)                           [ "Lighting" ]     {mqtt=">[MQTTBroker:Kuchnia_Pasek_LED/cmnd/POWER:command:*:default], <[MQTTBroker:Kuchnia_Pasek_LED/stat/POWER:state:default]"}
+Number Kuchnia_Pasek_LED_RSSI                   "Kuchnia Pasek LED RSSI [%d %%]" (RSSI_Group)                                                     {mqtt="<[MQTTBroker:Kuchnia_Pasek_LED/tele/STATE:state:JSONPATH($.Wifi.RSSI)]"}
+//Switch Kuchnia_Pasek_LED_Unreach              "Kuchnia Pasek LED unreachable" <siren> (Unreach_Group)                                           {mqtt="<[MQTTBroker:Kuchnia_Pasek_LED/tele/LWT:state:MAP(unreach.map)]"}
 //Number Kuchnia_Pasek_LED_Power                "Kuchnia Pasek LED efficiency [%.0f W]" <energy> (Wattages)
 
 
 // Sonoff Basic Salon_Lampa_LED 192.168.10.203
-Switch Salon_Lampa_LED                          "Salon Lampa LED" <light> (Sonoff)                          [ "Lighting" ]     {mqtt=">[MQTTBroker:Salon_Lampa_LED/cmnd/POWER:command:*:default], <[MQTTBroker:Salon_Lampa_LED/stat/POWER:state:default]"}
-Number Salon_Lampa_LED_RSSI                     "Salon Lampa LED RSSI [%d %%]" (RSSI_Group)                                    {mqtt="<[MQTTBroker:Salon_Lampa_LED/tele/STATE:state:JSONPATH($.Wifi.RSSI)]"}
-//Switch Salon_Lampa_LED_Unreach                "Salon Lampa LED unreachable" <siren> (Unreach_Group)                          {mqtt="<[MQTTBroker:Salon_Lampa_LED/tele/LWT:state:MAP(unreach.map)]"}
+Switch Salon_Lampa_LED                          "Salon Lampa LED" <light> (Sonoff)                                             [ "Lighting" ]     {mqtt=">[MQTTBroker:Salon_Lampa_LED/cmnd/POWER:command:*:default], <[MQTTBroker:Salon_Lampa_LED/stat/POWER:state:default]"}
+Number Salon_Lampa_LED_RSSI                     "Salon Lampa LED RSSI [%d %%]" (RSSI_Group)                                                       {mqtt="<[MQTTBroker:Salon_Lampa_LED/tele/STATE:state:JSONPATH($.Wifi.RSSI)]"}
+//Switch Salon_Lampa_LED_Unreach                "Salon Lampa LED unreachable" <siren> (Unreach_Group)                                             {mqtt="<[MQTTBroker:Salon_Lampa_LED/tele/LWT:state:MAP(unreach.map)]"}
 //Number Salon_Lampa_LED_Power                  "Salon Lampa LED efficiency [%.0f W]" <energy> (Wattages)
 
 // Sonoff Basic Salon_Lampka_LED 192.168.10.204
-Switch Salon_Lampka_LED                         "Salon Lampka LED" <light> (Sonoff)                         [ "Lighting" ]     {mqtt=">[MQTTBroker:Salon_Lampka_LED/cmnd/POWER:command:*:default], <[MQTTBroker:Salon_Lampka_LED/stat/POWER:state:default]"}
-Number Salon_Lampka_LED_RSSI                    "Salon Lampka LED RSSI [%d %%]" (RSSI_Group)                                   {mqtt="<[MQTTBroker:Salon_Lampka_LED/tele/STATE:state:JSONPATH($.Wifi.RSSI)]"}
-//Switch Salon_Lampka_LED_Unreach               "Salon Lampka LED unreachable" <siren> (Unreach_Group)                         {mqtt="<[MQTTBroker:Salon_Lampka_LED/tele/LWT:state:MAP(unreach.map)]"}
+Switch Salon_Lampka_LED                         "Salon Lampka LED" <light> (Sonoff)                                            [ "Lighting" ]     {mqtt=">[MQTTBroker:Salon_Lampka_LED/cmnd/POWER:command:*:default], <[MQTTBroker:Salon_Lampka_LED/stat/POWER:state:default]"}
+Number Salon_Lampka_LED_RSSI                    "Salon Lampka LED RSSI [%d %%]" (RSSI_Group)                                                      {mqtt="<[MQTTBroker:Salon_Lampka_LED/tele/STATE:state:JSONPATH($.Wifi.RSSI)]"}
+//Switch Salon_Lampka_LED_Unreach               "Salon Lampka LED unreachable" <siren> (Unreach_Group)                                            {mqtt="<[MQTTBroker:Salon_Lampka_LED/tele/LWT:state:MAP(unreach.map)]"}
 //Number Salon_Lampka_LED_Power                 "Salon Lampka LED efficiency [%.0f W]" <energy> (Wattages)
 
 // Sonoff Basic Sypialnia_Pasek_LED 192.168.10.205
-Switch Sypialnia_Pasek_LED                      "Sypialnia Pasek LED" <light> (Sonoff,EveningLighting)      [ "Lighting" ]     {mqtt=">[MQTTBroker:Sypialnia_Pasek_LED/cmnd/POWER:command:*:default], <[MQTTBroker:Sypialnia_Pasek_LED/stat/POWER:state:default]"}
-Number Sypialnia_Pasek_LED_RSSI                 "Sypialnia Pasek LED RSSI [%d %%]" (RSSI_Group)                                {mqtt="<[MQTTBroker:Sypialnia_Pasek_LED/tele/STATE:state:JSONPATH($.Wifi.RSSI)]"}
-//Switch Sypialnia_Pasek_LED_Unreach            "Sypialnia Pasek LED unreachable" <siren> (Unreach_Group)                      {mqtt="<[MQTTBroker:Sypialnia_Pasek_LED/tele/LWT:state:MAP(unreach.map)]"}
+Switch Sypialnia_Pasek_LED                      "Sypialnia Pasek LED" <light> (Sonoff,EveningLighting)                         [ "Lighting" ]     {mqtt=">[MQTTBroker:Sypialnia_Pasek_LED/cmnd/POWER:command:*:default], <[MQTTBroker:Sypialnia_Pasek_LED/stat/POWER:state:default]"}
+Number Sypialnia_Pasek_LED_RSSI                 "Sypialnia Pasek LED RSSI [%d %%]" (RSSI_Group)                                                   {mqtt="<[MQTTBroker:Sypialnia_Pasek_LED/tele/STATE:state:JSONPATH($.Wifi.RSSI)]"}
+//Switch Sypialnia_Pasek_LED_Unreach            "Sypialnia Pasek LED unreachable" <siren> (Unreach_Group)                                         {mqtt="<[MQTTBroker:Sypialnia_Pasek_LED/tele/LWT:state:MAP(unreach.map)]"}
 //Number Sypialnia_Pasek_LED_Power              "Sypialnia Pasek LED efficiency [%.0f W]" <energy> (Wattages)
 
 // Sonoff Basic Sypialnia_Pasek_LED 192.168.10.205
-Switch Sypialnia_Pasek_LED                      "Sypialnia Pasek LED" <light> (Sonoff,EveningLighting)      [ "Lighting" ]     {mqtt=">[MQTTBroker:Sypialnia_Pasek_LED/cmnd/POWER:command:*:default], <[MQTTBroker:Sypialnia_Pasek_LED/stat/POWER:state:default]"}
-Number Sypialnia_Pasek_LED_RSSI                 "Sypialnia Pasek LED RSSI [%d %%]" (RSSI_Group)                                {mqtt="<[MQTTBroker:Sypialnia_Pasek_LED/tele/STATE:state:JSONPATH($.Wifi.RSSI)]"}
-//Switch Sypialnia_Pasek_LED_Unreach            "Sypialnia Pasek LED unreachable" <siren> (Unreach_Group)                      {mqtt="<[MQTTBroker:Sypialnia_Pasek_LED/tele/LWT:state:MAP(unreach.map)]"}
+Switch Sypialnia_Pasek_LED                      "Sypialnia Pasek LED" <light> (Sonoff,EveningLighting)                         [ "Lighting" ]     {mqtt=">[MQTTBroker:Sypialnia_Pasek_LED/cmnd/POWER:command:*:default], <[MQTTBroker:Sypialnia_Pasek_LED/stat/POWER:state:default]"}
+Number Sypialnia_Pasek_LED_RSSI                 "Sypialnia Pasek LED RSSI [%d %%]" (RSSI_Group)                                                   {mqtt="<[MQTTBroker:Sypialnia_Pasek_LED/tele/STATE:state:JSONPATH($.Wifi.RSSI)]"}
+//Switch Sypialnia_Pasek_LED_Unreach            "Sypialnia Pasek LED unreachable" <siren> (Unreach_Group)                                         {mqtt="<[MQTTBroker:Sypialnia_Pasek_LED/tele/LWT:state:MAP(unreach.map)]"}
 //Number Sypialnia_Pasek_LED_Power              "Sypialnia Pasek LED efficiency [%.0f W]" <energy> (Wattages)
 
 
 // Sonoff Basic Salon_Barek_LED 192.168.10.206
-Switch Salon_Barek_LED                          "Salon Barek LED" <switch> (Sonoff,EveningLighting)         [ "Lighting" ]     {mqtt=">[MQTTBroker:Salon_Barek_LED/cmnd/POWER:command:*:default], <[MQTTBroker:Salon_Barek_LED/stat/POWER:state:default]"}
-Number Salon_Barek_LED_RSSI                     "Salon Barek LED RSSI [%d %%]" (RSSI_Group)                                    {mqtt="<[MQTTBroker:Salon_Barek_LED/tele/STATE:state:JSONPATH($.Wifi.RSSI)]"}
-//Switch Salon_Barek_LED_Unreach                "Salon Barek LED unreachable" <siren> (Unreach_Group)                          {mqtt="<[MQTTBroker:Salon_Barek_LED/tele/LWT:state:MAP(unreach.map)]"}
+Switch Salon_Barek_LED                          "Salon Barek LED" <switch> (Sonoff,EveningLighting)                            [ "Lighting" ]     {mqtt=">[MQTTBroker:Salon_Barek_LED/cmnd/POWER:command:*:default], <[MQTTBroker:Salon_Barek_LED/stat/POWER:state:default]"}
+Number Salon_Barek_LED_RSSI                     "Salon Barek LED RSSI [%d %%]" (RSSI_Group)                                                       {mqtt="<[MQTTBroker:Salon_Barek_LED/tele/STATE:state:JSONPATH($.Wifi.RSSI)]"}
+//Switch Salon_Barek_LED_Unreach                "Salon Barek LED unreachable" <siren> (Unreach_Group)                                             {mqtt="<[MQTTBroker:Salon_Barek_LED/tele/LWT:state:MAP(unreach.map)]"}
 //Number Salon_Barek_LED_Power                  "Salon Barek LED efficiency [%.0f W]" <energy> (Wattages)
 
 
 // Sonoff Basic Subwoofer 192.168.10.207
-Switch Subwoofer                                "Subwoofer" <switch> (Sonoff,Music)                         [ "Switchable" ]   {mqtt=">[MQTTBroker:Subwoofer/cmnd/POWER:command:*:default], <[MQTTBroker:Subwoofer/stat/POWER:state:default]"}
-Number Subwoofer_RSSI                           "Subwoofer RSSI [%d %%]" (RSSI_Group)                                          {mqtt="<[MQTTBroker:Subwoofer/tele/STATE:state:JSONPATH($.Wifi.RSSI)]"}
-//Switch Subwoofer_Unreach                      "Subwoofer unreachable" <siren> (Unreach_Group)                                {mqtt="<[MQTTBroker:Subwoofer/tele/LWT:state:MAP(unreach.map)]"}
+Switch Subwoofer                                "Subwoofer" <switch> (Sonoff,Music)                                            [ "Switchable" ]   {mqtt=">[MQTTBroker:Subwoofer/cmnd/POWER:command:*:default], <[MQTTBroker:Subwoofer/stat/POWER:state:default]"}
+Number Subwoofer_RSSI                           "Subwoofer RSSI [%d %%]" (RSSI_Group)                                                             {mqtt="<[MQTTBroker:Subwoofer/tele/STATE:state:JSONPATH($.Wifi.RSSI)]"}
+//Switch Subwoofer_Unreach                      "Subwoofer unreachable" <siren> (Unreach_Group)                                                   {mqtt="<[MQTTBroker:Subwoofer/tele/LWT:state:MAP(unreach.map)]"}
 //Number Subwoofer_Power                        "Subwoofer efficiency [%.0f W]" <energy> (Wattages)
 
 
 // Sonoff POW R2 Salon_Zasilanie_Multimedia 192.168.10.220
 //Group  SonoffPOWR2                                "Sonoff POW"                        <sonoff_pow>    (Sonoff_POW)
-Switch SonoffPOWR2_Salon_Zasilanie_Multimedia_POW_Power                  "Power []"                          <switch>        (Sonoff) [ "Switchable" ]  {mqtt=">[MQTTBroker:cmnd/SonoffPOWR2_Salon/POWER:command:*:default], <[MQTTBroker:stat/SonoffPOWR2_Salon/POWER:state:default]" }
-String SonoffPOWR2_Salon_Zasilanie_Multimedia_Reachable                  "Reachable: [%s]"                   <contactable>   (Sonoff)                   {mqtt="<[MQTTBroker:tele/SonoffPOWR2_Salon/LWT:state:default]" }
-Number SonoffPOWR2_Salon_Zasilanie_Multimedia_POW_Power                  "Power load [%.1f W]"               <voltage>       (Sonoff)                   {mqtt="<[MQTTBroker:tele/SonoffPOWR2_Salon/SENSOR:state:JSONPATH($.ENERGY.Power)]" }
-Number SonoffPOWR2_Salon_Zasilanie_Multimedia_POW_Voltage                "Line voltage [%.1f V]"             <voltage>       (Sonoff)                   {mqtt="<[MQTTBroker:tele/SonoffPOWR2_Salon/SENSOR:state:JSONPATH($.ENERGY.Voltage)]" }
-Number SonoffPOWR2_Salon_Zasilanie_Multimedia_Current                    "Line current [%.3f A]"             <current>       (Sonoff)                   {mqtt="<[MQTTBroker:tele/SonoffPOWR2_Salon/SENSOR:state:JSONPATH($.ENERGY.Current)]" }
-Number SonoffPOWR2_Salon_Zasilanie_Multimedia_Today                      "Total energy today [%.3f kWh]"     <total_energy>  (Sonoff)                   {mqtt="<[MQTTBroker:tele/SonoffPOWR2_Salon/SENSOR:state:JSONPATH($.ENERGY.Today)]" }
-Number SonoffPOWR2_Salon_Zasilanie_Multimedia_Yesterday                  "Total energy yesterday [%.3f kWh]" <total_energy>  (Sonoff)                   {mqtt="<[MQTTBroker:tele/SonoffPOWR2_Salon/SENSOR:state:JSONPATH($.ENERGY.Yesterday)]" }
-Number SonoffPOWR2_Salon_Zasilanie_Multimedia_RSSI                       "WiFi Signal Strength [%d %%]"      <wifi>          (Sonoff)                   {mqtt="<[MQTTBroker:tele/SonoffPOWR2_Salon/STATE:state:JSONPATH($.Wifi.RSSI)]" }
+Switch SonoffPOWR2_Salon_Zasilanie_Multimedia_POW_Power             "Power []"                          <switch>        (Sonoff,SonoffPOW,Salon)                  [ "Switchable" ]  {mqtt=">[MQTTBroker:cmnd/SonoffPOWR2_Salon/POWER:command:*:default], <[MQTTBroker:stat/SonoffPOWR2_Salon/POWER:state:default]" }
+String SonoffPOWR2_Salon_Zasilanie_Multimedia_Reachable             "Reachable: [%s]"                   <contactable>   (Sonoff,SonoffPOW,Salon)                                    {mqtt="<[MQTTBroker:tele/SonoffPOWR2_Salon/LWT:state:default]" }
+Number SonoffPOWR2_Salon_Zasilanie_Multimedia_POW_Power             "Power load [%.1f W]"               <voltage>       (Sonoff,SonoffPOW,Salon)                                    {mqtt="<[MQTTBroker:tele/SonoffPOWR2_Salon/SENSOR:state:JSONPATH($.ENERGY.Power)]" }
+Number SonoffPOWR2_Salon_Zasilanie_Multimedia_POW_Voltage           "Line voltage [%.1f V]"             <voltage>       (Sonoff,SonoffPOW,Salon)                                    {mqtt="<[MQTTBroker:tele/SonoffPOWR2_Salon/SENSOR:state:JSONPATH($.ENERGY.Voltage)]" }
+Number SonoffPOWR2_Salon_Zasilanie_Multimedia_Current               "Line current [%.3f A]"             <current>       (Sonoff,SonoffPOW,Salon)                                    {mqtt="<[MQTTBroker:tele/SonoffPOWR2_Salon/SENSOR:state:JSONPATH($.ENERGY.Current)]" }
+Number SonoffPOWR2_Salon_Zasilanie_Multimedia_Today                 "Total energy today [%.3f kWh]"     <total_energy>  (Sonoff,SonoffPOW,Salon)                                    {mqtt="<[MQTTBroker:tele/SonoffPOWR2_Salon/SENSOR:state:JSONPATH($.ENERGY.Today)]" }
+Number SonoffPOWR2_Salon_Zasilanie_Multimedia_Yesterday             "Total energy yesterday [%.3f kWh]" <total_energy>  (Sonoff,SonoffPOW,Salon)                                    {mqtt="<[MQTTBroker:tele/SonoffPOWR2_Salon/SENSOR:state:JSONPATH($.ENERGY.Yesterday)]" }
+Number SonoffPOWR2_Salon_Zasilanie_Multimedia_RSSI                  "WiFi Signal Strength [%d %%]"      <wifi>          (Sonoff,SonoffPOW,Salon)                                    {mqtt="<[MQTTBroker:tele/SonoffPOWR2_Salon/STATE:state:JSONPATH($.Wifi.RSSI)]" }
 
 // Sonoff POW R2 Serwerownia_Zasilanie 192.168.10.221
 //Group  SonoffPOWR2            "Sonoff POW"                        <sonoff_pow>    (Sonoff_POW)
-Switch SonoffPOWR2_Serwerownia_Zasilanie_POW_Power                  "Power []"                          <switch>        (Sonoff) [ "Switchable" ]  {mqtt=">[MQTTBroker:cmnd/Serwerownia_Zasilanie/POWER:command:*:default], <[MQTTBroker:stat/Serwerownia_Zasilanie/POWER:state:default]" }
-String SonoffPOWR2_Serwerownia_Zasilanie_Reachable                  "Reachable: [%s]"                   <contactable>   (Sonoff)                   {mqtt="<[MQTTBroker:tele/Serwerownia_Zasilanie/LWT:state:default]" }
-Number SonoffPOWR2_Serwerownia_Zasilanie_POW_Power                  "Power load [%.1f W]"               <voltage>       (Sonoff)                   {mqtt="<[MQTTBroker:tele/Serwerownia_Zasilanie/SENSOR:state:JSONPATH($.ENERGY.Power)]" }
-Number SonoffPOWR2_Serwerownia_Zasilanie_POW_Voltage                "Line voltage [%.1f V]"             <voltage>       (Sonoff)                   {mqtt="<[MQTTBroker:tele/Serwerownia_Zasilanie/SENSOR:state:JSONPATH($.ENERGY.Voltage)]" }
-Number SonoffPOWR2_Serwerownia_Zasilanie_Current                    "Line current [%.3f A]"             <current>       (Sonoff)                   {mqtt="<[MQTTBroker:tele/Serwerownia_Zasilanie/SENSOR:state:JSONPATH($.ENERGY.Current)]" }
-Number SonoffPOWR2_Serwerownia_Zasilanie_Today                      "Total energy today [%.3f kWh]"     <total_energy>  (Sonoff)                   {mqtt="<[MQTTBroker:tele/Serwerownia_Zasilanie/SENSOR:state:JSONPATH($.ENERGY.Today)]" }
-Number SonoffPOWR2_Serwerownia_Zasilanie_Yesterday                  "Total energy yesterday [%.3f kWh]" <total_energy>  (Sonoff)                   {mqtt="<[MQTTBroker:tele/Serwerownia_Zasilanie/SENSOR:state:JSONPATH($.ENERGY.Yesterday)]" }
-Number SonoffPOWR2_Serwerownia_Zasilanie_RSSI                       "WiFi Signal Strength [%d %%]"      <wifi>          (Sonoff)                   {mqtt="<[MQTTBroker:tele/Serwerownia_Zasilanie/STATE:state:JSONPATH($.Wifi.RSSI)]" }
+Switch SonoffPOWR2_Serwerownia_Zasilanie_POW_Power                  "Power []"                          <switch>        (Sonoff,SonoffPOW,Serwerownia)            [ "Switchable" ]  {mqtt=">[MQTTBroker:cmnd/Serwerownia_Zasilanie/POWER:command:*:default], <[MQTTBroker:stat/Serwerownia_Zasilanie/POWER:state:default]" }
+String SonoffPOWR2_Serwerownia_Zasilanie_Reachable                  "Reachable: [%s]"                   <contactable>   (Sonoff,SonoffPOW,Serwerownia)                              {mqtt="<[MQTTBroker:tele/Serwerownia_Zasilanie/LWT:state:default]" }
+Number SonoffPOWR2_Serwerownia_Zasilanie_POW_Power                  "Power load [%.1f W]"               <voltage>       (Sonoff,SonoffPOW,Serwerownia)                              {mqtt="<[MQTTBroker:tele/Serwerownia_Zasilanie/SENSOR:state:JSONPATH($.ENERGY.Power)]" }
+Number SonoffPOWR2_Serwerownia_Zasilanie_POW_Voltage                "Line voltage [%.1f V]"             <voltage>       (Sonoff,SonoffPOW,Serwerownia)                              {mqtt="<[MQTTBroker:tele/Serwerownia_Zasilanie/SENSOR:state:JSONPATH($.ENERGY.Voltage)]" }
+Number SonoffPOWR2_Serwerownia_Zasilanie_Current                    "Line current [%.3f A]"             <current>       (Sonoff,SonoffPOW,Serwerownia)                              {mqtt="<[MQTTBroker:tele/Serwerownia_Zasilanie/SENSOR:state:JSONPATH($.ENERGY.Current)]" }
+Number SonoffPOWR2_Serwerownia_Zasilanie_Today                      "Total energy today [%.3f kWh]"     <total_energy>  (Sonoff,SonoffPOW,Serwerownia)                              {mqtt="<[MQTTBroker:tele/Serwerownia_Zasilanie/SENSOR:state:JSONPATH($.ENERGY.Today)]" }
+Number SonoffPOWR2_Serwerownia_Zasilanie_Yesterday                  "Total energy yesterday [%.3f kWh]" <total_energy>  (Sonoff,SonoffPOW,Serwerownia)                              {mqtt="<[MQTTBroker:tele/Serwerownia_Zasilanie/SENSOR:state:JSONPATH($.ENERGY.Yesterday)]" }
+Number SonoffPOWR2_Serwerownia_Zasilanie_RSSI                       "WiFi Signal Strength [%d %%]"      <wifi>          (Sonoff,SonoffPOW,Serwerownia)                              {mqtt="<[MQTTBroker:tele/Serwerownia_Zasilanie/STATE:state:JSONPATH($.Wifi.RSSI)]" }
 
 // Sonoff POW R2 World_Control_Center 192.168.10.222
 //Group  SonoffPOWR2                                "Sonoff POW"                        <sonoff_pow>    (Sonoff_POW)
-Switch SonoffPOWR2_World_Control_Center_Power                  "Power []"                          <switch>        (Sonoff) [ "Switchable" ]       {mqtt=">[MQTTBroker:cmnd/World_Control_Center/POWER:command:*:default], <[MQTTBroker:stat/World_Control_Center/POWER:state:default]" }
-String SonoffPOWR2_World_Control_Center_Reachable   "Reachable: [%s]"                   <contactable>   (Sonoff)                                   {mqtt="<[MQTTBroker:tele/World_Control_Center/LWT:state:default]" }
-Number SonoffPOWR2_World_Control_Center_Power                  "Power load [%.1f W]"               <voltage>       (Sonoff)                        {mqtt="<[MQTTBroker:tele/World_Control_Center/SENSOR:state:JSONPATH($.ENERGY.Power)]" }
-Number SonoffPOWR2_World_Control_Center_Voltage                "Line voltage [%.1f V]"             <voltage>       (Sonoff)                        {mqtt="<[MQTTBroker:tele/World_Control_Center/SENSOR:state:JSONPATH($.ENERGY.Voltage)]" }
-Number SonoffPOWR2_World_Control_Center_Current                    "Line current [%.3f A]"             <current>       (Sonoff)                    {mqtt="<[MQTTBroker:tele/World_Control_Center/SENSOR:state:JSONPATH($.ENERGY.Current)]" }
-Number SonoffPOWR2_World_Control_Center_Today                      "Total energy today [%.3f kWh]"     <total_energy>  (Sonoff)                    {mqtt="<[MQTTBroker:tele/World_Control_Center/SENSOR:state:JSONPATH($.ENERGY.Today)]" }
-Number SonoffPOWR2_World_Control_Center_Yesterday                  "Total energy yesterday [%.3f kWh]" <total_energy>  (Sonoff)                    {mqtt="<[MQTTBroker:tele/World_Control_Center/SENSOR:state:JSONPATH($.ENERGY.Yesterday)]" }
-Number SonoffPOWR2_World_Control_Center_RSSI                       "WiFi Signal Strength [%d %%]"      <wifi>          (Sonoff)                    {mqtt="<[MQTTBroker:tele/World_Control_Center/STATE:state:JSONPATH($.Wifi.RSSI)]" }
+Switch SonoffPOWR2_Biuro_Power                                      "Power []"                          <switch>        (Sonoff,SonoffPOW,Biuro)                  [ "Switchable" ]  {mqtt=">[MQTTBroker:cmnd/World_Control_Center/POWER:command:*:default], <[MQTTBroker:stat/World_Control_Center/POWER:state:default]" }
+String SonoffPOWR2_Biuro_Reachable                                  "Reachable: [%s]"                   <contactable>   (Sonoff,SonoffPOW,Biuro)                                    {mqtt="<[MQTTBroker:tele/World_Control_Center/LWT:state:default]" }
+Number SonoffPOWR2_Biuro_Power                                      "Power load [%.1f W]"               <voltage>       (Sonoff,SonoffPOW,Biuro)                                    {mqtt="<[MQTTBroker:tele/World_Control_Center/SENSOR:state:JSONPATH($.ENERGY.Power)]" }
+Number SonoffPOWR2_Biuro_Voltage                                    "Line voltage [%.1f V]"             <voltage>       (Sonoff,SonoffPOW,Biuro)                                    {mqtt="<[MQTTBroker:tele/World_Control_Center/SENSOR:state:JSONPATH($.ENERGY.Voltage)]" }
+Number SonoffPOWR2_Biuro_Current                                    "Line current [%.3f A]"             <current>       (Sonoff,SonoffPOW,Biuro)                                    {mqtt="<[MQTTBroker:tele/World_Control_Center/SENSOR:state:JSONPATH($.ENERGY.Current)]" }
+Number SonoffPOWR2_Biuro_Today                                      "Total energy today [%.3f kWh]"     <total_energy>  (Sonoff,SonoffPOW,Biuro)                                    {mqtt="<[MQTTBroker:tele/World_Control_Center/SENSOR:state:JSONPATH($.ENERGY.Today)]" }
+Number SonoffPOWR2_Biuro_Yesterday                                  "Total energy yesterday [%.3f kWh]" <total_energy>  (Sonoff,SonoffPOW,Biuro)                                    {mqtt="<[MQTTBroker:tele/World_Control_Center/SENSOR:state:JSONPATH($.ENERGY.Yesterday)]" }
+Number SonoffPOWR2_Biuro_RSSI                                       "WiFi Signal Strength [%d %%]"      <wifi>          (Sonoff,SonoffPOW,Biuro)                                    {mqtt="<[MQTTBroker:tele/World_Control_Center/STATE:state:JSONPATH($.Wifi.RSSI)]" }
 
 // Sonoff POW R2 Serwerownia_Zasilanie 192.168.10.223
 //Group  SonoffPOWR2            "Sonoff POW"                        <sonoff_pow>    (Sonoff_POW)
-Switch SonoffPOWR2__Zasilanie_POW_Power                  "Power []"                          <switch>        (Sonoff) [ "Switchable" ]  {mqtt=">[MQTTBroker:cmnd/Sypialnia_Zasilanie/POWER:command:*:default], <[MQTTBroker:stat/Sypialnia_Zasilanie/POWER:state:default]" }
-String SonoffPOWR2_Sypialnia_Zasilanie_Reachable                  "Reachable: [%s]"                   <contactable>   (Sonoff)                   {mqtt="<[MQTTBroker:tele/Sypialnia_Zasilanie/LWT:state:default]" }
-Number SonoffPOWR2_Sypialnia_Zasilanie_POW_Power                  "Power load [%.1f W]"               <voltage>       (Sonoff)                   {mqtt="<[MQTTBroker:tele/Sypialnia_Zasilanie/SENSOR:state:JSONPATH($.ENERGY.Power)]" }
-Number SonoffPOWR2_Sypialnia_Zasilanie_POW_Voltage                "Line voltage [%.1f V]"             <voltage>       (Sonoff)                   {mqtt="<[MQTTBroker:tele/Sypialnia_Zasilanie/SENSOR:state:JSONPATH($.ENERGY.Voltage)]" }
-Number SonoffPOWR2_Sypialnia_Zasilanie_Current                    "Line current [%.3f A]"             <current>       (Sonoff)                   {mqtt="<[MQTTBroker:tele/Sypialnia_Zasilanie/SENSOR:state:JSONPATH($.ENERGY.Current)]" }
-Number SonoffPOWR2_Sypialnia_Zasilanie_Today                      "Total energy today [%.3f kWh]"     <total_energy>  (Sonoff)                   {mqtt="<[MQTTBroker:tele/Sypialnia_Zasilanie/SENSOR:state:JSONPATH($.ENERGY.Today)]" }
-Number SonoffPOWR2_Sypialnia_Zasilanie_Yesterday                  "Total energy yesterday [%.3f kWh]" <total_energy>  (Sonoff)                   {mqtt="<[MQTTBroker:tele/Sypialnia_Zasilanie/SENSOR:state:JSONPATH($.ENERGY.Yesterday)]" }
-Number SonoffPOWR2_Sypialnia_Zasilanie_RSSI                       "WiFi Signal Strength [%d %%]"      <wifi>          (Sonoff)                   {mqtt="<[MQTTBroker:tele/Sypialnia_Zasilanie/STATE:state:JSONPATH($.Wifi.RSSI)]" }
+Switch SonoffPOWR2__Zasilanie_POW_Power                             "Power []"                          <switch>        (Sonoff,SonoffPOW,Sypialnia)              [ "Switchable" ]  {mqtt=">[MQTTBroker:cmnd/Sypialnia_Zasilanie/POWER:command:*:default], <[MQTTBroker:stat/Sypialnia_Zasilanie/POWER:state:default]" }
+String SonoffPOWR2_Sypialnia_Zasilanie_Reachable                    "Reachable: [%s]"                   <contactable>   (Sonoff,SonoffPOW,Sypialnia)                                {mqtt="<[MQTTBroker:tele/Sypialnia_Zasilanie/LWT:state:default]" }
+Number SonoffPOWR2_Sypialnia_Zasilanie_POW_Power                    "Power load [%.1f W]"               <voltage>       (Sonoff,SonoffPOW,Sypialnia)                                {mqtt="<[MQTTBroker:tele/Sypialnia_Zasilanie/SENSOR:state:JSONPATH($.ENERGY.Power)]" }
+Number SonoffPOWR2_Sypialnia_Zasilanie_POW_Voltage                  "Line voltage [%.1f V]"             <voltage>       (Sonoff,SonoffPOW,Sypialnia)                                {mqtt="<[MQTTBroker:tele/Sypialnia_Zasilanie/SENSOR:state:JSONPATH($.ENERGY.Voltage)]" }
+Number SonoffPOWR2_Sypialnia_Zasilanie_Current                      "Line current [%.3f A]"             <current>       (Sonoff,SonoffPOW,Sypialnia)                                {mqtt="<[MQTTBroker:tele/Sypialnia_Zasilanie/SENSOR:state:JSONPATH($.ENERGY.Current)]" }
+Number SonoffPOWR2_Sypialnia_Zasilanie_Today                        "Total energy today [%.3f kWh]"     <total_energy>  (Sonoff,SonoffPOW,Sypialnia)                                {mqtt="<[MQTTBroker:tele/Sypialnia_Zasilanie/SENSOR:state:JSONPATH($.ENERGY.Today)]" }
+Number SonoffPOWR2_Sypialnia_Zasilanie_Yesterday                    "Total energy yesterday [%.3f kWh]" <total_energy>  (Sonoff,SonoffPOW,Sypialnia)                                {mqtt="<[MQTTBroker:tele/Sypialnia_Zasilanie/SENSOR:state:JSONPATH($.ENERGY.Yesterday)]" }
+Number SonoffPOWR2_Sypialnia_Zasilanie_RSSI                         "WiFi Signal Strength [%d %%]"      <wifi>          (Sonoff,SonoffPOW,Sypialnia)                                {mqtt="<[MQTTBroker:tele/Sypialnia_Zasilanie/STATE:state:JSONPATH($.Wifi.RSSI)]" }
 
 /*
 // Sonoff TH  Sonoff_TH16_Korytarz  192.168.10.230
