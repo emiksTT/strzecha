@@ -1,0 +1,11 @@
+
+rule "React on Rf received (SonoffBridgeRfReceived) change/update"
+when
+    Item SonoffBridgeRfReceived received update
+then
+    if (SonoffBridgeRfReceived.state == "191BA2")
+    {
+        if (SypialniaPasekLEDPOWER.state == ON || SypialniaPasekLEDPOWER.state == NULL) { SypialniaPasekLEDPOWER.sendCommand(OFF) }
+        else { SypialniaPasekLEDPOWER.sendCommand(ON) }
+    }
+end
