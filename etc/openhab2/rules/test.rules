@@ -1,0 +1,85 @@
+
+rule "React on Rf received (SonoffBridgeRfReceived) change/update"
+when
+    Item SonoffBridgeRfReceived received update
+then
+    if (SonoffBridgeRfReceived.state == "191BA2")
+    {
+        if (SypialniaPasekLEDPOWER.state == ON || SypialniaPasekLEDPOWER.state == NULL) { SypialniaPasekLEDPOWER.sendCommand(OFF) }
+        else { SypialniaPasekLEDPOWER.sendCommand(ON) }
+    }
+end
+
+
+
+/*
+
+rule "RfReceived"
+when
+    Item SonoffBridgeRfReceived received update // Need received update if Data has not change but button still pressed
+then
+    Thread::sleep(100) // Need the sleep to allow for the state to change
+
+
+   if (SonoffBridgeRfReceived.state == "191BA2")
+    {
+        if (SypialniaPasekLED.state == ON || SypialniaPasekLED.state == NULL) { SypialniaPasekLED.sendCommand(OFF) }
+        else { SypialniaPasekLED.sendCommand(ON) }
+    }
+    
+
+    if (RfReceived.state == "191BA8")
+    {
+        Sonoff_TH16_Korytarz.sendCommand(ON)
+    }    
+   
+*/
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+/*
+rule "RF433 switch sonoff and Update RF Switch (Bridge 1)"
+when
+    Item SonoffBridge_RfReceive receive update
+then
+if (SonoffBridge_RfReceive.state == NULL)
+   {
+    logInfo("SonoffBridge_RfReceive.rules", "Item is null, cancelling...")
+    return;
+    } 
+    var rfData = SonoffBridge_RfReceive.state.toString
+    logInfo("SonoffBridge_RfReceive.rules", "Received IT Codes: " + rfData)
+        switch (rfData) {         
+            case "191BA2":
+               {
+                publish("MQTTBroker", "cmnd/Sypialnia_Pasek_LED/POWER", "ON")  
+                }
+            case "191BA8":
+                {
+                publish("MQTTBroker", "cmnd/Sypialnia_Pasek_LED/POWER", "OFF")
+                }
+            case "A00A1B":
+               {
+                publish("broker", "cmnd/sonoff-065CA6/POWER", "ON")
+                }
+            case "A00A13":
+                {
+                publish("broker", "cmnd/sonoff-065CA6/POWER", "OFF")
+
+        	case "85D5CC":
+        	    {
+			    Pir433.sendCommand(ON)
+			    }                   
+            case "150551":
+               {
+				postUpdate(WohnFluter, ON)
+                }
+            case "150554":
+                {
+				postUpdate(WohnFluter, OFF)
+                }   
+
+    }
+ rfData=""
+ SonoffBridge_RfReceive.postUpdate(rfData)
+end
+
+ */
