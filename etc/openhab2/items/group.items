@@ -1,4 +1,18 @@
 Group All
+
+Group gSalon               "Salon"                                                (All)
+Group gKorytarz            "Koryatrz"                                             (All)
+Group gKuchnia             "Kuchnia"                                              (All)
+Group gBiuro               "Biuro"                                                (All)
+Group gToaleta             "Toaleta"                                              (All)
+Group gLazienka            "Łazienka"                                             (All)
+Group gSypialnia           "Sypialnia"                                            (All)
+Group gHol                 "Hol"                                                  (All)
+Group gBalkon              "Balkon"                                               (All)
+Group gPiwnica             "Piwnica"                                              (All)
+Group gGaraz               "Garaż"                                                (All)
+Group gZewnatrz            "Na zewnątrz"                                          (All)
+
 Group gSonoff              "All Sonoff Devices"                                   (All)
 Group gEveningLighting     "Lightning after Sunset"                               (All)
 Group gAirSensor           "Air temperature, humidity and quality sensors"        (All)
