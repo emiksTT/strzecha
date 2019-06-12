@@ -4,6 +4,8 @@
 // Sonoff RF Bridge RfReceive_SonoffBridge 192.168.10.200
 //String RfReceive_SonoffBridge                   "Sonoff RF Bridge"
 
+String  RF_Receive "RF Bridge"	{mqtt="<[MQTTBroker:tele/SonoffBridge/RESULT:state:JSONPATH($.RfReceived.Data)"}
+
 
 
 // Sonoff Basic Korytarz_Pasek_LED 192.168.10.201
