@@ -1,36 +1,60 @@
-// Strzecha Network Device
-
-Thing   network:pingdevice:Modem      [ hostname="192.168.0.0", retry=1, timeout=5000, refreshInterval=60000 ]
-Thing   network:pingdevice:Router     [ hostname="192.168.10.1", retry=1, timeout=5000, refreshInterval=60000 ]
-Thing   network:pingdevice:NAS        [ hostname="192.168.10.14",  retry=1, timeout=5000, refreshInterval=10000 ] 
-
-// vim: syntax=Xtend
 /*
-// Ping
-Switch     NiuniaXiaomiMI5Online     "Online"         {channel="network:pingdevice:Niunia_Xiaomi_MI5:online"}
-Number     NiuniaXiaomiMI5Latency    "Latency (ms)"   {channel="network:pingdevice:Niunia_Xiaomi_MI5:latency"}
-DateTime   NiuniaXiaomiMI5Lastseen   "Last seen"      {channel="network:pingdevice:Niunia_Xiaomi_MI5:lastseen"}
+Thing <binding_id>:<type_id>:<thing_id> "Label" @ "Location" [ <parameters> ]
+Examples:
 
-Switch     EmiksGalaxyS5MiniWhiteOnline     "Online"         {channel="network:pingdevice:EmiksGalaxyS5MiniWhite:online"}
-Number     EmiksGalaxyS5MiniWhiteLatency    "Latency (ms)"   {channel="network:pingdevice:EmiksGalaxyS5MiniWhite:latency"}
-DateTime   EmiksGalaxyS5MiniWhiteLastseen   "Last seen"      {channel="network:pingdevice:EmiksGalaxyS5MiniWhite:lastseen"}
+Thing network:device:webcam "Webcam" @ "Living Room" [ hostname="192.168.0.2", timeout="5000", ... ]
+Thing astro:moon:home [ geolocation="50.12345,10.98765", interval=300 ]
+Thing ntp:ntp:local [ hostname="de.pool.ntp.org" ] 
 
-Switch     ModemOnline     "Online"         {channel="network:servicedevice:Modem_Unitymedia:online"}
-Number     ModemLatency    "Latency (ms)"   {channel="network:servicedevice:Modem_Unitymedia:latency"}
-DateTime   ModemLastseen   "Last seen"      {channel="network:servicedevice:Modem_Unitymedia:lastseen"}
+network:pingdevice:one_device [ hostname="192.168.0.64" ]
+network:pingdevice:second_device [ hostname="192.168.0.65", retry=1, timeout=5000, refreshInterval=60000 ]
+network:servicedevice:important_server [ hostname="192.168.0.62", port=1234 ]
+network:speedtest:local "SpeedTest 50Mo" @ "Internet" [refreshInterval=20, uploadSize=1000000, url="http://1.testdebit.info:8080/", fileName="50M.iso"]
+*/
 
-Switch     PfSenseFirewallOnline     "Online"         {channel="network:servicedevice:pfSense_Firewall:online"}
-Number     PfSenseFirewallLatency    "Latency (ms)"   {channel="network:servicedevice:pfSense_Firewall:latency"}
-DateTime   PfSenseFirewallLastseen   "Last seen"      {channel="network:servicedevice:pfSense_Firewall:lastseen"}
+// Strzecha
 
-Switch     SkyNetVPNPLOnline     "Online"         {channel="network:servicedevice:SkyNet_VPN_PL:online"}
-Number     SkyNetVPNPLLatency    "Latency (ms)"   {channel="network:servicedevice:SkyNet_VPN_PL:latency"}
-DateTime   SkyNetVPNPLLastseen   "Last seen"      {channel="network:servicedevice:SkyNet_VPN_PL:lastseen"}
+Thing network:device:GalaxyS5MiniWhite           "Emiks Telefon"            @     "Strzecha"                [ hostname="192.168.10.40", timeout="5000", refreshInterval=60000 ]
+Thing network:device:GalaxyTab2Black             "Emiks Tablet"             @     "Strzecha"                [ hostname="192.168.10.41", timeout="5000", refreshInterval=60000 ]
+Thing network:device:GalaxyS5MiniBlack           "Emiks Telefon"            @     "Strzecha"                [ hostname="192.168.10.43", timeout="5000", refreshInterval=60000 ]
+Thing network:device:GalaxyTab2White             "Niunia Tablet"            @     "Strzecha"                [ hostname="192.168.10.44", timeout="5000", refreshInterval=60000 ]
+Thing network:device:Xiaomi_MI5                  "Niunia Telefon"           @     "Strzecha"                [ hostname="192.168.10.45", timeout="5000", refreshInterval=60000 ]
+Thing network:device:Honor_10                    "Niunia Telefon"           @     "Strzecha"                [ hostname="192.168.10.46", timeout="5000", refreshInterval=60000 ]
 
-Switch     OpenMediaVaultOnline     "Online"         {channel="network:servicedevice:OpenMediaVault:online"}
-Number     OpenMediaVaultLatency    "Latency (ms)"   {channel="network:servicedevice:OpenMediaVault:latency"}
-DateTime   OpenMediaVaultLastseen   "Last seen"      {channel="network:servicedevice:OpenMediaVault:lastseen"}
+// Serwerownia
 
-Switch     DekoderNCOnline     "Online"         {channel="network:servicedevice:Dekoder_NC:online"}
-Number     DekoderNCLatency    "Latency (ms)"   {channel="network:servicedevice:Dekoder_NC:latency"}
-DateTime   DekoderNCLastseen   "Last seen"      {channel="network:servicedevice:Dekoder_NC:lastseen"}
+Thing network:device:Modem                       "Modem"                    @     "Serwerownia"             [ hostname="192.168.0.1", timeout="5000", refreshInterval=60000 ]
+Thing network:device:Router                      "Router"                   @     "Serwerownia"             [ hostname="192.168.10.1", timeout="5000", refreshInterval=60000 ]
+Thing network:device:AccessPoint1                "Access Point 1"           @     "Serwerownia"             [ hostname="192.168.10.2", timeout="5000", refreshInterval=60000 ]
+Thing network:device:AccessPoint2                "Access Point 2"           @     "Serwerownia"             [ hostname="192.168.10.3", timeout="5000", refreshInterval=60000 ]
+Thing network:device:AccessPoint3                "Access Point 3"           @     "Serwerownia"             [ hostname="192.168.10.4", timeout="5000", refreshInterval=60000 ]
+Thing network:device:Mastah                      "Mastah"                   @     "Serwerownia"             [ hostname="192.168.10.13", timeout="5000", refreshInterval=60000 ]
+Thing network:device:OpenMediaVault              "Serwer NAS"               @     "Serwerownia"             [ hostname="192.168.10.14", timeout="5000", refreshInterval=60000 ]
+Thing network:device:Daphile                     "Music Daphile"            @     "Serwerownia"             [ hostname="192.168.10.15", timeout="5000", refreshInterval=60000 ]
+Thing network:device:SkyNet_VPN_PL               "SkyNet_VPN_PL"            @     "Serwerownia"             [ hostname="37.233.101.53", timeout="5000", refreshInterval=60000 ]
+
+// Sypialnia
+
+Thing network:device:ChromecastSypialnia         "Chromecast Sypialnia"     @     "Sypialnia"               [ hostname="192.168.10.17", timeout="5000", refreshInterval=60000 ]
+Thing network:device:SypialniaTV_LAN             "Sypialnia TV"             @     "Sypialnia"               [ hostname="192.168.10.36", timeout="5000", refreshInterval=60000 ]
+Thing network:device:DekoderNC                   "Dekoder NC+"              @     "Sypialnia"               [ hostname="192.168.10.11", timeout="5000", refreshInterval=60000 ]
+
+// Salon
+Thing network:device:Ps3_LAN                     "Salon Playstation"        @     "Salon"                   [ hostname="192.168.10.33", timeout="5000", refreshInterval=60000 ]
+Thing network:device:Ps3_Wifi                    "Salon Playstation"        @     "Salon"                   [ hostname="192.168.10.34", timeout="5000", refreshInterval=60000 ]
+Thing network:device:SalonTV_LAN                 "Salon TV"                 @     "Salon"                   [ hostname="192.168.10.35", timeout="5000", refreshInterval=60000 ]
+Thing network:device:SalonTV_Wifi                "Salon TV Wifi"            @     "Salon"                   [ hostname="192.168.10.36", timeout="5000", refreshInterval=60000 ]
+Thing network:device:Yamaha_RX_V479_Wifi         "Salon Wzmacniacz"         @     "Salon"                   [ hostname="192.168.10.37", timeout="5000", refreshInterval=60000 ]
+Thing network:device:Yamaha_RX_V479_LAN          "Salon Wzmacniacz"         @     "Salon"                   [ hostname="192.168.10.38", timeout="5000", refreshInterval=60000 ]
+
+// Biuro
+
+Thing network:device:Emiks_Machine_LAN           "Machine"                  @     "Biuro"                   [ hostname="192.168.10.20", timeout="5000", refreshInterval=60000 ]
+Thing network:device:Hp3050A                     "Hawlet Packard 3050a"     @     "Biuro"                   [ hostname="192.168.10.31", timeout="5000", refreshInterval=60000 ]
+
+// Kuchnia
+
+// Korytarz
+
+// Inne
+
