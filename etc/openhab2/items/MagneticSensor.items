@@ -1,0 +1,3 @@
+
+Contact Sonoff_Bridge_Front_Door  "Front Door: [%s]"            <frontdoor>           { channel="mqtt:topic:Sonoff_Bridge:FrontDoor" }
+Contact Sonoff_Bridge_Rear_Door  "Rear Door: [%s]"            <door>           { channel="mqtt:topic:Sonoff_Bridge:RearDoor" }
