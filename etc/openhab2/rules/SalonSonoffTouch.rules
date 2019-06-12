@@ -1,0 +1,6 @@
+when 
+Salon_SonoffTouch/POWER2 ON  //Sonoff_Touch_T1_2CH switch 2
+then
+Salon_Lampa_LED  on
+Salon_Lampka_LED on
+Salon_Barek_LED on
