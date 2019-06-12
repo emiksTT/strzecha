@@ -1,6 +1,12 @@
-when 
-Salon_SonoffTouch/POWER2 ON  //Sonoff_Touch_T1_2CH switch 2
+//Sonoff_Touch_T1_2CH switch 2
+
+
+when Item Salon_SonoffTouch.state == ON  
 then
-Salon_Lampa_LED  on
-Salon_Lampka_LED on
-Salon_Barek_LED on
+{
+       Salon_Lampa_LED.state == ON       // Sonoff Basic
+       Salon_Lampka_LED.state == ON      // Sonoff Basic
+    }
+end
+
+
