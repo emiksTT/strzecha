@@ -31,7 +31,9 @@ Thing network:device:AccessPoint3                "Access Point 3"           @   
 Thing network:device:Mastah                      "Mastah"                   @     "Serwerownia"             [ hostname="192.168.10.13", timeout="5000", refreshInterval=60000 ]
 Thing network:device:OpenMediaVault              "Serwer NAS"               @     "Serwerownia"             [ hostname="192.168.10.14", timeout="5000", refreshInterval=60000 ]
 Thing network:device:Daphile                     "Music Daphile"            @     "Serwerownia"             [ hostname="192.168.10.15", timeout="5000", refreshInterval=60000 ]
-Thing network:device:SkyNet_VPN_PL               "SkyNet_VPN_PL"            @     "Serwerownia"             [ hostname="37.233.101.53", timeout="5000", refreshInterval=60000 ]
+
+/////////  todo VPN IP Change
+Thing network:device:SkyNet_VPN_PL               "SkyNet_VPN_PL"            @     "Serwerownia"             [ hostname="8.8.8.8", timeout="5000", refreshInterval=60000 ]
 
 // Sypialnia
 
