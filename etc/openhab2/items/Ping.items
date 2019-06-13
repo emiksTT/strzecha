@@ -1,0 +1,28 @@
+// Ping
+Switch     NiuniaXiaomiMI5Online                       "Online"         {channel="network:pingdevice:Xiaomi_MI5:online"}
+Number     NiuniaXiaomiMI5Latency                      "Latency (ms)"   {channel="network:pingdevice:Xiaomi_MI5:latency"}
+DateTime   NiuniaXiaomiMI5Lastseen                     "Last seen"      {channel="network:pingdevice:Xiaomi_MI5:lastseen"}
+
+Switch     EmiksGalaxyS5MiniWhiteOnline                "Online"         {channel="network:pingdevice:GalaxyS5MiniWhite:online"}
+Number     EmiksGalaxyS5MiniWhiteLatency               "Latency (ms)"   {channel="network:pingdevice:GalaxyS5MiniWhite:latency"}
+DateTime   EmiksGalaxyS5MiniWhiteLastseen              "Last seen"      {channel="network:pingdevice:GalaxyS5MiniWhite:lastseen"}
+
+Switch     ModemOnline                                 "Online"         {channel="network:servicedevice:Modem:online"}
+Number     ModemLatency                                "Latency (ms)"   {channel="network:servicedevice:Modem:latency"}
+DateTime   ModemLastseen                               "Last seen"      {channel="network:servicedevice:Modem:lastseen"}
+
+Switch     PfSenseFirewallOnline                       "Online"         {channel="network:servicedevice:Router:online"}
+Number     PfSenseFirewallLatency                      "Latency (ms)"   {channel="network:servicedevice:Router:latency"}
+DateTime   PfSenseFirewallLastseen                     "Last seen"      {channel="network:servicedevice:Router:lastseen"}
+
+Switch     SkyNetVPNPLOnline                           "Online"         {channel="network:servicedevice:SkyNet_VPN_PL:online"}
+Number     SkyNetVPNPLLatency                          "Latency (ms)"   {channel="network:servicedevice:SkyNet_VPN_PL:latency"}
+DateTime   SkyNetVPNPLLastseen                         "Last seen"      {channel="network:servicedevice:SkyNet_VPN_PL:lastseen"}
+
+Switch     OpenMediaVaultOnline                        "Online"         {channel="network:servicedevice:OpenMediaVault:online"}
+Number     OpenMediaVaultLatency                       "Latency (ms)"   {channel="network:servicedevice:OpenMediaVault:latency"}
+DateTime   OpenMediaVaultLastseen                      "Last seen"      {channel="network:servicedevice:OpenMediaVault:lastseen"}
+
+Switch     DekoderNCOnline                             "Online"         {channel="network:servicedevice:DekoderNC:online"}
+Number     DekoderNCLatency                            "Latency (ms)"   {channel="network:servicedevice:DekoderNC:latency"}
+DateTime   DekoderNCLastseen                           "Last seen"      {channel="network:servicedevice:DekoderNC:lastseen"}
