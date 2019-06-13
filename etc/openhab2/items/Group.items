@@ -1,5 +1,6 @@
 Group All
 
+Group gStrzecha            "Strzecha"                                             (All)
 Group gSalon               "Salon"                                                (All)
 Group gKorytarz            "Koryatrz"                                             (All)
 Group gKuchnia             "Kuchnia"                                              (All)
