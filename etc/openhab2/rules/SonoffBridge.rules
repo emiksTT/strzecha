@@ -1,11 +1,19 @@
 
-rule "React on Rf received (SonoffBridgeRfReceived) change/update"
+
+rule "RF Bridge sensor triggered"
 when
-    Item SonoffBridgeRfReceived received update
+    Item SonoffBridge_RfReceive received update
 then
-    if (SonoffBridgeRfReceived.state == "191BA2")
+    if(SonoffBridge_RfReceive.state == '191BA2')
     {
-        if (SypialniaPasekLEDPOWER.state == ON || SypialniaPasekLEDPOWER.state == NULL) { SypialniaPasekLEDPOWER.sendCommand(OFF) }
-        else { SypialniaPasekLEDPOWER.sendCommand(ON) }
+        if (Sypialnia_Pasek_LED_Power.state == ON || Sypialnia_Pasek_LED_Power.state == NULL) { Sypialnia_Pasek_LED_Power.sendCommand(OFF) }
+        else { Sypialnia_Pasek_LED_Power.sendCommand(ON) }
     }
+    /*
+    if(SonoffBridge_RfReceive.state == '349DA4')
+    {
+        //Back door was opened
+        //Perform relevant tasks
+    }
+    */
 end
