@@ -4,8 +4,8 @@
 // Sonoff RF Bridge RfReceive_SonoffBridge 192.168.10.200
 //String RfReceive_SonoffBridge                   "Sonoff RF Bridge"
 
-String  RF_Receive                              "RF Bridge"                                      <qualityofservice> (Sonoff)                   	{mqtt="<[MQTTBroker:tele/SonoffBridge/RESULT:state:JSONPATH($.RfReceived.Data)"}
-Number  RF_Receive_RSSI                         "RF_Bridge RSSI [%d %%]"                              <wifi>    (RSSI_Group)                    {mqtt="<[MQTTBroker:tele/SonoffBridge/STATE:state:JSONPATH($.Wifi.RSSI)]"}
+String  SonoffBridge_RF_Receive                 "RF Bridge"                                      <qualityofservice> (Sonoff)                   	{mqtt="<[MQTTBroker:tele/SonoffBridge/RESULT:state:JSONPATH($.RfReceived.Data)"}
+Number  SonoffBridge_RSSI                       "RF_Bridge RSSI [%d %%]"                              <wifi>    (RSSI_Group)                    {mqtt="<[MQTTBroker:tele/SonoffBridge/STATE:state:JSONPATH($.Wifi.RSSI)]"}
 
 
 
