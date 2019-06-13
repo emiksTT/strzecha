@@ -1,9 +1,10 @@
 //Sonoff_Touch_T1_2CH switch 2
 
-
-when Item Salon_SonoffTouch.state == ON  
+rule "Salon oświetlenie dodatkowe"
+when 
+    Item Salon_SonoffTouch_S2.state == ON  
 then
-{
+    {
        Salon_Lampa_LED.state == ON       // Sonoff Basic
        Salon_Lampka_LED.state == ON      // Sonoff Basic
     }
