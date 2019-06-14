@@ -12,3 +12,13 @@ Switch FireAlarm_1                       "Czujnik dymu korytarz"                
 
 // Motion Detection
 Contact Pir_1                            "Czujnik ruchu korytarz"                 <motion>           (PIRSensor) 
+
+// Magnetic Sensor 
+Contact Kontaktron_1_1                     "Drzwi wejściowe otwarte"              <frontdoor>           (MagneticSensor) 
+Contact Kontaktron_1_0                     "Drzwi wejściowe zamknięte"            <frontdoor>           (MagneticSensor)
+
+Contact Kontaktron_2_1                     "Lodówka otwarta"                      <whitegood>           (MagneticSensor) 
+Contact Kontaktron_2_0                     "Lodówka zamknięta"                    <whitegood>           (MagneticSensor)
+
+Contact Kontaktron_3_1                     "Zamrażarka otwarta"                   <whitegood>           (MagneticSensor) 
+Contact Kontaktron_3_0                     "Zamrażarka zamknięta"                 <whitegood>           (MagneticSensor)
