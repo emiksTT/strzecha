@@ -1,0 +1,14 @@
+
+
+// Water Sensors
+Switch WaterSensorBad_1                  "Czujnik wody pod zlewem"                <water>            (WaterSensor)  
+Switch WaterSensorBad_2                  "Czujnik wody pod pralką"                <water>            (WaterSensor)  
+Switch WaterSensorToilet_1               "Czujnik wody w toalecie"                <water>            (WaterSensor)  
+Switch WaterSensorKitchen_1              "Czujnik wody pod zlewem i zmywarką"     <water>            (WaterSensor)  
+
+// Fire detection
+
+Switch FireAlarm_1                       "Czujnik dymu korytarz"                  <fire>             (FireSensor) 
+
+// Motion Detection
+Contact Pir_1                            "Czujnik ruchu korytarz"                 <motion>           (PIRSensor) 
