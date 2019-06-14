@@ -61,28 +61,7 @@ then
         if (Sypialnia_Pasek_LED_Power.state == ON || Sypialnia_Pasek_LED_Power.state == NULL) { Sypialnia_Pasek_LED_Power.sendCommand(OFF) }
         else { Sypialnia_Pasek_LED_Power.sendCommand(ON) }
     }
-    
+
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-
-    
-    /*
-    PILOT
-    FDDA0F
-    FDDA07
-    FDDA0B
-    FDDA03
-    FDDA0D
-    FDDA05
-
-
-
-
-
-    if(SonoffBridge_RfReceive.state == '349DA4')
-    {
-        //Back door was opened
-        //Perform relevant tasks
-    }
-    */
 end
