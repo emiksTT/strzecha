@@ -19,8 +19,7 @@ rule "Sunrise Rule"
 when
     Channel 'astro:sun:local:rise#event' triggered START
 then
-    // Do what you want to do at start of sunset
-    // Outside_Lights.sendCommand(OFF)
+    xxxxxxxxxxxx
 end
 
 */
