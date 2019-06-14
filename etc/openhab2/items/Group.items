@@ -15,7 +15,7 @@ Group gGaraz               "Garaż"                                             
 Group gZewnatrz            "Na zewnątrz"                                          (All)
 Group gSerwerownia         "Serwerownia"                                          (All)
 
-
+Group gAstro               "Astro"                                                (All)
 Group gSonoff              "All Sonoff Devices"                                   (All)
 Group gLight               "Light"                                                (All)
 Group gEveningLighting     "Lightning after Sunset"                               (All)
