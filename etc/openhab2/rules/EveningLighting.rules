@@ -3,9 +3,9 @@ when
     Item zachód słońca start
 then    
     {
-       Korytarz_Pasek_LED_POWER.state == ON      // Sonoff Basic
-       Kuchnia_Pasek_LED_POWER.state == ON       // Sonoff Basic
-       SypialniaPasekLED_POWER.state == ON       // Sonoff Basic
-       Salon_Barek_LED_Power.state == ON         // Sonoff Basic
+       Korytarz_Pasek_LED_POWER.sendCommand(ON)      // Sonoff Basic
+       Kuchnia_Pasek_LED_POWER.sendCommand(ON)       // Sonoff Basic
+       SypialniaPasekLED_POWER.sendCommand(ON)       // Sonoff Basic
+       Salon_Barek_LED_Power.sendCommand(ON)         // Sonoff Basic
     }
     end
