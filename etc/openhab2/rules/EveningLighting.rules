@@ -12,8 +12,37 @@ then
     }
     end
 
+rule "Steckdose Licht aus"
+ 
+when
+  
+	Time cron "0 00 23 * * ?"
+
+  then
+       Korytarz_Pasek_LED_POWER.sendCommand(OFF)      // Sonoff Basic
+       Kuchnia_Pasek_LED_POWER.sendCommand(OFF)       // Sonoff Basic
+       SypialniaPasekLED_POWER.sendCommand(OFF)       // Sonoff Basic
+       Salon_Barek_LED_Power.sendCommand(OFF)         // Sonoff Basic
+ // pushover("Licht aus!")
+end
+
+
+
 
 /*
+rule "Steckdose Licht aus"
+ 
+when
+  //jeden Abend um 22.30 Uhr
+	Time cron "0 30 22 * * ?"
+
+  then
+  Mobile_Steckdose_1.sendCommand(OFF)
+  pushover("Licht aus!")
+end
+
+
+
 
 rule "Sunrise Rule"
 when
