@@ -1,8 +1,8 @@
 // Group groupname ["labeltext"] [<iconname>] [(group1, group2, ...)]
 
-Group All
+Group Strzecha
 
-Group Strzecha            "Strzecha"                                             (All)
+
 Group Salon               "Salon"                                                (Strzecha)
 Group Korytarz            "Koryatrz"                                             (Strzecha)
 Group Kuchnia             "Kuchnia"                                              (Strzecha)
@@ -12,32 +12,38 @@ Group Lazienka            "Łazienka"                                           
 Group Sypialnia           "Sypialnia"                                            (Strzecha)
 Group Hol                 "Hol"                                                  (Strzecha)
 Group Balkon              "Balkon"                                               (Strzecha)
-Group Piwnica             "Piwnica"                                              (Strzecha)
-Group Garaz               "Garaż"                                                (Strzecha)
+
 Group Zewnatrz            "Na zewnątrz"                                          (Strzecha)
+Group Piwnica             "Piwnica"                                              (Zewnatrz)
+Group Garaz               "Garaż"                                                (Zewnatrz)
+
 Group Serwerownia         "Serwerownia"                                          (Strzecha)
+Group RSSI_Group          "Wifi range"                                           (Serwerownia)
+Group Astro               "Astro"                                                (Serwerownia)
+
+Group Security            "Security"                                             (Strzecha)
+Group AirSensor           "Air temperature, humidity and quality sensors"        (Security)
+Group FireSensor          "Fire Detection"                                       (Security)
+Group WaterSensor         "Kitchen, Toilet, Bathroom water sensor"               (Security)
+Group MagneticSensor      "Door, Window, Fridge Sensor"                          (Security)
+Group Camera              "All Cameras"                                          (Security)
+Group MiotionSensor       "All Motion Detection Devices"                         (Security)
+
+Group Multimedia          "TV, Chromecast, Music Player"                         (Strzecha)
+Group Telefon            "Telefony"                                             (Multimedia)
+Group Telewizor           "All TV`s"                                             (Multimedia)
+Group Music               "All Music PLayer"                                     (Multimedia)
+Group Chromecast          "Chromecast"                                           (Multimedia)
 
 
-Group Sensors             "All Music PLayer"                                     (All)
-Group AirSensor           "Air temperature, humidity and quality sensors"        (Sensors)
-Group FireSensor          "Fire Detection"                                       (Sensors)
-Group WaterSensor         "Kitchen, Toilet, Bathroom water sensor"               (Sensors)
-Group MagneticSensor      "Door, Window, Fridge Sensor"                          (Sensors)
-Group Camera              "All Cameras"                                          (Sensors)
-Group MiotionSensor       "All Motion Detection Devices"                         (Sensors)
 
-
-Group Astro               "Astro"                                                (All)
-Group Sonoff              "All Sonoff Devices"                                   (All)
-Group Light               "Light"                                                (All)
-Group EveningLighting     "Lightning after Sunset"                               (All)
+Group Light               "Light"                                                (Strzecha)
+Group EveningLighting     "Lightning after Sunset"                               (Light)
+Group Sonoff              "All Sonoff Devices"                                   (Light)
 
 
 
 
-Group Telefony            "Telefony"                                             (All)
-Group Telewizor           "All TV`s"                                             (All)
-Group Music               "All Music PLayer"                                     (All)
 
 
 
