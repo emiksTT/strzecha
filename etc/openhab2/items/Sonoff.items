@@ -1,9 +1,9 @@
 // broker : MQTTBroker
 
 // Sonoff RF Bridge  192.168.10.200
-String  SonoffBridge_RfReceive                  "Sonoff RF Bridge"                                      <qualityofservice> (Sonoff)              	{mqtt="<[MQTTBroker:tele/SonoffBridge/RESULT:state:JSONPATH($.RfReceived.Data)"}
-Number  SonoffBridge_RSSI                       "Sonoff RF Bridge RSSI [%d %%]"                              <wifi>    (RSSI_Group)                 {mqtt="<[MQTTBroker:tele/SonoffBridge/STATE:state:JSONPATH($.Wifi.RSSI)]"}
-
+String  SonoffBridge_RfReceive                  "Sonoff RF Bridge"                               <qualityofservice> (Sonoff)                    	{mqtt="<[MQTTBroker:tele/SonoffBridge/RESULT:state:JSONPATH($.RfReceived.Data)"}
+Number  SonoffBridge_RSSI                       "Sonoff RF Bridge RSSI [%d %%]"                       <wifi>    (RSSI_Group)                        {mqtt="<[MQTTBroker:tele/SonoffBridge/STATE:state:JSONPATH($.Wifi.RSSI)]"}
+   
 // Sonoff Basic Korytarz_Pasek_LED 192.168.10.201
 Switch Korytarz_Pasek_LED_Power                 "Korytarz Pasek LED"               <light> (Sonoff,Korytarz,EveningLighting)   [ "Switchable" ]   {mqtt=">[MQTTBroker:cmnd/Korytarz_Pasek_LED/POWER:command:*:default], <[MQTTBroker:Korytarz_Pasek_LED/stat/POWER:state:default]"}
 Number Korytarz_Pasek_LED_RSSI                  "Korytarz Pasek LED RSSI [%d %%]"                     <wifi>    (RSSI_Group)                      {mqtt="<[MQTTBroker:tele/Korytarz_Pasek_LED/STATE:state:JSONPATH($.Wifi.RSSI)]"}
@@ -87,6 +87,6 @@ Number   Sonoff_TH16_Korytarz_RSSI                                  "WiFi Signal
 
 // Sonoff Touch T1 2CH cmnd/Salon_SonoffTouch 192.168.10.235 Tasmota 6.5.0  2_4_2/2.2.1(cfd48f3)
 // When Press _S2 then (Salon_Lampa_LED_Power + Salon_Lampka_LED_Power) ON/OFF
-Switch Salon_SonoffTouch_S1                                         "Salon górne oświetlenie"           <light>         (Sonoff,Salon)                           [ "Switchable" ]   {mqtt=">[MQTTBroker:cmnd/Salon_SonoffTouch/POWER1:command:*:default], <[MQTTBroker:stat/Salon_SonoffTouch/POWER1:state:default]"}
-Switch Salon_SonoffTouch_S2                                         "Salon oświetlenie dodatkowe"       <light>         (Sonoff,Salon)                           [ "Switchable" ]   {mqtt=">[MQTTBroker:cmnd/Salon_SonoffTouch/POWER2:command:*:default], <[MQTTBroker:stat/Salon_SonoffTouch/POWER2:state:default]"}
+Switch Salon_SonoffTouch_S1                                         "Salon górne oświetlenie"           <light>         (Light,Sonoff,Salon)                     [ "Switchable" ]   {mqtt=">[MQTTBroker:cmnd/Salon_SonoffTouch/POWER1:command:*:default], <[MQTTBroker:stat/Salon_SonoffTouch/POWER1:state:default]"}
+Switch Salon_SonoffTouch_S2                                         "Salon oświetlenie dodatkowe"       <light>         (Light,Sonoff,Salon)                     [ "Switchable" ]   {mqtt=">[MQTTBroker:cmnd/Salon_SonoffTouch/POWER2:command:*:default], <[MQTTBroker:stat/Salon_SonoffTouch/POWER2:state:default]"}
 Number Salon_SonoffTouch_RSSI                                       "Salon_SonoffTouch_RSSI [%d %%]"    <wifi>          (RSSI_Group)                                                {mqtt="<[MQTTBroker:tele/Salon_SonoffTouch/STATE:state:JSONPATH($.Wifi.RSSI)]"}            
