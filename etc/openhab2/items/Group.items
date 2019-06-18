@@ -12,6 +12,8 @@ Group Lazienka            "Łazienka"                                           
 Group Sypialnia           "Sypialnia"                                            <bedroom>            (Strzecha)
 Group Hol                 "Hol"                                                  <corridor>           (Strzecha)
 Group Balkon              "Balkon"                                               <terrace>            (Strzecha)
+Group Spizarnia           "Spiżarnia"                                            <none>               (Strzecha)
+Group Garderoba           "Garderoba"                                            <none>               (Strzecha)
 
 Group Zewnatrz            "Na zewnątrz"                                          <none>               (Strzecha)
 Group Piwnica             "Piwnica"                                              <cellar>             (Zewnatrz)
