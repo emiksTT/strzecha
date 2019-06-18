@@ -1,8 +1,8 @@
 
 
 // Water Sensors
-Switch WaterSensor_1                     "Czujnik wody pod zlewem"                <water>            (WaterSensor)  
-Switch WaterSensor_2                     "Czujnik wody pod pralką"                <water>            (WaterSensor)  
+Switch WaterSensor_1                     "Czujnik wody pod zlewem"                <water>            (WaterSensor)  //Kitchen     EBC012
+Switch WaterSensor_2                     "Czujnik wody pod pralką"                <water>            (WaterSensor)  //Bathroom    01C212
 Switch WaterSensor_3                     "Czujnik wody w toalecie"                <water>            (WaterSensor)  
 Switch WaterSensor_4                     "Czujnik wody pod zlewem i zmywarką"     <water>            (WaterSensor)  
 
