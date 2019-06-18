@@ -15,14 +15,14 @@ Switch FireSensor_1                      "Czujnik dymu korytarz"                
 Contact Pir_1                            "Czujnik ruchu korytarz"                 <motion>           (PIRSensor) 
 
 // Magnetic Sensor 
-Contact Kontaktron_1                     "Drzwi Wejściowe"                      <frontdoor>      (MagneticSensor) 
-Contact Kontaktron_2                     "Drzwi Kuchnia"                        <door>           (MagneticSensor)
-Contact Kontaktron_3                     "Drzwi Salon"                          <door>           (MagneticSensor)
-Contact Kontaktron_4                     "Drzwi Toaleta"                        <door>           (MagneticSensor)
-Contact Kontaktron_5                     "Drzwi Biuro"                          <door>           (MagneticSensor)
-Contact Kontaktron_6                     "Drzwi Sypialnia"                      <door>           (MagneticSensor)
-Contact Kontaktron_7                     "Drzwi Łazienka"                       <door>           (MagneticSensor)
-Contact Kontaktron_8                     "Drzwi Spiżarnia"                      <door>           (MagneticSensor)
+Contact Kontaktron_1                     "Drzwi Wejściowe"                      <frontdoor>      (MagneticSensor,Strzecha) 
+Contact Kontaktron_2                     "Drzwi Kuchnia"                        <door>           (MagneticSensor,Kuchnia)
+Contact Kontaktron_3                     "Drzwi Salon"                          <door>           (MagneticSensor,Salon)
+Contact Kontaktron_4                     "Drzwi Toaleta"                        <door>           (MagneticSensor,Toaleta)
+Contact Kontaktron_5                     "Drzwi Biuro"                          <door>           (MagneticSensor,Biuro)
+Contact Kontaktron_6                     "Drzwi Sypialnia"                      <door>           (MagneticSensor,Sypialnia)
+Contact Kontaktron_7                     "Drzwi Łazienka"                       <door>           (MagneticSensor,Lazienka)
+Contact Kontaktron_8                     "Drzwi Spiżarnia"                      <door>           (MagneticSensor,)
 Contact Kontaktron_9                     "Drzwi Garderoba"                      <door>           (MagneticSensor)
 Contact Kontaktron_10                    "Drzwi Piwnica"                        <door>           (MagneticSensor)
 
@@ -33,6 +33,5 @@ Contact Kontaktron_10                    "Okno Sypialnia duże"                 
 Contact Kontaktron_10                    "Okno Łazienka"                        <window>         (MagneticSensor)
 Contact Kontaktron_10                    "Okno Biuro"                           <window>         (MagneticSensor)
 
-Contact Kontaktron_21                    "Lodówka otwarta"                      <whitegood>           (MagneticSensor) 
-Contact Kontaktron_22                    "Zamrażarka otwarta"                   <whitegood>           (MagneticSensor) 
-
+Contact Kontaktron_21                    "Lodówka otwarta"                      <whitegood>      (MagneticSensor) 
+Contact Kontaktron_22                    "Zamrażarka otwarta"                   <whitegood>      (MagneticSensor) 
