@@ -1,10 +1,10 @@
 
 
 // Water Sensors
-Switch WaterSensorBad_1                  "Czujnik wody pod zlewem"                <water>            (WaterSensor)  
-Switch WaterSensorBad_2                  "Czujnik wody pod pralką"                <water>            (WaterSensor)  
-Switch WaterSensorToilet_1               "Czujnik wody w toalecie"                <water>            (WaterSensor)  
-Switch WaterSensorKitchen_1              "Czujnik wody pod zlewem i zmywarką"     <water>            (WaterSensor)  
+Switch WaterSensor_1                     "Czujnik wody pod zlewem"                <water>            (WaterSensor)  
+Switch WaterSensor_2                     "Czujnik wody pod pralką"                <water>            (WaterSensor)  
+Switch WaterSensor_3                     "Czujnik wody w toalecie"                <water>            (WaterSensor)  
+Switch WaterSensor_4                     "Czujnik wody pod zlewem i zmywarką"     <water>            (WaterSensor)  
 
 // Fire detection
 
@@ -14,11 +14,20 @@ Switch FireAlarm_1                       "Czujnik dymu korytarz"                
 Contact Pir_1                            "Czujnik ruchu korytarz"                 <motion>           (PIRSensor) 
 
 // Magnetic Sensor 
-Contact Kontaktron_1_1                     "Drzwi wejściowe otwarte"              <frontdoor>           (MagneticSensor) 
-Contact Kontaktron_1_0                     "Drzwi wejściowe zamknięte"            <frontdoor>           (MagneticSensor)
+Contact Kontaktron_1                     "Drzwi wejściowe otwarte"              <frontdoor>           (MagneticSensor) 
+Contact Kontaktron_2                     "Drzwi wejściowe otwarte"              <frontdoor>           (MagneticSensor)
+Contact Kontaktron_3                     "Drzwi wejściowe otwarte"              <frontdoor>           (MagneticSensor)
+Contact Kontaktron_4                     "Drzwi wejściowe otwarte"              <frontdoor>           (MagneticSensor)
+Contact Kontaktron_5                     "Drzwi wejściowe otwarte"              <frontdoor>           (MagneticSensor)
+Contact Kontaktron_6                     "Drzwi wejściowe otwarte"              <frontdoor>           (MagneticSensor)
+Contact Kontaktron_7                     "Drzwi wejściowe otwarte"              <frontdoor>           (MagneticSensor)
+Contact Kontaktron_8                     "Drzwi wejściowe otwarte"              <frontdoor>           (MagneticSensor)
+Contact Kontaktron_9                     "Drzwi wejściowe otwarte"              <frontdoor>           (MagneticSensor)
+Contact Kontaktron_10                    "Drzwi wejściowe otwarte"              <frontdoor>           (MagneticSensor)
 
-Contact Kontaktron_2_1                     "Lodówka otwarta"                      <whitegood>           (MagneticSensor) 
-Contact Kontaktron_2_0                     "Lodówka zamknięta"                    <whitegood>           (MagneticSensor)
 
-Contact Kontaktron_3_1                     "Zamrażarka otwarta"                   <whitegood>           (MagneticSensor) 
-Contact Kontaktron_3_0                     "Zamrażarka zamknięta"                 <whitegood>           (MagneticSensor)
+Contact Kontaktron_11                    "Lodówka otwarta"                      <whitegood>           (MagneticSensor) 
+
+
+Contact Kontaktron_12                    "Zamrażarka otwarta"                   <whitegood>           (MagneticSensor) 
+
