@@ -8,11 +8,11 @@ Switch WaterSensor_4                     "Czujnik wody pod zlewem i zmywarką"  
 
 // Fire detection
 
-Switch FireSensor_1                      "Czujnik dymu korytarz"                  <fire>             (FireSensor) 
+Switch FireSensor_1                      "Czujnik dymu korytarz"                  <fire>             (FireSensor)   // Smoke Detector Koryatrz : EDF91E
 
 // Motion Detection
 
-Contact Pir_1                            "Czujnik ruchu korytarz"                 <motion>           (PIRSensor) 
+Contact Pir_1                            "Czujnik ruchu korytarz"                 <motion>           (PIRSensor)    // Koryatrz : EDF91E
 
 // Magnetic Sensor 
 Contact Kontaktron_1                     "Drzwi Wejściowe"                      <frontdoor>      (MagneticSensor,Strzecha) 
