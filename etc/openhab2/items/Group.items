@@ -19,8 +19,8 @@ Group Zewnatrz            "Na zewnątrz"                                        
 Group Piwnica             "Piwnica"                                              <cellar>             (Zewnatrz)
 Group Garaz               "Garaż"                                                <garage>             (Zewnatrz)
 
-Group Serwerownia         "Serwerownia"                                          <none>               (Strzecha)
-Group RSSI_Group          "Wifi range"                                           <wifi>               (Serwerownia)
+Group Serwerownia         "Serwerownia"                                          <energy>             (Strzecha)
+Group RSSI_Group          "Wifi range"                                           <network>            (Serwerownia)
 Group Astro               "Astro"                                                <sun>                (Serwerownia)
 Group Server              "Serwery"                                              <network>            (Serwerownia)
 
