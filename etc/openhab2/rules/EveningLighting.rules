@@ -12,7 +12,7 @@ then
     }
     end
 
-rule "Steckdose Licht aus"
+rule "Wyłącz oświetlenie wieczorne"
  
 when
   
