@@ -5,9 +5,9 @@ when
     Channel 'astro:sun:local:set#event' triggered START
 then    
     {
-       Korytarz_Pasek_LED_POWER.sendCommand(ON)      // Sonoff Basic
-       Kuchnia_Pasek_LED_POWER.sendCommand(ON)       // Sonoff Basic
-       SypialniaPasekLED_POWER.sendCommand(ON)       // Sonoff Basic
+       Korytarz_Pasek_LED_Power.sendCommand(ON)      // Sonoff Basic
+       Kuchnia_Pasek_LED_Power.sendCommand(ON)       // Sonoff Basic
+       Sypialnia_Pasek_LED_Power.sendCommand(ON)       // Sonoff Basic
        Salon_Barek_LED_Power.sendCommand(ON)         // Sonoff Basic
     }
     end
@@ -19,9 +19,9 @@ when
 	Time cron "0 00 23 * * ?"
 
   then
-       Korytarz_Pasek_LED_POWER.sendCommand(OFF)      // Sonoff Basic
-       Kuchnia_Pasek_LED_POWER.sendCommand(OFF)       // Sonoff Basic
-       SypialniaPasekLED_POWER.sendCommand(OFF)       // Sonoff Basic
+       Korytarz_Pasek_LED_Power.sendCommand(OFF)      // Sonoff Basic
+       Kuchnia_Pasek_LED_Power.sendCommand(OFF)       // Sonoff Basic
+       Sypialnia_Pasek_LED_Power.sendCommand(OFF)       // Sonoff Basic
        Salon_Barek_LED_Power.sendCommand(OFF)         // Sonoff Basic
  // pushover("Licht aus!")
 end
