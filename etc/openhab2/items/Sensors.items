@@ -26,12 +26,12 @@ Contact Kontaktron_8                     "Drzwi Spiżarnia"                     
 Contact Kontaktron_9                     "Drzwi Garderoba"                      <door>           (MagneticSensor)
 Contact Kontaktron_10                    "Drzwi Piwnica"                        <door>           (MagneticSensor)
 
-Contact Kontaktron_10                    "Okno Kuchnia"                         <window>         (MagneticSensor)
-Contact Kontaktron_10                    "Okno Salon"                           <window>         (MagneticSensor)
-Contact Kontaktron_10                    "Okno Sypialnia małe"                  <window>         (MagneticSensor)
-Contact Kontaktron_10                    "Okno Sypialnia duże"                  <window>         (MagneticSensor)
-Contact Kontaktron_10                    "Okno Łazienka"                        <window>         (MagneticSensor)
-Contact Kontaktron_10                    "Okno Biuro"                           <window>         (MagneticSensor)
+Contact Kontaktron_11                    "Okno Kuchnia"                         <window>         (MagneticSensor)
+Contact Kontaktron_12                    "Okno Salon"                           <window>         (MagneticSensor)
+Contact Kontaktron_13                    "Okno Sypialnia małe"                  <window>         (MagneticSensor)
+Contact Kontaktron_14                    "Okno Sypialnia duże"                  <window>         (MagneticSensor)
+Contact Kontaktron_15                    "Okno Łazienka"                        <window>         (MagneticSensor)
+Contact Kontaktron_16                    "Okno Biuro"                           <window>         (MagneticSensor)
 
 Contact Kontaktron_21                    "Lodówka otwarta"                      <whitegood>      (MagneticSensor) 
 Contact Kontaktron_22                    "Zamrażarka otwarta"                   <whitegood>      (MagneticSensor) 
