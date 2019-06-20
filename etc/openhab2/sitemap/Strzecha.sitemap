@@ -1,0 +1,83 @@
+sitemap strzecha label="Strzecha" {
+
+
+    Frame {
+        Text label="Oświetlenie" icon="light" {
+            Default item=Sypialnia_Pasek_LED_Power label="Sypialnia LED"
+            Default item=Korytarz_Pasek_LED_Power label="Korytarz LED"
+            Default item=Kuchnia_Pasek_LED_Power label="Kuchnia LED"
+            Default item=Salon_SonoffTouch_S1 label="Światło góra"
+            Default item=Salon_Lampa_LED_Power label="Salon Lampa"
+            Default item=Salon_Lampka_LED_Power label="Salon Lampka"
+            Default item=Salon_Barek_LED_Power label="Salon Barek"
+        }
+    }
+
+    Frame {
+        Text label="Alarm" icon="alarm" {
+            Default item=WaterSensor_1                     label="Czujnik wody pod zlewem"
+            Default item=WaterSensor_2                     label="Czujnik wody pod pralką"
+            Default item=WaterSensor_3                     label="Czujnik wody w toalecie"
+            Default item=WaterSensor_4                     label="Czujnik wody pod zlewem i zmywarką"
+
+            Default item=FireSensor_1                      label="Czujnik dymu korytarz"
+
+            Default item=Pir_1                             label="Czujnik ruchu korytarz"
+
+            Default item=Kontaktron_1                      label="Drzwi Wejściowe"  
+            Default item=Kontaktron_2                      label="Drzwi Kuchnia"  
+            Default item=Kontaktron_3                      label="Drzwi Salon"
+            Default item=Kontaktron_4                      label="Drzwi Toaleta"
+            Default item=Kontaktron_5                      label="Drzwi Biuro"
+            Default item=Kontaktron_6                      label="Drzwi Sypialnia"
+            Default item=Kontaktron_7                      label="Drzwi Łazienka" 
+            Default item=Kontaktron_8                      label="Drzwi Spiżarnia"
+            Default item=Kontaktron_9                      label="Drzwi Garderoba"
+            Default item=Kontaktron_10                     label="Drzwi Piwnica"  
+
+            Default item=Kontaktron_11                     label="Okno Kuchnia"  
+            Default item=Kontaktron_12                     label="Okno Salon" 
+            Default item=Kontaktron_13                     label="Okno Sypialnia małe"
+            Default item=Kontaktron_14                     label="Okno Sypialnia duże" 
+            Default item=Kontaktron_15                     label="Okno Łazienka"
+            Default item=Kontaktron_16                     label="Okno Biuro" 
+
+
+            Default item=Kontaktron_21                     label="Lodówka otwarta"
+            Default item=Kontaktron_22                     label="Zamrażarka otwarta"  
+                                 
+        }
+    }
+
+    Frame {
+        Text label="Temperatura i wilgotność" icon="temperature" {
+            Default item=Sonoff_TH16_Korytarz_Temp         label="Temperatura korytarz"
+            Default item=Sonoff_TH16_Korytarz_Humidity     label="Wilgotność korytarz"
+        }
+    }
+     Frame {
+        Text label="Monitoring" icon="camera" {
+        Video url="http://demo.openhab.org/Hue.m4v"        label="Salon"
+        }
+    }
+    Frame {
+        Group item=Salon
+        Group item=Korytarz
+        Group item=Kuchnia
+        Group item=Lazienka
+        Group item=Sypialnia
+        Group item=Garderoba    
+        Group item=Biuro
+        Group item=Spizarnia
+        Group item=Toaleta
+        Group item=Balkon
+        Group item=Serwerownia
+    }
+
+
+        
+Frame {
+        Group item=Strzecha
+    }
+
+}
