@@ -1,0 +1,39 @@
+
+
+
+rule "All Lights OFF"                        
+when 
+    Item WszystkieSwiatla.state == OFF
+then 
+
+    {
+        if (Korytarz_Pasek_LED_Power.state == OFF || Korytarz_Pasek_LED_Power.state == NULL) { Korytarz_Pasek_LED_Power.sendCommand(OFF) }
+        else { Korytarz_Pasek_LED_Power.sendCommand(OFF) }
+    }
+    {
+        if (Kuchnia_Pasek_LED_Power.state == OFF || Kuchnia_Pasek_LED_Power.state == NULL) { Kuchnia_Pasek_LED_Power.sendCommand(OFF) }
+        else { Kuchnia_Pasek_LED_Power.sendCommand(OFF) }
+    }
+   
+       {
+        if (Sypialnia_Pasek_LED_Power.state == OFF || Sypialnia_Pasek_LED_Power.state == NULL) { Sypialnia_Pasek_LED_Power.sendCommand(OFF) }
+        else { Sypialnia_Pasek_LED_Power.sendCommand(OFF) }
+    }
+   
+   
+       {
+        if (Salon_Barek_LED_Power.state == OFF || Salon_Barek_LED_Power.state == NULL) { Salon_Barek_LED_Power.sendCommand(OFF) }
+        else { Salon_Barek_LED_Power.sendCommand(OFF) }
+    }
+   
+       {
+        if (Salon_Lampka_LED_Power.state == OFF || Salon_Lampka_LED_Power.state == NULL) { Salon_Lampka_LED_Power.sendCommand(OFF) }
+        else { Salon_Lampka_LED_Power.sendCommand(OFF) }
+    }
+   
+       {
+        if (Salon_Lampa_LED_Power.state == OFF || Salon_Lampa_LED_Power.state == NULL) { Salon_Lampa_LED_Power.sendCommand(OFF) }
+        else { Salon_Lampa_LED_Power.sendCommand(OFF) }
+    }
+   
+    end
