@@ -1,10 +1,11 @@
 
-
 rule "RF Bridge sensor triggered"
 when
-    Item SonoffBridge_RfReceive received update
+   Item SonoffBridge_RfReceive received update
+    
 then
-   
+    Thread::sleep(50) 
+    
 ///////////////////////////////////    PILOT 433 MHz 6CH Salon    ///////////////////////////////////////////////////////////////////////// 
 
     if(SonoffBridge_RfReceive.state == 'FDDA0F')
@@ -61,6 +62,8 @@ then
         if (Sypialnia_Pasek_LED_Power.state == ON || Sypialnia_Pasek_LED_Power.state == NULL) { Sypialnia_Pasek_LED_Power.sendCommand(OFF) }
         else { Sypialnia_Pasek_LED_Power.sendCommand(ON) }
     }
+
+
 
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
