@@ -1,6 +1,47 @@
 
 
 
+rule "All Lights ON"                        
+when 
+    Item WszystkieSwiatla.state == ON
+then 
+
+    {
+        if (Korytarz_Pasek_LED_Power.state == ON || Korytarz_Pasek_LED_Power.state == NULL) { Korytarz_Pasek_LED_Power.sendCommand(ON) }
+        else { Korytarz_Pasek_LED_Power.sendCommand(ON) }
+    }
+    {
+        if (Kuchnia_Pasek_LED_Power.state == ON || Kuchnia_Pasek_LED_Power.state == NULL) { Kuchnia_Pasek_LED_Power.sendCommand(ON) }
+        else { Kuchnia_Pasek_LED_Power.sendCommand(ON) }
+    }
+   
+       {
+        if (Sypialnia_Pasek_LED_Power.state == ON || Sypialnia_Pasek_LED_Power.state == NULL) { Sypialnia_Pasek_LED_Power.sendCommand(ON) }
+        else { Sypialnia_Pasek_LED_Power.sendCommand(ON) }
+    }
+   
+   
+       {
+        if (Salon_Barek_LED_Power.state == ON || Salon_Barek_LED_Power.state == NULL) { Salon_Barek_LED_Power.sendCommand(ON) }
+        else { Salon_Barek_LED_Power.sendCommand(ON) }
+    }
+   
+       {
+        if (Salon_Lampka_LED_Power.state == ON || Salon_Lampka_LED_Power.state == NULL) { Salon_Lampka_LED_Power.sendCommand(ON) }
+        else { Salon_Lampka_LED_Power.sendCommand(ON) }
+    }
+   
+       {
+        if (Salon_Lampa_LED_Power.state == ON || Salon_Lampa_LED_Power.state == NULL) { Salon_Lampa_LED_Power.sendCommand(ON) }
+        else { Salon_Lampa_LED_Power.sendCommand(ON) }
+    }
+   
+    end
+
+
+
+
+
 rule "All Lights OFF"                        
 when 
     Item WszystkieSwiatla.state == OFF
