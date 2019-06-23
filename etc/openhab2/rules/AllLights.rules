@@ -1,39 +1,99 @@
 
+rule "All lights on, or off"
+ 
+when 
+    Item AllLights received update
+then 
+    if (receivedCommand == ON) {
+        // Salon_SonoffTouch_S1.sendCommand(ON)
+        Korytarz_Pasek_LED_Power.sendCommand(ON)
+        Kuchnia_Pasek_LED_Power.sendCommand(ON)
+        Salon_Lampa_LED_Power.sendCommand(ON)
+        Salon_Lampka_LED_Power.sendCommand(ON)
+        Sypialnia_Pasek_LED_Power.sendCommand(ON)
+        Salon_Barek_LED_Power.sendCommand(ON)
+    } 
+    else {
+        // Salon_SonoffTouch_S1.sendCommand(OFF)
+        Korytarz_Pasek_LED_Power.sendCommand(OFF)
+        Kuchnia_Pasek_LED_Power.sendCommand(OFF)
+        Salon_Lampa_LED_Power.sendCommand(OFF)
+        Salon_Lampka_LED_Power.sendCommand(OFF)
+        Sypialnia_Pasek_LED_Power.sendCommand(OFF)
+        Salon_Barek_LED_Power.sendCommand(OFF)
+    } 
+end
 
 
+
+
+
+
+
+/*
+rule "Wszystkie światła"
+when
+   Item AllLights received update // changed // 
+    
+then
+    Thread::sleep(50) // Need the sleep to allow for the state to change
+    
+    
+///////////////////////////////////    PILOT 433 MHz 6CH Salon    ///////////////////////////////////////////////////////////////////////// 
+
+    
+    {
+        if (Salon_SonoffTouch_S1.state == ON || Salon_SonoffTouch_S1.state == NULL) { Salon_SonoffTouch_S1.sendCommand(OFF) }
+        else { Salon_SonoffTouch_S1.sendCommand(ON) }
+    }
+
+    {
+        if (Salon_Lampka_LED_Power.state == ON || Salon_Lampka_LED_Power.state == NULL) { Salon_Lampka_LED_Power.sendCommand(OFF) }
+        else { Salon_Lampka_LED_Power.sendCommand(ON) }
+    }
+
+    {
+        if (Salon_Lampa_LED_Power.state == ON || Salon_Lampa_LED_Power.state == NULL) { Salon_Lampa_LED_Power.sendCommand(OFF) }
+        else { Salon_Lampa_LED_Power.sendCommand(ON) }
+    }
+
+    {
+        if (Salon_Barek_LED_Power.state == ON || Salon_Barek_LED_Power.state == NULL) { Salon_Barek_LED_Power.sendCommand(OFF) }
+        else { Salon_Barek_LED_Power.sendCommand(ON) }
+    }
+
+    {
+        if (Korytarz_Pasek_LED_Power.state == ON || Korytarz_Pasek_LED_Power.state == NULL) { Korytarz_Pasek_LED_Power.sendCommand(OFF) }
+        else { Korytarz_Pasek_LED_Power.sendCommand(ON) }
+    }
+
+    {
+        if (Kuchnia_Pasek_LED_Power.state == ON || Kuchnia_Pasek_LED_Power.state == NULL) { Kuchnia_Pasek_LED_Power.sendCommand(OFF) }
+        else { Kuchnia_Pasek_LED_Power.sendCommand(ON) }
+    }
+    {
+        if (Sypialnia_Pasek_LED_Power.state == ON || Sypialnia_Pasek_LED_Power.state == NULL) { Sypialnia_Pasek_LED_Power.sendCommand(OFF) }
+        else { Sypialnia_Pasek_LED_Power.sendCommand(ON) }
+    }
+    end
+
+
+/*
 rule "All Lights ON"                        
 when 
     Item WszystkieSwiatla.state == ON
 then 
 
     {
-        if (Korytarz_Pasek_LED_Power.state == ON || Korytarz_Pasek_LED_Power.state == NULL) { Korytarz_Pasek_LED_Power.sendCommand(ON) }
-        else { Korytarz_Pasek_LED_Power.sendCommand(ON) }
-    }
-    {
-        if (Kuchnia_Pasek_LED_Power.state == ON || Kuchnia_Pasek_LED_Power.state == NULL) { Kuchnia_Pasek_LED_Power.sendCommand(ON) }
-        else { Kuchnia_Pasek_LED_Power.sendCommand(ON) }
-    }
-   
-       {
-        if (Sypialnia_Pasek_LED_Power.state == ON || Sypialnia_Pasek_LED_Power.state == NULL) { Sypialnia_Pasek_LED_Power.sendCommand(ON) }
-        else { Sypialnia_Pasek_LED_Power.sendCommand(ON) }
-    }
-   
-   
-       {
-        if (Salon_Barek_LED_Power.state == ON || Salon_Barek_LED_Power.state == NULL) { Salon_Barek_LED_Power.sendCommand(ON) }
-        else { Salon_Barek_LED_Power.sendCommand(ON) }
-    }
-   
-       {
-        if (Salon_Lampka_LED_Power.state == ON || Salon_Lampka_LED_Power.state == NULL) { Salon_Lampka_LED_Power.sendCommand(ON) }
-        else { Salon_Lampka_LED_Power.sendCommand(ON) }
-    }
-   
-       {
-        if (Salon_Lampa_LED_Power.state == ON || Salon_Lampa_LED_Power.state == NULL) { Salon_Lampa_LED_Power.sendCommand(ON) }
-        else { Salon_Lampa_LED_Power.sendCommand(ON) }
+       Korytarz_Pasek_LED_Power.sendCommand(ON)      // Sonoff Basic
+       Kuchnia_Pasek_LED_Power.sendCommand(ON)       // Sonoff Basic
+       Sypialnia_Pasek_LED_Power.sendCommand(ON)       // Sonoff Basic
+       Salon_Barek_LED_Power.sendCommand(ON)         // Sonoff Basic
+       Salon_Lampka_LED_Power.sendCommand(ON)      // Sonoff Basic
+       Salon_Lampa_LED_Power.sendCommand(ON)       // Sonoff Basic
+       Sypialnia_Pasek_LED_Power.sendCommand(ON)       // Sonoff Basic
+       Salon_Barek_LED_Power.sendCommand(ON)         // Sonoff Basic
+       Salon_SonoffTouch_S1.sendCommand(ON)         // Sonoff Basic
     }
    
     end
@@ -46,35 +106,18 @@ rule "All Lights OFF"
 when 
     Item WszystkieSwiatla.state == OFF
 then 
+    {
+       Korytarz_Pasek_LED_Power.sendCommand(OFF)      // Sonoff Basic
+       Kuchnia_Pasek_LED_Power.sendCommand(OFF)       // Sonoff Basic
+       Sypialnia_Pasek_LED_Power.sendCommand(OFF)       // Sonoff Basic
+       Salon_Barek_LED_Power.sendCommand(OFF)         // Sonoff Basic
+       Salon_Lampka_LED_Power.sendCommand(OFF)      // Sonoff Basic
+       Salon_Lampa_LED_Power.sendCommand(OFF)       // Sonoff Basic
+       Sypialnia_Pasek_LED_Power.sendCommand(OFF)       // Sonoff Basic
+       Salon_Barek_LED_Power.sendCommand(OFF)         // Sonoff Basic
+       Salon_SonoffTouch_S1.sendCommand(OFF)         // Sonoff Basic
+    }
 
-    {
-        if (Korytarz_Pasek_LED_Power.state == OFF || Korytarz_Pasek_LED_Power.state == NULL) { Korytarz_Pasek_LED_Power.sendCommand(OFF) }
-        else { Korytarz_Pasek_LED_Power.sendCommand(OFF) }
-    }
-    {
-        if (Kuchnia_Pasek_LED_Power.state == OFF || Kuchnia_Pasek_LED_Power.state == NULL) { Kuchnia_Pasek_LED_Power.sendCommand(OFF) }
-        else { Kuchnia_Pasek_LED_Power.sendCommand(OFF) }
-    }
-   
-       {
-        if (Sypialnia_Pasek_LED_Power.state == OFF || Sypialnia_Pasek_LED_Power.state == NULL) { Sypialnia_Pasek_LED_Power.sendCommand(OFF) }
-        else { Sypialnia_Pasek_LED_Power.sendCommand(OFF) }
-    }
-   
-   
-       {
-        if (Salon_Barek_LED_Power.state == OFF || Salon_Barek_LED_Power.state == NULL) { Salon_Barek_LED_Power.sendCommand(OFF) }
-        else { Salon_Barek_LED_Power.sendCommand(OFF) }
-    }
-   
-       {
-        if (Salon_Lampka_LED_Power.state == OFF || Salon_Lampka_LED_Power.state == NULL) { Salon_Lampka_LED_Power.sendCommand(OFF) }
-        else { Salon_Lampka_LED_Power.sendCommand(OFF) }
-    }
-   
-       {
-        if (Salon_Lampa_LED_Power.state == OFF || Salon_Lampa_LED_Power.state == NULL) { Salon_Lampa_LED_Power.sendCommand(OFF) }
-        else { Salon_Lampa_LED_Power.sendCommand(OFF) }
-    }
+
    
     end
