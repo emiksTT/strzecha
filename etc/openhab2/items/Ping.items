@@ -7,26 +7,3 @@ Switch     EmiksGalaxyS5MiniWhiteOnline                "Online"                 
 Number     EmiksGalaxyS5MiniWhiteLatency               "Latency (ms)"           <screen>           (Strzecha)                    {channel="network:pingdevice:GalaxyS5MiniWhite:latency"}
 DateTime   EmiksGalaxyS5MiniWhiteLastseen              "Last seen"              <screen>           (Strzecha)                    {channel="network:pingdevice:GalaxyS5MiniWhite:lastseen"}
 
-Switch     ModemOnline                                 "Online"                 <network>          (Serwerownia,Server)          {channel="network:servicedevice:Modem:online"}
-Number     ModemLatency                                "Latency (ms)"           <network>          (Serwerownia,Server)          {channel="network:servicedevice:Modem:latency"}
-DateTime   ModemLastseen                               "Last seen"              <network>          (Serwerownia,Server)          {channel="network:servicedevice:Modem:lastseen"}
-
-Switch     PfSenseFirewallOnline                       "Online"                 <network>          (Serwerownia,Server)          {channel="network:servicedevice:Router:online"}
-Number     PfSenseFirewallLatency                      "Latency (ms)"           <network>          (Serwerownia,Server)          {channel="network:servicedevice:Router:latency"}
-DateTime   PfSenseFirewallLastseen                     "Last seen"              <network>          (Serwerownia,Server)          {channel="network:servicedevice:Router:lastseen"}
-
-Switch     SkyNetVPNPLOnline                           "Online"                 <network>          (Serwerownia,Server)          {channel="network:servicedevice:SkyNet_VPN_PL:online"}
-Number     SkyNetVPNPLLatency                          "Latency (ms)"           <network>          (Serwerownia,Server)          {channel="network:servicedevice:SkyNet_VPN_PL:latency"}
-DateTime   SkyNetVPNPLLastseen                         "Last seen"              <network>          (Serwerownia,Server)          {channel="network:servicedevice:SkyNet_VPN_PL:lastseen"}
-
-Switch     OpenMediaVaultOnline                        "Online"                 <network>          (Serwerownia,Server)          {channel="network:servicedevice:OpenMediaVault:online"}
-Number     OpenMediaVaultLatency                       "Latency (ms)"           <network>          (Serwerownia,Server)          {channel="network:servicedevice:OpenMediaVault:latency"}
-DateTime   OpenMediaVaultLastseen                      "Last seen"              <network>          (Serwerownia,Server)          {channel="network:servicedevice:OpenMediaVault:lastseen"}
-
-Switch     DekoderNCOnline                             "Online"                 <network>          (Serwerownia,Server)          {channel="network:servicedevice:DekoderNC:online"}
-Number     DekoderNCLatency                            "Latency (ms)"           <network>          (Serwerownia,Server)          {channel="network:servicedevice:DekoderNC:latency"}
-DateTime   DekoderNCLastseen                           "Last seen"              <network>          (Serwerownia,Server)          {channel="network:servicedevice:DekoderNC:lastseen"}
-
-Switch     MastahGameServerOnline                      "Online"                 <network>          (Serwerownia,Server)          {channel="network:servicedevice:MastahGameServer:online"}
-Number     MastahGameServerLatency                     "Latency (ms)"           <network>          (Serwerownia,Server)          {channel="network:servicedevice:MastahGameServer:latency"}
-DateTime   MastahGameServerLastseen                    "Last seen"              <network>          (Serwerownia,Server)          {channel="network:servicedevice:MastahGameServer:lastseen"}
