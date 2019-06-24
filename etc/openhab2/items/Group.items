@@ -3,7 +3,7 @@
 Group Strzecha
 
 
-Group Salon               "Salon"                                                <house>              (Strzecha)
+Group Salon               "Salon"                                                <sofa>               (Strzecha)
 Group Korytarz            "Koryatrz"                                             <corridor>           (Strzecha)
 Group Kuchnia             "Kuchnia"                                              <kitchen>            (Strzecha)
 Group Biuro               "Biuro"                                                <office>             (Strzecha)
@@ -20,8 +20,9 @@ Group Piwnica             "Piwnica"                                             
 Group Garaz               "Garaż"                                                <garage>             (Zewnatrz)
 
 Group Serwerownia         "Serwerownia"                                          <energy>             (Strzecha)
+Group Elektryka           "Elektryka"                                            <energy>             (Serwerownia)
 Group RSSI_Group          "Wifi range"                                           <network>            (Serwerownia)
-Group Astro               "Astro"                                                <sun>                (Serwerownia)
+//Group Astro               "Astro"                                                <sun>                (Serwerownia)
 Group Server              "Serwery"                                              <network>            (Serwerownia)
 
 Group Security            "Security"                                             <alarm>              (Strzecha)
@@ -40,9 +41,11 @@ Group Chromecast          "Chromecast"                                          
 
 
 
-Group Light               "Light"                                                <light>              (Strzecha)
+Group Light               "Light [(%d)]"                                         <light>              (Strzecha)
 Group EveningLighting     "Lightning after Sunset"                               <light>              (Light)
-Group Sonoff              "All Sonoff Devices"                                   <light>              (Light)
+
+
+Group Sonoff              "All Sonoff Devices"                                   <light>              (Strzecha)
 
 
 
