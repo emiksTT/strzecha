@@ -16,13 +16,13 @@ Group Spizarnia           "Spiżarnia"                                          
 Group Garderoba           "Garderoba"                                            <wardrobe>           (Strzecha)
 
 Group Zewnatrz            "Na zewnątrz"                                          <none>               (Strzecha)
+Group Astro               "Astro"                                                <moon>               (Zewnatrz)
 Group Piwnica             "Piwnica"                                              <cellar>             (Zewnatrz)
 Group Garaz               "Garaż"                                                <garage>             (Zewnatrz)
 
 Group Serwerownia         "Serwerownia"                                          <energy>             (Strzecha)
 Group Elektryka           "Elektryka"                                            <energy>             (Serwerownia)
 Group RSSI_Group          "Wifi range"                                           <network>            (Serwerownia)
-//Group Astro               "Astro"                                                <sun>                (Serwerownia)
 Group Server              "Serwery"                                              <network>            (Serwerownia)
 
 Group Security            "Security"                                             <alarm>              (Strzecha)
@@ -41,8 +41,12 @@ Group Chromecast          "Chromecast"                                          
 
 
 
-Group Light               "Light [(%d)]"                                         <light>              (Strzecha)
-Group EveningLighting     "Lightning after Sunset"                               <light>              (Light)
+Group Light               "Light [(%d)]"                                        <light>              (Strzecha)
+Group EveningLighting     "Oświetlenie wieczorne"                               <light>              (Light)
+Group SalonLight          "Oświetlenie"                                         <light>              (Light)
+Group SalonExtraLight     "Oświetlenie dodatkowe salonu"                        <light>              (Light)
+Group KuchniaLight        "Oświetlenie Kuchni"                                  <light>              (Light)
+Group SypialniaLight      "Oświetlenie Sypialni"                                <light>              (Light)
 
 
 Group Sonoff              "All Sonoff Devices"                                   <light>              (Strzecha)
