@@ -1,6 +1,6 @@
 // Group groupname ["labeltext"] [<iconname>] [(group1, group2, ...)]
 
-Group Strzecha
+Group Strzecha "Nasza Chatka"   <house>
 
 
 Group Salon               "Salon"                                                <sofa>               (Strzecha)
