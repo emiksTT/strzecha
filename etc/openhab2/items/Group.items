@@ -21,7 +21,8 @@ Group Piwnica             "Piwnica"                                             
 Group Garaz               "Garaż"                                                <garage>             (Zewnatrz)
 
 Group Serwerownia         "Serwerownia"                                          <energy>             (Strzecha)
-Group Elektryka           "Elektryka"                                            <energy>             (Serwerownia)
+Group Elektryka           "Elektryka"                                            <energy>             (Strzecha)
+Group:Number:SUM Wattages "Zużycie prądu [%.1f W]"                               <energy>             (Elektryka)
 Group RSSI_Group          "Wifi range"                                           <network>            (Serwerownia)
 Group Server              "Serwery"                                              <network>            (Serwerownia)
 
