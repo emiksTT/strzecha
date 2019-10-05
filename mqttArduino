@@ -1,0 +1,53 @@
+
+#include <ESP8266WiFi.h> // Enables the ESP8266 to connect to the local network (via WiFi)
+#include <PubSubClient.h> // Allows us to connect to, and publish to the MQTT broker
+const char* ssid = "Umbrella";
+const char* wifi_password = "Umbrella.222.Wifi.Haslo";
+const char* mqtt_server = "192.168.10.12";
+const char* mqtt_topic = "roletaSalon";
+const char* mqtt_username = "openhabian";
+const char* mqtt_password = "jajko22";
+const char* clientID = "roletaSalon";
+
+WiFiClient wifiClient;
+PubSubClient client(mqtt_server, 1883, wifiClient);
+
+
+void setup() {
+
+  Serial.begin(9600);
+  Serial.print("Connecting to ");
+  Serial.println(ssid);
+
+  WiFi.begin(ssid, wifi_password);
+
+  while (WiFi.status() != WL_CONNECTED) {
+    delay(500);
+    Serial.print(".");
+  }
+  
+  Serial.println("WiFi connected");
+  Serial.print("IP address: ");
+  Serial.println(WiFi.localIP());
+
+  if (client.connect(clientID, mqtt_username, mqtt_password)) {
+    Serial.println("Connected to MQTT Broker!");
+  }
+  else {
+    Serial.println("Connection to MQTT Broker failed...");
+  }
+}
+
+void loop() {
+  
+  
+  Serial.println("its work!");
+  delay(2000);
+  client.publish("/roletaSalon/state","1");
+  Serial.println("state = 1");
+  delay(2000);
+  client.publish("/roletaSalon/state","0");
+  Serial.println("state = 0");
+  delay(2000);
+  
+}
