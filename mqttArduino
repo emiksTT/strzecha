@@ -2,11 +2,11 @@
 #include <ESP8266WiFi.h> // Enables the ESP8266 to connect to the local network (via WiFi)
 #include <PubSubClient.h> // Allows us to connect to, and publish to the MQTT broker
 const char* ssid = "Umbrella";
-const char* wifi_password = "Umbrella.222.Wifi.Haslo";
+const char* wifi_password = "XXXXXXXXXX";
 const char* mqtt_server = "192.168.10.12";
 const char* mqtt_topic = "roletaSalon";
 const char* mqtt_username = "openhabian";
-const char* mqtt_password = "jajko22";
+const char* mqtt_password = "XXXXXXX";
 const char* clientID = "roletaSalon";
 
 WiFiClient wifiClient;
