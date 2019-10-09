@@ -1,79 +1,82 @@
 #include <ESP8266WiFi.h>
 #include <PubSubClient.h>
- 
+
 const char* ssid = "Umbrella";
-const char* password =  "xxxxxxxxx";
+const char* password =  "xxx";
 const char* mqttServer = "192.168.10.12";
 const int mqttPort = 1883;
 const char* mqttUser = "openhabian";
-const char* mqttPassword = "xxxxxx";
+const char* mqttPassword = "xxx";
 
-byte mqttIN = 0;
-byte mqttLastIN = 0;
-byte mqttOUT = 0;
-byte Open = 0;
-byte Close = 100;
-int posMotor = 8000;
-int posMotorMIN = 0;
-int posMotorMAX = 20000;
+byte mqttIn = 0;              //Mqtt Subsrcibe Open = 0, Close = 100
+byte mqttLastIn = 0;          //Last command from mqtt
+byte mqttOut = 0;             //Mqtt Publish Open = 0, Close = 100
+
+int posMotor = 8000;          //Actual step  position
+int posMotorMin = 0;          //Motor Step Open = 0, Close = 20000 (0 ==> 20000 = ~1m)
+int posMotorMax = 20000;      //Motor Step Open = 0, Close = 20000 (0 ==> 20000 = ~1m)
+int posMotorNew = 18000;      //New position from mqtt
+int posMotorMove = 2000;      //Motor Stteps to move
 
 WiFiClient espClient;
 PubSubClient client(espClient);
- 
+
 void setup() {
- 
+
   Serial.begin(9600);
- 
+
   WiFi.begin(ssid, password);
- 
+
   while (WiFi.status() != WL_CONNECTED) {
     delay(500);
     Serial.println("Connecting to WiFi..");
   }
   Serial.println("Connected to the WiFi network");
- 
+
   client.setServer(mqttServer, mqttPort);
   client.setCallback(callback);
- 
+
   while (!client.connected()) {
     Serial.println("Connecting to MQTT...");
- 
+
     if (client.connect("ESP8266Client", mqttUser, mqttPassword )) {
- 
-      Serial.println("connected");  
- 
+
+      Serial.println("connected");
+
     } else {
- 
+
       Serial.print("failed with state ");
       Serial.print(client.state());
       delay(2000);
- 
+
     }
   }
- 
-  //client.publish("cmnd/roletaSalon/POWER", "ON");
+
+  //client.publish("cmnd/roletaSalon/POWER", "posMotor");  //Publish new motor position
   client.subscribe("cmnd/roletaSalon/POWER");
- 
+
 }
- 
+
 void callback(char* topic, byte* payload, unsigned int length) {
- 
+
   Serial.print("Message arrived in topic: ");
   Serial.println(topic);
- 
+
   Serial.print("Message:");
   for (int i = 0; i < length; i++) {
     Serial.print((char)payload[i]);
   }
- 
+
   Serial.println();
   Serial.println("-----------------------");
- 
+
 }
- 
+
 void loop() {
   client.loop();
-  delay(3000);
- 
-  
+  posMotorNew = map(mqttIn, 0, 100, 0, 20000);
+  postMotorMove = posMotor - posMotorNew
+  stepper1.moveTo(posMotorMove);
+
+
 }
