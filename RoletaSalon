@@ -1,38 +1,69 @@
 #include <ESP8266WiFi.h>
 #include <PubSubClient.h>
+#include <AccelStepper.h>
+#define HALFSTEP 8  //Half-step Motor mode (8 step control signal sequence)
+
+// Motor pin definitions
+#define mtrPin1  D5     // IN1 on the ULN2003 driver 1
+#define mtrPin2  D6     // IN2 on the ULN2003 driver 1
+#define mtrPin3  D7     // IN3 on the ULN2003 driver 1
+#define mtrPin4  D8     // IN4 on the ULN2003 driver 1
+
+WiFiClient espClient;
+PubSubClient client(espClient);
+AccelStepper stepper1(HALFSTEP, mtrPin1, mtrPin3, mtrPin2, mtrPin4);
 
 const char* ssid = "Umbrella";
 const char* password =  "xxx";
 const char* mqttServer = "192.168.10.12";
-const int mqttPort = 1883;
+const int   mqttPort = 1883;
 const char* mqttUser = "openhabian";
 const char* mqttPassword = "xxx";
 
-byte mqttIn = 0;              //Mqtt Subsrcibe Open = 0, Close = 100
-byte mqttLastIn = 0;          //Last command from mqtt
-byte mqttOut = 0;             //Mqtt Publish Open = 0, Close = 100
+int mqttIn = 999999;              //Mqtt Subsrcibe Open = 0, Close = 100  %
+//int mqttLastIn = 230;          //Last command from mqtt
+//int mqttOut = 0;             //Mqtt Publish Open = 0, Close = 100  &
 
-int posMotor = 8000;          //Actual step  position
+int posMotor = 0;          //Actual step  position
 int posMotorMin = 0;          //Motor Step Open = 0, Close = 20000 (0 ==> 20000 = ~1m)
 int posMotorMax = 20000;      //Motor Step Open = 0, Close = 20000 (0 ==> 20000 = ~1m)
-int posMotorNew = 18000;      //New position from mqtt
-int posMotorMove = 2000;      //Motor Stteps to move
+int posMotorNew = 1800;      //New position from mqtt
+int posMotorMove = 0;      //Motor Stteps to move
+                              // +  result = move to the right/up
+                              // -  result = move to the left/down
 
-WiFiClient espClient;
-PubSubClient client(espClient);
+
+
+////////////////////////////////// Setup Section ////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////////////////////////////////
 
 void setup() {
 
   Serial.begin(9600);
 
+  ////////////////////////// Motor Settings Section //////////////////////////////////
+  
+  stepper1.setMaxSpeed(500.0);
+  stepper1.setAcceleration(70.0);  //Make the acc quick
+  stepper1.setSpeed(500);
+  stepper1.moveTo(posMotorMove);  //Rotate 1 revolution
+  
+  ////////////////////////////////////////////////////////////////////////////////////
+  
+  //mqttIn = mqttLastIn; // (mqttIn = mqttLastIn)Motor stop, wait for new data from mqtt
+
+
+  //////////////////////////  Wifi Settings Section  /////////////////////////////////
   WiFi.begin(ssid, password);
 
   while (WiFi.status() != WL_CONNECTED) {
-    delay(500);
+    delay(1000);
     Serial.println("Connecting to WiFi..");
   }
   Serial.println("Connected to the WiFi network");
+  ////////////////////////////////////////////////////////////////////////////////////
 
+  //////////////////////////  Mqtt Settings Section  /////////////////////////////////
   client.setServer(mqttServer, mqttPort);
   client.setCallback(callback);
 
@@ -51,12 +82,17 @@ void setup() {
 
     }
   }
-
-  //client.publish("cmnd/roletaSalon/POWER", "posMotor");  //Publish new motor position
   client.subscribe("cmnd/roletaSalon/POWER");
-
+  Serial.println(mqttIn);
+  delay(1000);
+  
 }
+  ////////////////////////////////////////////////////////////////////////////////////
+  
+/////////////////////////////////    End Setup Section   ////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////////////////////////////////
 
+  /////////////////////////////// Reading Data from Mqtt Topic ///////////////////////
 void callback(char* topic, byte* payload, unsigned int length) {
 
   Serial.print("Message arrived in topic: ");
@@ -64,19 +100,46 @@ void callback(char* topic, byte* payload, unsigned int length) {
 
   Serial.print("Message:");
   for (int i = 0; i < length; i++) {
-    Serial.print((char)payload[i]);
+    Serial.print((char)payload[i]);            // Serial Print Mqtt Command
   }
-
   Serial.println();
   Serial.println("-----------------------");
-
+  payload[length] = '\0';                      // Make payload a string by NULL terminating it.
+  mqttIn = atoi((char *)payload);              //Data from Mqtt Topic to Global Variable mqttIn
 }
+  ////////////////////////////////////////////////////////////////////////////////////
 
+/////////////////////////////////    Main Loop Section   ////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////////////////////////////////
 void loop() {
+  //delay(1000);
   client.loop();
   posMotorNew = map(mqttIn, 0, 100, 0, 20000);
-  postMotorMove = posMotor - posMotorNew
+  
+  if(mqttIn < 999998){
+  //delay(500);
+  
+  //Serial.print("Mqtt =");
+  //Serial.println(mqttIn);
+  //delay(500);
+  
+  //Serial.print("New Motor Position =");
+  //Serial.println(posMotorNew);
+  //delay(500);
+  posMotorMove = (posMotorNew - posMotor); 
+  //Serial.print("motor move step =");  
+  //Serial.println(posMotorMove);
+  //delay(500);
   stepper1.moveTo(posMotorMove);
-
-
+  stepper1.run();                                            //Start
+  //client.publish("cmnd/roletaSalon/POWER", posMotor);  //Publish new motor position  // to do
+  //invalid conversion from 'int' to 'const char*' 
+    
+  }
+  
+  
 }
+/////////////////////////////////    End Main Loop Section   ////////////////////////////////////
+/////////////////////////////////////////////////////////////////////////////////////////////////
+
+
