@@ -1,0 +1,64 @@
+
+val String filename = "EnergyMeter"
+
+rule "EnergyMeter init"
+when
+    System started
+then
+    createTimer(now.plusSeconds(180)) [|
+        EnergyMeter.members.forEach(item |
+            if (item.state == NULL) item.postUpdate(0)
+        )
+    ]
+end
+
+
+rule "Korytarz Pasek LED" when Item Korytarz_Pasek_LED_Power received update
+then if (Korytarz_Pasek_LED_Power.state == ON) Korytarz_Pasek_LED_Power.postUpdate(7.5) else Korytarz_Pasek_LED_Power.postUpdate(0) end
+
+
+
+rule "Kuchnia Pasek LED" when Item Kuchnia_Pasek_LED_Power received update
+then if (Kuchnia_Pasek_LED_Power.state == ON) Kuchnia_Pasek_LED_Power.postUpdate(11.6) else Kuchnia_Pasek_LED_Power.postUpdate(0) end
+
+
+
+rule "Salon Lampa LED" when Item Salon_Lampa_LED_Power received update
+then if (Salon_Lampa_LED_Power.state == ON) Salon_Lampa_LED_Power.postUpdate(23.0) else Salon_Lampa_LED_Power.postUpdate(0) end
+
+
+rule "Salon Lampka LED" when Item Salon_Lampka_LED_Power received update
+then if (Salon_Lampka_LED_Power.state == ON) Salon_Lampka_LED_Power.postUpdate(7.5) else Salon_Lampka_LED_Power.postUpdate(0) end
+
+
+
+rule "Sypialnia Pasek LED" when Item Sypialnia_Pasek_LED_Power received update
+then if (Sypialnia_Pasek_LED_Power.state == ON) Sypialnia_Pasek_LED_Power.postUpdate(11.6) else Sypialnia_Pasek_LED_Power.postUpdate(0) end
+
+
+
+rule "Salon Barek LED" when Item Salon_Barek_LED_Power received update
+then if (Salon_Barek_LED_Power.state == ON) Salon_Barek_LED_Power.postUpdate(23.0) else Salon_Barek_LED_Power.postUpdate(0) end
+
+
+rule "Subwoofer" when Item Subwoofer_Power received update
+then if (Subwoofer_Power.state == ON) Subwoofer_Power.postUpdate(7.5) else Subwoofer_Power.postUpdate(0) end
+
+
+
+rule "Nawilżacz_Korytarz" when Item Sonoff_TH16_Korytarz_Power received update
+then if (Sonoff_TH16_Korytarz_Power.state == ON) Sonoff_TH16_Korytarz_Power.postUpdate(11.6) else Sonoff_TH16_Korytarz_Power.postUpdate(0) end
+
+
+
+rule "Salon oświetlenie górne" when Item Salon_SonoffTouch_S1 received update
+then if (Salon_SonoffTouch_S1.state == ON) Salon_SonoffTouch_S1.postUpdate(23.0) else Salon_SonoffTouch_S1.postUpdate(0) end
+
+
+
+
+
+
+
+
+// vim: syntax=Xtend

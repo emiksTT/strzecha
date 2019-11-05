@@ -1,0 +1,40 @@
+
+
+rule "Evenings Light ON"                        
+when
+    Channel 'astro:sun:local:set#event' triggered START 
+
+then    
+    {
+      OswietlenieWieczorne.sendCommand(ON)
+      Korytarz_Pasek_LED_Power.sendCommand(ON)      // Sonoff Basic
+      Kuchnia_Pasek_LED_Power.sendCommand(ON)       // Sonoff Basic
+      Sypialnia_Pasek_LED_Power.sendCommand(ON)     // Sonoff Basic
+      Salon_Barek_LED_Power.sendCommand(ON)         // Sonoff Basic
+      Biuro_Lampka_Power.sendCommand(ON)
+      sendTelegram("redminote7", "Evenings Light ON");
+       
+    }
+    end
+
+///////////////////////////////////////////////////////////////////////////////////////////////
+
+rule "Evenings Light OFF"
+ 
+when
+  
+	Time cron "0 30 23 * * ?"
+
+  then
+     {
+      OswietlenieWieczorne.sendCommand(OFF) 
+      Korytarz_Pasek_LED_Power.sendCommand(OFF)      // Sonoff Basic
+      Kuchnia_Pasek_LED_Power.sendCommand(OFF)       // Sonoff Basic
+      Sypialnia_Pasek_LED_Power.sendCommand(OFF)     // Sonoff Basic
+      Salon_Barek_LED_Power.sendCommand(OFF)         // Sonoff Basic
+      Biuro_Lampka_Power.sendCommand(OFF)
+      sendTelegram("redminote7", "Evenings Light OFF");
+     }
+end
+
+///////////////////////////////////////////////////////////////////////////////////////////////

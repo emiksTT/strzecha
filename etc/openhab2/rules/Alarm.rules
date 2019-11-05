@@ -1,0 +1,13 @@
+   rule "Alarm"
+    when
+    	Item AnybodyHome.state == OFF
+       
+    then
+        if(Pir_1.state == ON || Kontaktron_1.state == ON)
+
+    	{  
+ 
+    	sendTelegram("redminote7", "Alarm  Alarm  Alarm !!!");
+                
+    	}
+    end

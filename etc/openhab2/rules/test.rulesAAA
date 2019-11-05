@@ -1,0 +1,10 @@
+   rule "Alarm"
+    when
+    	Item SonoffBridge_RfReceive received update
+       
+    then
+        //RoletaSalon.sendCommand(60);
+     
+        
+        
+    end

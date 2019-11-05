@@ -1,0 +1,22 @@
+/*
+
+rule tmp
+when
+  System started
+then
+  temp1.postUpdate(19.8)
+  temp2.postUpdate(20.4)
+  var avgTemp = (temp1.state as DecimalType + temp2.state as DecimalType) / 2
+  temp3.postUpdate(avgTemp)
+end
+
+//Biuro_Lampka_Temp
+
+
+
+		        if ( Ambilight.state == ON )  {AmbilightVideoSh.sendCommand(ON)} 
+        else  {PhilipsTV_Ambilight_Power.sendCommand(OFF)} 
+
+
+
+*/
