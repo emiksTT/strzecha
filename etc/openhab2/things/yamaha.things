@@ -1,0 +1,9 @@
+
+
+Bridge yamahareceiver:yamahaAV:9ab0c000_f668_11de_9976_00a0decead8a "Yamaha Receiver Bridge Name" [host="192.168.10.37", refreshInterval=20] {
+    Thing zone ZoneID1 "Main Zone Thing Name" @ "Salon" [zone="Main_Zone", volumeDbMin=-81, volumeDbMax=12]
+   // Thing zone ZoneID2 "Zone 2 Thing Name" @ "location" [zone="Zone_2"]
+   //Thing zone ZoneID3 "Zone 3 Thing Name" @ "location" [zone="Zone_3"]
+   // Thing zone ZoneID4 "Zone 4 Thing Name" @ "location" [zone="Zone_4"]
+}
+
