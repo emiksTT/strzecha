@@ -1,0 +1,3 @@
+Dimmer  RoletaSalon   "Roleta Salon [%d %%]"   <rollershutter>  {channel="mqtt:topic:roletaSalon:roletaSalon"}
+// {channel="mqtt:topic:roletaSalon:roletaSalon"}
+//{mqtt=">[MQTTBroker:cmnd/roletaSalon/POWER:command:*:default], <[MQTTBroker:roletaSalon/stat/POWER:state:default]"}

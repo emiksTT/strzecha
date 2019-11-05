@@ -1,37 +1,39 @@
 
 
 // Water Sensors
-Switch WaterSensor_1                     "Czujnik wody pod zlewem"                <water>            (WaterSensor)  //Kitchen     EBC012
-Switch WaterSensor_2                     "Czujnik wody pod pralką"                <water>            (WaterSensor)  //Bathroom    01C212
-Switch WaterSensor_3                     "Czujnik wody w toalecie"                <water>            (WaterSensor)  
-Switch WaterSensor_4                     "Czujnik wody pod zlewem i zmywarką"     <water>            (WaterSensor)  
+Switch WaterSensor_1                     "Czujnik wody pod zlewem i zmywarką"     <water>            (WaterSensor,Security)  //Kitchen     EBC012
+Switch WaterSensor_2                     "Czujnik wody pod pralką"                <water>            (WaterSensor,Security)  //Bathroom    01C212
+Switch WaterSensor_3                     "Czujnik wody w toalecie"                <water>            (WaterSensor,Security)  
+Switch WaterSensor_4                     "Czujnik wody pod zlewem łazienka"       <water>            (WaterSensor,Security)  
 
 // Fire detection
 
-Switch FireSensor_1                      "Czujnik dymu korytarz"                  <fire>             (FireSensor)   // Smoke Detector Koryatrz : EDF91E
+Switch FireSensor_1                      "Czujnik dymu korytarz"                  <fire>             (FireSensor,Security)   // Smoke Detector Koryatrz : EDF91E
 
 // Motion Detection
 
-Contact Pir_1                            "Czujnik ruchu korytarz"                 <motion>           (PIRSensor)    // Koryatrz : EDF91E
+Contact Pir_1                            "Czujnik ruchu korytarz [%1$tA, %1$td.%1$tm.%1$tY %1$tT]"                 <motion>           (PIRSensor,Security)    // Koryatrz : EDF91E
 
 // Magnetic Sensor 
-Contact Kontaktron_1                     "Drzwi Wejściowe"                      <frontdoor>      (MagneticSensor,Strzecha) 
-Contact Kontaktron_2                     "Drzwi Kuchnia"                        <door>           (MagneticSensor,Kuchnia)
-Contact Kontaktron_3                     "Drzwi Salon"                          <door>           (MagneticSensor,Salon)
-Contact Kontaktron_4                     "Drzwi Toaleta"                        <door>           (MagneticSensor,Toaleta)
-Contact Kontaktron_5                     "Drzwi Biuro"                          <door>           (MagneticSensor,Biuro)
-Contact Kontaktron_6                     "Drzwi Sypialnia"                      <door>           (MagneticSensor,Sypialnia)
-Contact Kontaktron_7                     "Drzwi Łazienka"                       <door>           (MagneticSensor,Lazienka)
-Contact Kontaktron_8                     "Drzwi Spiżarnia"                      <door>           (MagneticSensor,)
-Contact Kontaktron_9                     "Drzwi Garderoba"                      <door>           (MagneticSensor)
-Contact Kontaktron_10                    "Drzwi Piwnica"                        <door>           (MagneticSensor)
+//Drzwi wejściowe otwarcie 5A8B0A
+//Drzwi wejściowe zamknięcie 5A8B0E
+Switch Kontaktron_1                      "Drzwi Wejściowe"                      <frontdoor>      (MagneticSensor,Strzecha,Security) 
+Switch Kontaktron_2                      "Drzwi Kuchnia"                        <door>           (MagneticSensor,Kuchnia,Security)
+Contact Kontaktron_3                     "Drzwi Salon"                          <door>           (MagneticSensor,Salon,Security)
+Contact Kontaktron_4                     "Drzwi Toaleta"                        <door>           (MagneticSensor,Toaleta,Security)
+Contact Kontaktron_5                     "Drzwi Biuro"                          <door>           (MagneticSensor,Biuro,Security)
+Contact Kontaktron_6                     "Drzwi Sypialnia"                      <door>           (MagneticSensor,Sypialnia,Security)
+Contact Kontaktron_7                     "Drzwi Łazienka"                       <door>           (MagneticSensor,Lazienka,Security)
+Contact Kontaktron_8                     "Drzwi Spiżarnia"                      <door>           (MagneticSensor,Spizarnia,Security)
+Contact Kontaktron_9                     "Drzwi Garderoba"                      <door>           (MagneticSensor,Garderoba,Security)
+Contact Kontaktron_10                    "Drzwi Piwnica"                        <door>           (MagneticSensor,Piwnica,Security)
 
-Contact Kontaktron_11                    "Okno Kuchnia"                         <window>         (MagneticSensor)
-Contact Kontaktron_12                    "Okno Salon"                           <window>         (MagneticSensor)
-Contact Kontaktron_13                    "Okno Sypialnia małe"                  <window>         (MagneticSensor)
-Contact Kontaktron_14                    "Okno Sypialnia duże"                  <window>         (MagneticSensor)
-Contact Kontaktron_15                    "Okno Łazienka"                        <window>         (MagneticSensor)
-Contact Kontaktron_16                    "Okno Biuro"                           <window>         (MagneticSensor)
+Contact Kontaktron_11                    "Okno Kuchnia"                         <window>         (MagneticSensor,Kuchnia,Security)
+Contact Kontaktron_12                    "Okno Salon"                           <window>         (MagneticSensor,Security)
+Contact Kontaktron_13                    "Okno Sypialnia małe"                  <window>         (MagneticSensor,Sypialnia,Security)
+Contact Kontaktron_14                    "Okno Sypialnia duże"                  <window>         (MagneticSensor,Sypialnia,Security)
+Contact Kontaktron_15                    "Okno Łazienka"                        <window>         (MagneticSensor,Lazienka,Security)
+Contact Kontaktron_16                    "Okno Biuro"                           <window>         (MagneticSensor,Biuro,Security)
 
-Contact Kontaktron_21                    "Lodówka otwarta"                      <whitegood>      (MagneticSensor) 
-Contact Kontaktron_22                    "Zamrażarka otwarta"                   <whitegood>      (MagneticSensor) 
+Contact Kontaktron_21                    "Lodówka otwarta"                      <whitegood>      (MagneticSensor,Kuchnia,Security) 
+Contact Kontaktron_22                    "Zamrażarka otwarta"                   <whitegood>      (MagneticSensor,Kuchnia,Security) 

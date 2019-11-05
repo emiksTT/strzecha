@@ -1,0 +1,25 @@
+// AmbielightOFF
+curl -X POST --digest --insecure -u om7Ggt8bPyRzG6Po:5b05fa086abe21afa8916c74724d397e9114ff2bf89703d0d35cbf24795ff8f9 -d '{"styleName":"OFF"}' https://192.168.10.35:1926/6/ambilight/currentconfiguration
+
+# setting Ambilight to FOLLOW_VIDEO
+curl -X POST --digest --insecure -u om7Ggt8bPyRzG6Po:5b05fa086abe21afa8916c74724d397e9114ff2bf89703d0d35cbf24795ff8f9 -d '{"styleName":"FOLLOW_VIDEO","isExpert":false,"menuSetting":"STANDARD","stringValue":"Standard"}' https://192.168.10.35:1926/6/ambilight/currentconfiguration
+
+# getting Ambilight supported modes
+$ curl -X GET --digest --insecure -u om7Ggt8bPyRzG6Po:5b05fa086abe21afa8916c74724d397e9114ff2bf89703d0d35cbf24795ff8f9 https://192.168.10.35:1926/6/ambilight/supportedstyles
+{"supportedStyles":[{"styleName":"OFF"},{"styleName":"FOLLOW_VIDEO"},{"styleName":"FOLLOW_AUDIO","algorithms":["ENERGY_ADAPTIVE_BRIGHTNESS","ENERGY_ADAPTIVE_COLORS","VU_METER","SPECTRUM_ANALYZER","KNIGHT_RIDER_CLOCKWISE","KNIGHT_RIDER_ALTERNATING","RANDOM_PIXEL_FLASH","STROBO","PARTY"],"maxTuning":2},{"styleName":"FOLLOW_COLOR","algorithms":["MANUAL_HUE","AUTOMATIC_HUE"],"maxSpeed":255},{"styleName":"LOUNGE"},{"styleName":"MANUAL"},{"styleName":"EXPERT"},{"styleName":"GRID"},{"styleName":"FLAG"},{"styleName":"APP"}]}
+
+#getting current Ambilight config
+$ curl -X GET --digest --insecure -u om7Ggt8bPyRzG6Po:5b05fa086abe21afa8916c74724d397e9114ff2bf89703d0d35cbf24795ff8f9 https://192.168.10.35:1926/6/ambilight/currentconfiguration
+{"styleName":"FOLLOW_VIDEO","isExpert":false,"menuSetting":"STANDARD","stringValue":"Standard"}
+
+# setting Ambilight to OFF
+$  curl -X POST --digest --insecure -u om7Ggt8bPyRzG6Po:5b05fa086abe21afa8916c74724d397e9114ff2bf89703d0d35cbf24795ff8f9 -d '{"styleName":"OFF"}' https://192.168.10.35:1926/6/ambilight/currentconfiguration
+
+$ curl -X GET --digest --insecure -u om7Ggt8bPyRzG6Po:5b05fa086abe21afa8916c74724d397e9114ff2bf89703d0d35cbf24795ff8f9 https://192.168.10.35:1926/6/ambilight/currentconfiguration
+{"styleName":"OFF","isExpert":false}
+
+# setting Ambilight to FOLLOW_VIDEO
+$ curl -X POST --digest --insecure -u om7Ggt8bPyRzG6Po:5b05fa086abe21afa8916c74724d397e9114ff2bf89703d0d35cbf24795ff8f9 -d '{"styleName":"FOLLOW_VIDEO","isExpert":false,"menuSetting":"STANDARD","stringValue":"Standard"}' https://192.168.10.35:1926/6/ambilight/currentconfiguration
+
+$ curl -X GET --digest --insecure -u om7Ggt8bPyRzG6Po:5b05fa086abe21afa8916c74724d397e9114ff2bf89703d0d35cbf24795ff8f9 https://192.168.10.35:1926/6/ambilight/currentconfiguration
+{"styleName":"FOLLOW_VIDEO","isExpert":false,"menuSetting":"STANDARD","stringValue":"Standard"}

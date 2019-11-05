@@ -1,0 +1,3 @@
+Switch  AlarmUzbrojony          "Alarm uzbrojony"                  <siren>  (Security)
+Switch  AlarmRozbrojony         "Alarm rozbrojony"                 <siren>  (Security)
+Switch  AnybodyHome             "Domownicy"                        <siren>  (Security)

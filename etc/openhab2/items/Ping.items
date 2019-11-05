@@ -1,9 +1,45 @@
 // Ping
-Switch     NiuniaXiaomiMI5Online                       "Online"                 <screen>           (Strzecha)                    {channel="network:pingdevice:Xiaomi_MI5:online"}
-Number     NiuniaXiaomiMI5Latency                      "Latency (ms)"           <screen>           (Strzecha)                    {channel="network:pingdevice:Xiaomi_MI5:latency"}
-DateTime   NiuniaXiaomiMI5Lastseen                     "Last seen"              <screen>           (Strzecha)                    {channel="network:pingdevice:Xiaomi_MI5:lastseen"}
+Switch     NiuniaTelefonOnline                         "Niunia Tel Online"      <network>          (Strzecha,Serwerownia)        {channel="network:pingdevice:NiuniaTelefon:online"}
+Number     NiuniaTelefonLatency                        "Latency (ms)"           <network>          (Strzecha,Serwerownia)        {channel="network:pingdevice:NiuniaTelefon:latency"}
+DateTime   NiuniaTelefonLastseen                       "Last seen"              <network>          (Strzecha,Serwerownia)        {channel="network:pingdevice:NiuniaTelefon:lastseen"}
 
-Switch     EmiksGalaxyS5MiniWhiteOnline                "Online"                 <screen>           (Strzecha)                    {channel="network:pingdevice:GalaxyS5MiniWhite:online"}
-Number     EmiksGalaxyS5MiniWhiteLatency               "Latency (ms)"           <screen>           (Strzecha)                    {channel="network:pingdevice:GalaxyS5MiniWhite:latency"}
-DateTime   EmiksGalaxyS5MiniWhiteLastseen              "Last seen"              <screen>           (Strzecha)                    {channel="network:pingdevice:GalaxyS5MiniWhite:lastseen"}
+Switch     EmiksTelefonOnline                          "Emiks Tel Online"       <network>          (Strzecha,Serwerownia)        {channel="network:pingdevice:EmiksTelefon:online"}
+Number     EmiksTelefonLatency                         "Latency (ms)"           <network>          (Strzecha,Serwerownia)        {channel="network:pingdevice:EmiksTelefon:latency"}
+DateTime   EmiksTelefonLastseen                        "Last seen"              <network>          (Strzecha,Serwerownia)        {channel="network:pingdevice:EmiksTelefon:lastseen"}
+
+Switch     AccessPoint1Online                          "AccessPoint1 Online"    <network>          (Strzecha,Serwerownia)        {channel="network:pingdevice:AccessPoint1:online"}
+Number     AccessPoint1Latency                         "Latency (ms)"           <network>          (Strzecha,Serwerownia)        {channel="network:pingdevice:AccessPoint1:latency"}
+DateTime   AccessPoint1Lastseen                        "Last seen"              <network>          (Strzecha,Serwerownia)        {channel="network:pingdevice:AccessPoint1:lastseen"}
+
+Switch     ModemOnline                                 "Modem Online"           <network>          (Serwerownia,Server)          {channel="network:servicedevice:Modem:online"}
+Number     ModemLatency                                "Latency (ms)"           <network>          (Serwerownia,Server)          {channel="network:servicedevice:Modem:latency"}
+DateTime   ModemLastseen                               "Last seen"              <network>          (Serwerownia,Server)          {channel="network:servicedevice:Modem:lastseen"}
+
+Switch     PfSenseFirewallOnline                       "Router Online"          <network>          (Serwerownia,Server)          {channel="network:servicedevice:Router:online"}
+Number     PfSenseFirewallLatency                      "Latency (ms)"           <network>          (Serwerownia,Server)          {channel="network:servicedevice:Router:latency"}
+DateTime   PfSenseFirewallLastseen                     "Last seen"              <network>          (Serwerownia,Server)          {channel="network:servicedevice:Router:lastseen"}
+
+Switch     SkyNetVPNPLOnline                           "VPN PL Online"          <network>          (Serwerownia,Server)          {channel="network:servicedevice:SkyNet_VPN_PL:online"}
+Number     SkyNetVPNPLLatency                          "Latency (ms)"           <network>          (Serwerownia,Server)          {channel="network:servicedevice:SkyNet_VPN_PL:latency"}
+DateTime   SkyNetVPNPLLastseen                         "Last seen"              <network>          (Serwerownia,Server)          {channel="network:servicedevice:SkyNet_VPN_PL:lastseen"}
+
+Switch     OpenMediaVaultOnline                        "NAS Online"             <network>          (Serwerownia,Server)          {channel="network:servicedevice:OpenMediaVault:online"}
+Number     OpenMediaVaultLatency                       "Latency (ms)"           <network>          (Serwerownia,Server)          {channel="network:servicedevice:OpenMediaVault:latency"}
+DateTime   OpenMediaVaultLastseen                      "Last seen"              <network>          (Serwerownia,Server)          {channel="network:servicedevice:OpenMediaVault:lastseen"}
+
+Switch     DekoderNCOnline                             "Dekoder Online"         <network>          (Serwerownia,Server)          {channel="network:servicedevice:DekoderNC:online"}
+Number     DekoderNCLatency                            "Latency (ms)"           <network>          (Serwerownia,Server)          {channel="network:servicedevice:DekoderNC:latency"}
+DateTime   DekoderNCLastseen                           "Last seen"              <network>          (Serwerownia,Server)          {channel="network:servicedevice:DekoderNC:lastseen"}
+
+Switch     MastahGameServerOnline                      "Mastah Online"          <network>          (Serwerownia,Server)          {channel="network:servicedevice:MastahGameServer:online"}
+Number     MastahGameServerLatency                     "Latency (ms)"           <network>          (Serwerownia,Server)          {channel="network:servicedevice:MastahGameServer:latency"}
+DateTime   MastahGameServerLastseen                    "Last seen"              <network>          (Serwerownia,Server)          {channel="network:servicedevice:MastahGameServer:lastseen"}
+
+Switch     SonoffBridgeOnline                          "SonoffBridge Online"    <network>          (Serwerownia,Server)          {channel="network:servicedevice:SonoffBridge:online"}
+Number     SonoffBridgeLatency                         "Latency (ms)"           <network>          (Serwerownia,Server)          {channel="network:servicedevice:SonoffBridge:latency"}
+DateTime   SonoffBridgeLastseen                        "Last seen"              <network>          (Serwerownia,Server)          {channel="network:servicedevice:SonoffBridge:lastseen"}
+
+Switch     SalonTVOnline                               "SalonTV Online"         <network>          (Serwerownia,Server)          {channel="network:servicedevice:SalonTV:online"}
+Number     SalonTVLatency                              "Latency (ms)"           <network>          (Serwerownia,Server)          {channel="network:servicedevice:SalonTV:latency"}
+DateTime   SalonTVLastseen                             "Last seen"              <network>          (Serwerownia,Server)          {channel="network:servicedevice:SalonTV:lastseen"}
 
