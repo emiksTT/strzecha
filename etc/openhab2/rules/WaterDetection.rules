@@ -33,7 +33,31 @@ if(SonoffBridge_RfReceive.state == '01C212')
 		//sendTelegram("emiks", "Water Detection : Leakage under the washing machine !!!");  
 
     }
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////  
+// Bathroom Sink water sensor
+if(SonoffBridge_RfReceive.state == '78CE14')
+    {
 
+        WaterSensor_3.sendCommand(ON)
+        PhilipsTV_Ambilight_Power.sendCommand(ON)
+        sendTelegram("redminote7", "Water Detection : Leak under the sink in Bathroom !!!")
+        //sendTelegram("niunia", "Water Detection : Leak under the sink / dishwasher in the kitchen !!!"); 
+		//sendTelegram("emiks", "Water Detection : Leak under the sink / dishwasher in the kitchen !!!");  
+
+    }
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+// Toilet water sensor
+if(SonoffBridge_RfReceive.state == '61B013')
+    {
+        
+        WaterSensor_4.sendCommand(ON)
+        PhilipsTV_Ambilight_Power.sendCommand(ON)
+        sendTelegram("redminote7", "Water Detection : Leakage under the Toilet !!!")
+        //sendTelegram("niunia", "Water Detection : Leakage under the washing machine !!!"); 
+		//sendTelegram("emiks", "Water Detection : Leakage under the washing machine !!!");  
+
+    }
 
 end
 
