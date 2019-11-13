@@ -14,22 +14,24 @@ sitemap strzecha label="Strzecha" {
             Default item=Salon_Lampka_LED_Power label="Salon Lampka"
             Default item=Salon_Barek_LED_Power label="Salon Barek"
             Default item=Biuro_Lampka_Power label="Biuro Lampka"
+            Slider  item=Ikea1     label="ikea1 sciemniacz"
+            Slider  item=Ikea2     label="ikea2 sciemniacz"
 
             // Bulb1
-            Switch      item=Hue1_Toggle      label="hue prawa on/off"
+           // Switch      item=Hue1_Toggle      label="hue prawa on/off"
             Slider      item=Hue1_Dimmer      label="hue prawa sciemniacz"
             Colorpicker item=Hue1_Color       label="hue prawa color"
-            Slider      item=Hue1_ColorTemp   label="hue prawa temp"
-            Switch      item=Hue1_Alert       label="hue prawa alert"   mappings=[NONE="None", SELECT="Alert", LSELECT="Long Alert"]
-            Switch      item=Hue1_Effect      label="hue prawa effect"
+           // Slider      item=Hue1_ColorTemp   label="hue prawa temp"
+           // Switch      item=Hue1_Alert       label="hue prawa alert"   mappings=[NONE="None", SELECT="Alert", LSELECT="Long Alert"]
+            //Switch      item=Hue1_Effect      label="hue prawa effect"
 
             // Bulb2
-            Switch      item=Hue2_Toggle      label="hue lewa on/off"
+           // Switch      item=Hue2_Toggle      label="hue lewa on/off"
             Slider      item=Hue2_Dimmer      label="hue lewa sciemniacz"
-            Slider      item=Hue2_ColorTemp   label="hue lewa temp"
+            //Slider      item=Hue2_ColorTemp   label="hue lewa temp"
             Colorpicker item=Hue2_Color       label="hue lewa color"
-            Switch      item=Hue2_Alert       label="hue lewa alert"   mappings=[NONE="None", SELECT="Alert", LSELECT="Long Alert"]
-            Switch      item=Hue2_Effect      label="hue lewa effect"
+           // Switch      item=Hue2_Alert       label="hue lewa alert"   mappings=[NONE="None", SELECT="Alert", LSELECT="Long Alert"]
+           // Switch      item=Hue2_Effect      label="hue lewa effect"
             
             //Default item=OswietlenieWieczorne label="Oswietlenie wieczorne"
             //Default item=OswietleniePoranne label="Oswietlenie poranne"
@@ -44,10 +46,10 @@ sitemap strzecha label="Strzecha" {
             //Default item=AlarmRozbrojony                   label="Alarm rozbrojony"
             Default item=AnybodyHome                       label="Domownicy"                               icon="parents_3_3"
 
-            Default item=WaterSensor_1                     label="Czujnik wody pod zlewem"
+            Default item=WaterSensor_1                     label="Czujnik wody pod zlewem  i zmywarką"
             Default item=WaterSensor_2                     label="Czujnik wody pod pralką"
-            Default item=WaterSensor_3                     label="Czujnik wody w toalecie"
-            Default item=WaterSensor_4                     label="Czujnik wody pod zlewem i zmywarką"
+            Default item=WaterSensor_3                     label="Czujnik wody pod zlewem w łazience"
+            Default item=WaterSensor_4                     label="Czujnik wody  w toalecie "
 
             Default item=FireSensor_1                      label="Czujnik dymu korytarz"
 
