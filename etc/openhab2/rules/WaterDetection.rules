@@ -6,18 +6,19 @@ when
    Item SonoffBridge_RfReceive received update
     
 then
-    Thread::sleep(50) // Need the sleep to allow for the state to change
+    //Thread::sleep(50) // Need the sleep to allow for the state to change
     
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////  
 // Kitchen water sensor sink & dishwasher
 if(SonoffBridge_RfReceive.state == 'EBC012')
     {
-
+        
         WaterSensor_1.sendCommand(ON)
+        sendTelegram("redminote7", "Water Detection Kitchen: Leak under the sink dishwasher  !!!")
+        //sendTelegram("niunia", "Water Detection Kitchen : Leak under the sink / dishwasher  !!!"); 
+		//sendTelegram("emiks", "Water Detection Kitchen: Leak under the sink / dishwasher  !!!");
         PhilipsTV_Ambilight_Power.sendCommand(ON)
-        sendTelegram("redminote7", "Water Detection : Leak under the sink / dishwasher in the kitchen !!!")
-        //sendTelegram("niunia", "Water Detection : Leak under the sink / dishwasher in the kitchen !!!"); 
-		//sendTelegram("emiks", "Water Detection : Leak under the sink / dishwasher in the kitchen !!!");  
+        
 
     }
 
@@ -27,10 +28,11 @@ if(SonoffBridge_RfReceive.state == '01C212')
     {
         
         WaterSensor_2.sendCommand(ON)
+        sendTelegram("redminote7", "Water Detection Bathroom : Leakage under the washing machine !!!")
+        //sendTelegram("niunia", "Water Detection Bathroom : Leakage under the washing machine !!!"); 
+		//sendTelegram("emiks", "Water Detection Bathroom : Leakage under the washing machine !!!");  
         PhilipsTV_Ambilight_Power.sendCommand(ON)
-        sendTelegram("redminote7", "Water Detection : Leakage under the washing machine !!!")
-        //sendTelegram("niunia", "Water Detection : Leakage under the washing machine !!!"); 
-		//sendTelegram("emiks", "Water Detection : Leakage under the washing machine !!!");  
+         
 
     }
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////  
@@ -39,10 +41,11 @@ if(SonoffBridge_RfReceive.state == '78CE14')
     {
 
         WaterSensor_3.sendCommand(ON)
+        sendTelegram("redminote7", "Water Detection Bathroom: Leak under the sink  !!!")
+        //sendTelegram("niunia", "Water Detection Bathroom : Leak under the sink  !!!"); 
+		//sendTelegram("emiks", "Water Detection Bathroom : Leak under the sink  !!!");  
         PhilipsTV_Ambilight_Power.sendCommand(ON)
-        sendTelegram("redminote7", "Water Detection : Leak under the sink in Bathroom !!!")
-        //sendTelegram("niunia", "Water Detection : Leak under the sink / dishwasher in the kitchen !!!"); 
-		//sendTelegram("emiks", "Water Detection : Leak under the sink / dishwasher in the kitchen !!!");  
+        
 
     }
 
@@ -52,11 +55,11 @@ if(SonoffBridge_RfReceive.state == '61B013')
     {
         
         WaterSensor_4.sendCommand(ON)
+        sendTelegram("redminote7", "Water Detection Toilet : Leakage under the Toilet or Sink !!!")
+        //sendTelegram("niunia", "Water Detection Toilet : Leakage under the Toilet or Sink !!!"); 
+		//sendTelegram("emiks", "Water Detection Toilet : Leakage under the Toilet or Sink !!!");  
         PhilipsTV_Ambilight_Power.sendCommand(ON)
-        sendTelegram("redminote7", "Water Detection : Leakage under the Toilet !!!")
-        //sendTelegram("niunia", "Water Detection : Leakage under the washing machine !!!"); 
-		//sendTelegram("emiks", "Water Detection : Leakage under the washing machine !!!");  
-
+        
     }
 
 end
