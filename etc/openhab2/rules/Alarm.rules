@@ -8,6 +8,8 @@
     	{  
  
     	sendTelegram("redminote7", "Alarm  Alarm  Alarm !!!");
+      //sendTelegram("niunia", "Alarm  Alarm  Alarm !!!");
+		//sendTelegram("emiks", "Alarm  Alarm  Alarm !!!");
                 
     	}
     end
