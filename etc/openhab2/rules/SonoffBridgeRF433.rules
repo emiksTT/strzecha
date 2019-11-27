@@ -7,7 +7,7 @@ when
     Item SonoffBridge_RfReceive received update
     
 then
-    Thread::sleep(50) // Need the sleep to allow for the state to change
+   // Thread::sleep(150) // Need the sleep to allow for the state to change
     
 
 
@@ -109,16 +109,16 @@ then
     
     if(SonoffBridge_RfReceive.state == '0B5DA1')
     {
-        if (Biuro_Lampka_Power.state == ON || Biuro_Lampka_Power.state == NULL) { Biuro_Lampka_Power.sendCommand(OFF) }
-        else { Biuro_Lampka_Power.sendCommand(ON) }
+        if (Kuchnia_Pasek_LED_Power.state == ON || Kuchnia_Pasek_LED_Power.state == NULL) { Kuchnia_Pasek_LED_Power.sendCommand(OFF) }
+        else { Kuchnia_Pasek_LED_Power.sendCommand(ON) }
     }
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-///////////////////////////////////        PILOT 433 MHz 3CH Sypialnia     ///////////////////////////////////////////////////////////////////    
+///////////////////////////////////        PILOT 433 MHz 3CH Sypialnia  Niunia  //////////////////////////////////////////////////////////////    
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////   
     if(SonoffBridge_RfReceive.state == '0BF164')
     {
-        if (Sypialnia_Pasek_LED_Power.state == ON || Sypialnia_Pasek_LED_Power.state == NULL) { Sypialnia_Pasek_LED_Power.sendCommand(OFF) }
-        else { Sypialnia_Pasek_LED_Power.sendCommand(ON) }
+        if (SypialniaGwiazdka_Power.state == ON || SypialniaGwiazdka_Power.state == NULL) { SypialniaGwiazdka_Power.sendCommand(OFF) }
+        else { SypialniaGwiazdka_Power.sendCommand(ON) }
     }
     
     if(SonoffBridge_RfReceive.state == '0BF162')
@@ -129,15 +129,40 @@ then
     
     if(SonoffBridge_RfReceive.state == '0BF161')
     {
-        if (Sypialnia_Pasek_LED_Power.state == ON || Sypialnia_Pasek_LED_Power.state == NULL) { Sypialnia_Pasek_LED_Power.sendCommand(OFF) }
-        else { Sypialnia_Pasek_LED_Power.sendCommand(ON) }
+        if (Ikea2.state == (10) || Ikea2.state == NULL) { Ikea2.sendCommand(OFF) }
+        else { Ikea2.sendCommand(10) }   // emiks lampka nocna
     
     }
 
+
+
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+///////////////////////////////////        PILOT 433 MHz 3CH Sypialnia  emiks   //////////////////////////////////////////////////////////////    
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////   
+    if(SonoffBridge_RfReceive.state == '0D7E32')
+    {
+        if (SypialniaGwiazdka_Power.state == ON || SypialniaGwiazdka_Power.state == NULL) { SypialniaGwiazdka_Power.sendCommand(OFF) }
+        else { SypialniaGwiazdka_Power.sendCommand(ON) }
+    }
+    
+    if(SonoffBridge_RfReceive.state == '0D7E34')
+    {
+        if (Sypialnia_Pasek_LED_Power.state == ON || Sypialnia_Pasek_LED_Power.state == NULL) { Sypialnia_Pasek_LED_Power.sendCommand(OFF) }
+        else { Sypialnia_Pasek_LED_Power.sendCommand(ON) }
+    }
+    
+    if(SonoffBridge_RfReceive.state == '0D7E38')
+    {
+      
+        if (Ikea2.state == (10) || Ikea2.state == NULL) { Ikea2.sendCommand(OFF) }
+        else { Ikea2.sendCommand(10) }   // emiks lampka nocna
+    
+    }
+
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 end
-
-//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-
 
 
