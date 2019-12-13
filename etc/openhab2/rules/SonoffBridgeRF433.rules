@@ -16,14 +16,14 @@ then
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
     if(SonoffBridge_RfReceive.state == 'FDDA0F')
     {
-        if (Salon_SonoffTouch_S1.state == ON || Salon_SonoffTouch_S1.state == NULL) { Salon_SonoffTouch_S1.sendCommand(OFF)}
-        else { Salon_SonoffTouch_S1.sendCommand(ON) }
+        if ( Hue1_Toggle.state == ON || Hue1_Toggle.state == NULL || Hue2_Toggle.state == ON || Hue2_Toggle.state == NULL || Salon_Lampa_LED_Power.state == ON || Salon_Lampa_LED_Power.state == NULL || Salon_Barek_LED_Power.state == ON || Salon_Barek_LED_Power.state == NULL ) { Hue1_Toggle.sendCommand(OFF)  Hue2_Toggle.sendCommand(OFF) Salon_Lampa_LED_Power.sendCommand(OFF) Salon_Barek_LED_Power.sendCommand(OFF) }
+        else { Hue1_Toggle.sendCommand(ON) Hue2_Toggle.sendCommand(ON) Salon_Lampa_LED_Power.sendCommand(ON) Salon_Barek_LED_Power.sendCommand(ON) }
     }
 
     if(SonoffBridge_RfReceive.state == 'FDDA07')
     {
-       // if (Salon_Lampka_LED_Power.state == ON || Salon_Lampka_LED_Power.state == NULL) { Salon_Lampka_LED_Power.sendCommand(OFF) }
-        //else { Salon_Lampka_LED_Power.sendCommand(ON) }
+        if ( Hue1_Toggle.state == ON || Hue1_Toggle.state == NULL || Hue2_Toggle.state == ON || Hue2_Toggle.state == NULL ) { Hue1_Toggle.sendCommand(OFF)  Hue2_Toggle.sendCommand(OFF) }
+        else { Hue1_Toggle.sendCommand(ON) Hue2_Toggle.sendCommand(ON) }
     }
 
     if(SonoffBridge_RfReceive.state == 'FDDA0B')
@@ -55,8 +55,8 @@ then
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////   
     if(SonoffBridge_RfReceive.state == '076334')
     {
-        if ( Hue1_Toggle.state == ON || Hue1_Toggle.state == NULL ) { Hue1_Toggle.sendCommand(OFF) }
-        else { Hue1_Toggle.sendCommand(ON) }
+        if ( Hue1_Toggle.state == ON || Hue1_Toggle.state == NULL || Hue2_Toggle.state == ON || Hue2_Toggle.state == NULL ) { Hue1_Toggle.sendCommand(OFF)  Hue2_Toggle.sendCommand(OFF) }
+        else { Hue1_Toggle.sendCommand(ON) Hue2_Toggle.sendCommand(ON) }
     }
     
     if(SonoffBridge_RfReceive.state == '076338')
