@@ -2,22 +2,39 @@
 
 // Water Sensors
 Switch WaterSensor_1                     "Czujnik wody pod zlewem i zmywarką"     <water>            (WaterSensor,Security)  //Kitchen     EBC012
+String WaterSensor_1_Date                "Czujnik wody pod zlewem i zmywarką [%1$tA, %1$td.%1$tm.%1$tY %1$tT]"     <water>            (WaterSensor,Security)  //Kitchen     EBC012
+
 Switch WaterSensor_2                     "Czujnik wody pod pralką"                <water>            (WaterSensor,Security)  //Bathroom    01C212
+String WaterSensor_2_Date                "Czujnik wody pod pralką [%1$tA, %1$td.%1$tm.%1$tY %1$tT]"                <water>            (WaterSensor,Security)  //Bathroom    01C212
+
 Switch WaterSensor_3                     "Czujnik wody w toalecie"                <water>            (WaterSensor,Security)  
+String WaterSensor_3_Date                "Czujnik wody w toalecie [%1$tA, %1$td.%1$tm.%1$tY %1$tT]"                <water>            (WaterSensor,Security)  
+
 Switch WaterSensor_4                     "Czujnik wody pod zlewem łazienka"       <water>            (WaterSensor,Security)  
+String WaterSensor_4_Date                "Czujnik wody pod zlewem łazienka [%1$tA, %1$td.%1$tm.%1$tY %1$tT]"       <water>            (WaterSensor,Security)  
 
 // Fire detection
 
-Switch FireSensor_1                      "Czujnik dymu korytarz"                  <fire>             (FireSensor,Security)   // Smoke Detector Koryatrz : EDF91E
+Switch FireSensor_1                      "Czujnik dymu korytarz"                  <fire>             (FireSensor,Security)   // Smoke Detector Koryatrz : 
+String FireSensor_1_Date                 "Czujnik dymu korytarz [%1$tA, %1$td.%1$tm.%1$tY %1$tT]"    <fire>             (FireSensor,Security)   // Smoke Detector Koryatrz : 
 
 // Motion Detection
 
-Contact Pir_1                            "Czujnik ruchu korytarz [%1$tA, %1$td.%1$tm.%1$tY %1$tT]"                 <motion>           (PIRSensor,Security)    // Koryatrz : EDF91E
+Switch  Pir_1                            "Czujnik ruchu korytarz"                 <motion>           (PIRSensor,Security)    // Koryatrz : EDF91E
+String  Pir_1_Date                       "Czujnik ruchu korytarz [%1$tA, %1$td.%1$tm.%1$tY %1$tT]"                 <motion>           (PIRSensor,Security)    // Koryatrz : EDF91E
+
+Switch  Pir_2                            "Czujnik ruchu kuchnia"                 <motion>           (PIRSensor,Security,Kuchnia)    {mqtt=">[MQTTBroker:stat/KuchniaWemos/POWER1:command:*:default], <[MQTTBroker:KuchniaWemos/stat/POWER1:state:default]" }
+String  Pir_2_Date                       "Czujnik ruchu kuchnia [%1$tA, %1$td.%1$tm.%1$tY %1$tT]"                 <motion>           (PIRSensor,Security,Kuchnia)    //  {mqtt=">[MQTTBroker:stat/WemosTest/POWER:command:*:default], <[MQTTBroker:stat/WemosTest/POWER:state:default]" }
+
+Switch  Pir_3                            "Czujnik ruchu sypialnia"                 <motion>           (PIRSensor,Security,Sypialnia)    {mqtt=">[MQTTBroker:stat/SypialniaWemos/POWER:command:*:default], <[MQTTBroker:SypialniaWemos/stat/POWER:state:default]" }
+String  Pir_3_Date                       "Czujnik ruchu sypialnia [%1$tA, %1$td.%1$tm.%1$tY %1$tT]"                 <motion>           (PIRSensor,Security,Sypialnia)    //  {mqtt=">[MQTTBroker:stat/WemosTest/POWER:command:*:default], <[MQTTBroker:stat/WemosTest/POWER:state:default]" }
 
 // Magnetic Sensor 
-//Drzwi wejściowe otwarcie 5A8B0A
-//Drzwi wejściowe zamknięcie 5A8B0E
+
 Switch Kontaktron_1                      "Drzwi Wejściowe"                      <frontdoor>      (MagneticSensor,Strzecha,Security) 
+String Kontaktron_1_Date                 "Drzwi Wejściowe [%1$tA, %1$td.%1$tm.%1$tY %1$tT]"      <frontdoor>      (MagneticSensor,Strzecha,Security) 
+
+
 Switch Kontaktron_2                      "Drzwi Kuchnia"                        <door>           (MagneticSensor,Kuchnia,Security)
 Contact Kontaktron_3                     "Drzwi Salon"                          <door>           (MagneticSensor,Salon,Security)
 Contact Kontaktron_4                     "Drzwi Toaleta"                        <door>           (MagneticSensor,Toaleta,Security)
@@ -35,5 +52,8 @@ Contact Kontaktron_14                    "Okno Sypialnia duże"                 
 Contact Kontaktron_15                    "Okno Łazienka"                        <window>         (MagneticSensor,Lazienka,Security)
 Contact Kontaktron_16                    "Okno Biuro"                           <window>         (MagneticSensor,Biuro,Security)
 
-Contact Kontaktron_21                    "Lodówka otwarta"                      <whitegood>      (MagneticSensor,Kuchnia,Security) 
-Contact Kontaktron_22                    "Zamrażarka otwarta"                   <whitegood>      (MagneticSensor,Kuchnia,Security) 
+Switch Kontaktron_21                    "Lodówka otwarta"                      <whitegood>      (MagneticSensor,Kuchnia,Security)  {mqtt=">[MQTTBroker:stat/KuchniaWemos/POWER2:command:*:default], <[MQTTBroker:KuchniaWemos/stat/POWER2:state:default]" }
+String Kontaktron_21_Date                "Lodówka otwarta [%1$tA, %1$td.%1$tm.%1$tY %1$tT]"      <whitegood>      (MagneticSensor,Strzecha,Security) 
+
+Switch Kontaktron_22                    "Zamrażarka otwarta"                   <whitegood>      (MagneticSensor,Kuchnia,Security)  {mqtt=">[MQTTBroker:stat/KuchniaWemos/POWER3:command:*:default], <[MQTTBroker:KuchniaWemos/stat/POWER3:state:default]" }
+String Kontaktron_22_Date                "Zamrażarka otwarta [%1$tA, %1$td.%1$tm.%1$tY %1$tT]"   <whitegood>      (MagneticSensor,Strzecha,Security) 

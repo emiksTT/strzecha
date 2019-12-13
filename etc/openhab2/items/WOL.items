@@ -26,6 +26,7 @@ wol="192.168.1.255#00-1f-d0-93-f8-b7"
 As a result, your lines in the items file might look like the following:
 
 Switch Network_OpenhabWebsite   "openHAB Web"   (Status, Network)   { wol="192.168.1.255#00:1f:d0:93:f8:b7" }
+
 # Examples
 The item binding can be combined with an exec binding to be able to switch the system on and off. The example below works if openHAB is running on a windows host.
 
