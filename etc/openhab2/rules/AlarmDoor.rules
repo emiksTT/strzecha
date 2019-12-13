@@ -12,34 +12,37 @@ var Timer timer8
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// 
  
 
-rule "Alert when door open or close"
+rule "Alert when door open"
 when
     Item SonoffBridge_RfReceive received update
 then
-    Thread::sleep(50) // Need the sleep to allow for the state to change
+    //Thread::sleep(50) // Need the sleep to allow for the state to change
 
 
-    if(SonoffBridge_RfReceive.state == '5A8B0A')
+    if(SonoffBridge_RfReceive.state == 'D2100A')
     {
 
 		Kontaktron_1.sendCommand(ON);
+		Kontaktron_1_Date.sendCommand(new DateTimeType());
 
-        PhilipsTV_Ambilight_Power.sendCommand(ON);
+        
 
         sendTelegram("redminote7", "Front Door open!");
 		//sendTelegram("niunia", "Front Door Open!"); 
 		//sendTelegram("emiks", "Front Door Open!"); 
         
-        Korytarz_Pasek_LED_Power.sendCommand(ON)
+        Korytarz_Pasek_LED_Power.sendCommand(ON);
+		PhilipsTV_Ambilight_Power.sendCommand(ON);
 
         
     }
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// 
 
-    if(SonoffBridge_RfReceive.state == '5A8B0E')
+    if(SonoffBridge_RfReceive.state == 'D2100E')
     {
 
         Kontaktron_1.sendCommand(OFF);
+		Kontaktron_1_Date.sendCommand(new DateTimeType());
 
 	    sendTelegram("redminote7", "Front Door closed!");
 		//sendTelegram("niunia", "Front Door closed!"); 
@@ -88,7 +91,7 @@ when
     Item Kontaktron_1 changed to ON 
 then
 //Thread::sleep(50) // Need the sleep to allow for the state to change
-timer1 = createTimer(now.plusSeconds(20)) [|
+    timer1 = createTimer(now.plusSeconds(20)) [|
     if(Kontaktron_1.state == ON)
 	{
     		

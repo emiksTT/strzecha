@@ -13,19 +13,23 @@ then
 if(SonoffBridge_RfReceive.state == 'EDF91E')
     {
     Pir_1.sendCommand(ON) 
+    OswietlenieRuchuNocne.sendCommand(ON)
+    OswietlenieBezRuchuWylacz.sendCommand(ON)
+    OswietlenieBezRuchuWylaczWieczornoPoranne.sendCommand(ON)
+    Pir_1_Date.sendCommand(new DateTimeType())
      
     //sendTelegram("redminote7", "Front Door Motion Detection !");
 
     stopMotionTimer = createTimer(now.plusSeconds(10)) [|
-    			Pir_1.sendCommand(OFF)
-               
-				
-    		]
+    			Pir_1.sendCommand(OFF)	
+    ]
             } else {
     	if(stopMotionTimer!==null) {                //if(timer!=null)
     			stopMotionTimer.cancel
     			stopMotionTimer = null
     	}
+
+        
     }
 
 end
@@ -33,4 +37,27 @@ end
     
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////
+
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+rule "Pir's send Date"
+when
+    Item Pir_2 changed to ON 
+then
+    Pir_2_Date.sendCommand(new DateTimeType())
+    OswietlenieBezRuchuWylacz.sendCommand(ON)
+    OswietlenieRuchuNocne.sendCommand(ON)
+    OswietlenieBezRuchuWylaczWieczornoPoranne.sendCommand(ON)
+end
+
+
+rule "Pir's send Date"
+when
+    Item Pir_3 changed to ON
+then
+    Pir_3_Date.sendCommand(new DateTimeType())
+    OswietlenieBezRuchuWylacz.sendCommand(ON)
+    OswietlenieRuchuNocne.sendCommand(ON)
+    OswietlenieBezRuchuWylaczWieczornoPoranne.sendCommand(ON)
+end
+

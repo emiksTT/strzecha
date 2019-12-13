@@ -10,17 +10,16 @@ rule "Ambilight turn on at sunset"
 		then
         if (SalonTVOnline.state == ON && Twilight.state == ON && Ambilight.state == OFF) 
 		{
-			executeCommandLine("/etc/openhab2/scripts/AmbilightFollowVideo.sh")
 			Ambilight.sendCommand(ON)
 			sendTelegram("redminote7", "TV Salon : Ambilight going ON")
-
+			executeCommandLine("/etc/openhab2/scripts/AmbilightFollowVideo.sh")
 		} 
 		else
 		    {
-			if (SalonTVOnline.state == ON && Twilight.state == OFF && Ambilight.state == ON){
-            executeCommandLine("/etc/openhab2/scripts/AmbilightTurnOff.sh")
 			Ambilight.sendCommand(OFF)
 			sendTelegram("redminote7", "TV Salon : Ambilight going OFF")
+			if (SalonTVOnline.state == ON && Twilight.state == OFF && Ambilight.state == ON){
+            executeCommandLine("/etc/openhab2/scripts/AmbilightTurnOff.sh")
 			}
 
 		}
