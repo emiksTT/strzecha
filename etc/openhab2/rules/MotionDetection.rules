@@ -59,5 +59,6 @@ then
     OswietlenieBezRuchuWylacz.sendCommand(ON)
     OswietlenieRuchuNocne.sendCommand(ON)
     OswietlenieBezRuchuWylaczWieczornoPoranne.sendCommand(ON)
+    OswietlenieRuchuSypialnia.sendCommand(ON)
 end
 

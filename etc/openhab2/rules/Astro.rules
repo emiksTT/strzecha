@@ -1,12 +1,14 @@
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 rule "Daylight"                        
 when
-    Channel 'astro:sun:local:rise#event' triggered START 
+    Channel 'astro:sun:local:rise#event' triggered START
 
 then    
     {
     Daylight.sendCommand(ON)
+    Daylight_Date.sendCommand(new DateTimeType())
     Twilight.sendCommand(OFF)
+    OswietleniePoranne.sendCommand(OFF)
     }
 end
 
@@ -14,13 +16,14 @@ end
 
 rule "Twilight"                        
 when
-    Channel 'astro:sun:local:civilDusk#event' triggered START 
+    Channel 'astro:sun:local:set#event' triggered START 
 
 then    
     {
     Twilight.sendCommand(ON)
+    Twilight_Date.sendCommand(new DateTimeType())
     Daylight.sendCommand(OFF)
-       
+    OswietlenieWieczorne.sendCommand(ON)   
     }
     end
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////

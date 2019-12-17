@@ -1,0 +1,52 @@
+///////////////////////////////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////////////////////
+rule "Film"
+when
+    Item Film changed to ON 
+then
+    PhilipsTV_Power.sendCommand(ON)
+    Yamaha_Power.sendCommand(ON)
+    Salon_Barek_LED_Power.sendCommand(OFF)
+    Salon_Lampa_LED_Power.sendCommand(OFF)
+    PhilipsTV_Ambilight_Power.sendCommand(ON)
+    Subwoofer_Power.sendCommand(ON)
+    RoletaSalon.sendCommand(100)
+    PhilipsTV_Ambilight_Hue_Power.sendCommand(ON)
+    PhilipsTV_Mute.sendCommand(ON)
+    Yamaha_Volume.sendCommand(50)
+end
+///////////////////////////////////////////////////////////////////////////////////////////////
+rule "Film"
+when
+    Item Film changed to OFF 
+then
+    PhilipsTV_Ambilight_Hue_Power.sendCommand(OFF)
+    PhilipsTV_Ambilight_Power.sendCommand(OFF)
+    PhilipsTV_Power.sendCommand(OFF)
+    Yamaha_Power.sendCommand(OFF)
+    Subwoofer_Power.sendCommand(OFF)
+end
+///////////////////////////////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////////////////////
+rule "Telewizja"
+when
+    Item Telewizja changed to ON 
+then
+    PhilipsTV_Power.sendCommand(ON)
+    //Dekoder_Power.sendCommand(ON)
+    //Dekoder_Volume.sendCommand(100)
+    //Dekoder_Channel.sendCommand(TVN)   
+end
+///////////////////////////////////////////////////////////////////////////////////////////////
+
+rule "Telewizja"
+when
+    Item Telewizja changed to OFF 
+then
+    PhilipsTV_Power.sendCommand(OFF)
+    //Dekoder_Power.sendCommand(OFF)
+end
+
+
+///////////////////////////////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////////////////////

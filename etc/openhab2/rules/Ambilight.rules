@@ -4,11 +4,11 @@
 
 rule "Ambilight turn on at sunset"
 		when 
-
+            //Item Twilight.state == ON
 		    Time cron "0 0/5 * * * ?" //every 5 minutes check set ambilight
 		    
 		then
-        if (SalonTVOnline.state == ON && Twilight.state == ON && Ambilight.state == OFF) 
+        if (PhilipsTV_Power.state == ON && Twilight.state == ON && Ambilight.state == OFF )    //|| Ambilight.state == NULL
 		{
 			Ambilight.sendCommand(ON)
 			sendTelegram("redminote7", "TV Salon : Ambilight going ON")
@@ -16,10 +16,11 @@ rule "Ambilight turn on at sunset"
 		} 
 		else
 		    {
+			if (PhilipsTV_Power.state == ON && Twilight.state == OFF && Ambilight.state == ON ){
+            executeCommandLine("/etc/openhab2/scripts/AmbilightTurnOff.sh")
 			Ambilight.sendCommand(OFF)
 			sendTelegram("redminote7", "TV Salon : Ambilight going OFF")
-			if (SalonTVOnline.state == ON && Twilight.state == OFF && Ambilight.state == ON){
-            executeCommandLine("/etc/openhab2/scripts/AmbilightTurnOff.sh")
+
 			}
 
 		}

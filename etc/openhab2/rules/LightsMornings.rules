@@ -11,7 +11,10 @@ when
 then    
     //if (Pir_1 received update OR Pir_2 received update) 
     {
+       Night_State.sendCommand(OFF)
+       Night_State_Date.sendCommand(OFF) 
        OswietleniePoranne.sendCommand(ON)
+
        Korytarz_Pasek_LED_Power.sendCommand(ON)      // Sonoff Basic
        Kuchnia_Pasek_LED_Power.sendCommand(ON)       // Sonoff Basic
        Sypialnia_Pasek_LED_Power.sendCommand(ON)     // Sonoff Basic
@@ -20,6 +23,7 @@ then
        SypialniaGwiazdka_Power.sendCommand(ON)       // Sonoff Basic
        Ikea1.sendCommand(10)
        Ikea2.sendCommand(10) //emiks lampka nocna
+       
        sendTelegram("redminote7", "Mornings Light ON");
     }
 end
@@ -32,7 +36,7 @@ when
 	    Channel 'astro:sun:local:rise#event' triggered START
 then
     {
-       OswietleniePoranne.sendCommand(OFF)
+       //OswietleniePoranne.sendCommand(OFF)
        Korytarz_Pasek_LED_Power.sendCommand(OFF)      // Sonoff Basic
        Kuchnia_Pasek_LED_Power.sendCommand(OFF)       // Sonoff Basic
        Sypialnia_Pasek_LED_Power.sendCommand(OFF)     // Sonoff Basic

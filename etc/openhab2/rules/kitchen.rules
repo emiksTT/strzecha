@@ -43,3 +43,13 @@ then
     }
 	]
 end
+
+
+
+rule "Kitchen window"
+when
+    Item Kontaktron_11 changed to ON
+then
+    Kontaktron_11_Date.sendCommand(new DateTimeType())
+    
+end
