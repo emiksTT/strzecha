@@ -1,12 +1,12 @@
 //Switch WszystkieSwiatla               "Wszystkie światła [(%d)]"         <light> (Strzecha)          [ "Switchable" ]
 //Switch WszystkieSwiatla1              "Wszystkie światła1 [(%d)]"        <light> (Strzecha)          [ "Switchable" ]
 
-Switch OswietlenieWieczorne           "Oświetlenie wieczorne [(%d)]"     <light> (Strzecha)          [ "Switchable" ]
-Switch OswietleniePoranne             "Oświetlenie poranne [(%d)]"       <light> (Strzecha)          [ "Switchable" ]
-Switch OswietlenieRuchuSypialnia      "Oświetlenie ruchu w sypialni"     { expire="10m,command=OFF" }
-Switch OswietlenieRuchuNocne          "Czasowe oświetlenie w nocy"       { expire="10m,command=OFF" }
-Switch OswietlenieBezRuchuWylacz      "Wylącz oświetlenie po 30min"      { expire="30m,command=OFF" }
-Switch OswietlenieBezRuchuWylaczWieczornoPoranne      "Wylącz oświetlenie  wieczorno poranne po 10min"      { expire="10m,command=OFF" }
+Switch OswietlenieWieczorne           "Oświetlenie wieczorne [(%d)]"     <light> (Strzecha)         
+Switch OswietleniePoranne             "Oświetlenie poranne [(%d)]"       <light> (Strzecha)         
+Switch OswietlenieRuchuSypialnia      "Oświetlenie ruchu w sypialni"     <light> (Strzecha)                 { expire="30m,command=OFF" }
+Switch OswietlenieRuchuNocne          "Czasowe oświetlenie w nocy"       <light> (Strzecha)                 { expire="30m,command=OFF" }
+Switch OswietlenieBezRuchuWylacz      "Wylącz oświetlenie po 30min"      <light> (Strzecha)                 { expire="60m,command=OFF" }
+Switch OswietlenieBezRuchuWylaczWieczornoPoranne      "Wylącz oświetlenie  wieczorno poranne po 10min"    <light> (Strzecha)     { expire="30m,command=OFF" }
 
 
 //Group:Switch:OR(ON, OFF) gLight        "Wszystkie światła [(%d)]"     <light> (Strzecha)                [ "Switchable" ]

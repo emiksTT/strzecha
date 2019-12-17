@@ -1,3 +1,6 @@
+String SystemStart "Openhab SystemStart [%1$tA, %1$td.%1$tm.%1$tY %1$tT]"       <time>  (Serwerownia)  
+
+
 
 /* Network information*/
 String Network_AdapterName        "Adapter name"        <network>        { channel="systeminfo:computer:work:network#networkDisplayName" }
