@@ -15,5 +15,5 @@ Bridge mqtt:broker:MQTTBroker "Mosquitto MQTT Broker" @ "MQTT" [
   //lastwill_qos=1,
   //lastwill_topic="",
   username="openhabian",
-  password="jajko22"
+  password="xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
 ]
