@@ -7,8 +7,10 @@ then
     {
     Daylight.sendCommand(ON)
     Daylight_Date.sendCommand(new DateTimeType())
-    Twilight.sendCommand(OFF)
-    OswietleniePoranne.sendCommand(OFF)
+    Night.sendCommand(OFF)
+    Night_Date.sendCommand(new DateTimeType())
+    
+    //OswietleniePoranne.sendCommand(OFF)
     }
 end
 
@@ -23,7 +25,23 @@ then
     Twilight.sendCommand(ON)
     Twilight_Date.sendCommand(new DateTimeType())
     Daylight.sendCommand(OFF)
-    OswietlenieWieczorne.sendCommand(ON)   
+    
+    //OswietlenieWieczorne.sendCommand(ON)   
     }
     end
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+rule "Night"                        
+when
+    Time cron "0 30 23 * * ?"
+
+then    
+    {
+    Night.sendCommand(ON)
+    Night_Date.sendCommand(new DateTimeType())
+    Twilight_Date.sendCommand(OFF)
+    Twilight_Date.sendCommand(new DateTimeType())
+    }
+    end
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+Time cron "0 30 23 * * ?"
