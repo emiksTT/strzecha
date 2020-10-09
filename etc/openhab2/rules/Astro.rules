@@ -33,7 +33,8 @@ then
 
 rule "Night"                        
 when
-    Time cron "0 30 23 * * ?"
+    Time cron "0 30 22 * * ?"  // &&   Sunday Thuesday  OR
+    // Time cron "0 30 23 * * ?"  &&    Friday Saturday
 
 then    
     {
