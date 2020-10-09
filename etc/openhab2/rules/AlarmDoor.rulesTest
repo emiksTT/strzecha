@@ -1,1 +1,33 @@
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////           Front Door                /////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// 
+var Timer OpenDoorTime
+rule "Alert when door open"
+when
+    Item SonoffBridge_RfReceive received update
+then
+    Thread::sleep(50) // Need the sleep to allow for the state to change
 
+    if(SonoffBridge_RfReceive.state == 'D2100A')
+    {
+
+		Kontaktron_1.sendCommand(ON);
+		Kontaktron_1_Date.sendCommand(new DateTimeType());
+    
+    sendTelegram("redminote7", "Front Door open!");
+		//sendTelegram("niunia", "Front Door Open!"); 
+		//sendTelegram("emiks", "Front Door Open!"); 
+        
+    Korytarz_Pasek_LED_Power.sendCommand(ON);
+		//PhilipsTV_Ambilight_Power.sendCommand(ON);  // Red Color
+    // Hue1 Hue2      // Red Color
+    
+    if(AnyBodyHome.state == OFF && Dark.state == ON)
+    {
+    //Korytarz_Power.sendCommand(ON)
+    //Kuchnia_LED_Power.sendCommand(ON)
+    //Salon_LED_Power.sendCommand(ON)
+    }
+
+    
+    }
