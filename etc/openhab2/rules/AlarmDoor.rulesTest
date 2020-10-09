@@ -1,8 +1,12 @@
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 ////////////////////////////////           Front Door                /////////////////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// 
+//When door open sensor send D2100A
+//When door close sensor send D2100E
+
 var Timer OpenDoorTime
-rule "Alert when door open"
+
+rule "Alert when front door open"
 when
     Item SonoffBridge_RfReceive received update
 then
@@ -11,23 +15,23 @@ then
     if(SonoffBridge_RfReceive.state == 'D2100A')
     {
 
-		Kontaktron_1.sendCommand(ON);
-		Kontaktron_1_Date.sendCommand(new DateTimeType());
+    Kontaktron_1.sendCommand(ON);
+    Kontaktron_1_Date.sendCommand(new DateTimeType());
     
     sendTelegram("redminote7", "Front Door open!");
-		//sendTelegram("niunia", "Front Door Open!"); 
-		//sendTelegram("emiks", "Front Door Open!"); 
+    //sendTelegram("niunia", "Front Door Open!"); 
+    //sendTelegram("emiks", "Front Door Open!"); 
         
     Korytarz_Pasek_LED_Power.sendCommand(ON);
-		//PhilipsTV_Ambilight_Power.sendCommand(ON);  // Red Color
+    //PhilipsTV_Ambilight_Power.sendCommand(ON);  // Red Color
     // Hue1 Hue2      // Red Color
     
-    if(AnyBodyHome.state == OFF && Dark.state == ON)
-    {
-    //Korytarz_Power.sendCommand(ON)
-    //Kuchnia_LED_Power.sendCommand(ON)
-    //Salon_LED_Power.sendCommand(ON)
-    }
+    	if(AnyBodyHome.state == OFF && Dark.state == ON)
+    	{
+    	//Korytarz_Power.sendCommand(ON)
+    	//Kuchnia_LED_Power.sendCommand(ON)
+    	//Salon_LED_Power.sendCommand(ON)
+    	}
 
     
     }
