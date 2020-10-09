@@ -1,16 +1,14 @@
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
 rule "Daylight"                        
 when
     Channel 'astro:sun:local:rise#event' triggered START
 
 then    
     {
+    Night.sendCommand(OFF)
     Daylight.sendCommand(ON)
     Daylight_Date.sendCommand(new DateTimeType())
-    Night.sendCommand(OFF)
-    Night_Date.sendCommand(new DateTimeType())
-    
-    //OswietleniePoranne.sendCommand(OFF)
     }
 end
 
@@ -22,27 +20,25 @@ when
 
 then    
     {
+    Daylight.sendCommand(OFF)
     Twilight.sendCommand(ON)
     Twilight_Date.sendCommand(new DateTimeType())
-    Daylight.sendCommand(OFF)
-    
-    //OswietlenieWieczorne.sendCommand(ON)   
     }
-    end
+end
+
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 rule "Night"                        
 when
-    Time cron "0 30 22 * * ?"  // &&   Sunday Thuesday  OR
-    // Time cron "0 30 23 * * ?"  &&    Friday Saturday
-
+    Time cron "0 0 30 22 * SUN,MON,TUE,WED,THU *" or                   // Time cron "0 30 22 * * ?"  
+    Time cron "0 0 30 23 * FRI,SAT *"                                  // Time cron "0 30 23 * * ?"  
 then    
     {
+    Twilight_Date.sendCommand(OFF)
     Night.sendCommand(ON)
     Night_Date.sendCommand(new DateTimeType())
-    Twilight_Date.sendCommand(OFF)
-    Twilight_Date.sendCommand(new DateTimeType())
     }
-    end
+end
+
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
