@@ -28,7 +28,6 @@ then
     
     	if(AnyBodyHome.state == OFF && Dark.state == ON)
     	{
-    	//Korytarz_Power.sendCommand(ON)
     	//Kuchnia_LED_Power.sendCommand(ON)
     	//Salon_LED_Power.sendCommand(ON)
     	}
