@@ -2,19 +2,19 @@
     when
     	Item EmiksTelefonOnline changed
 		or
-		Item NiuniaTelefonOnline changed
+	Item NiuniaTelefonOnline changed
     then
     	if (EmiksTelefonOnline.state == OFF && NiuniaTelefonOnline.state == OFF) {
     		
     	    AnybodyHome.sendCommand(OFF)
-			AnybodyHome_Date.sendCommand(new DateTimeType());
-			//sendTelegram("redminote7", "Nie ma nikogo w domu!!!")
+	    AnybodyHome_Date.sendCommand(new DateTimeType());
+	    sendTelegram("redminote7", "Nie ma nikogo w domu!!!")
     		
     	} else {
     		
-			AnybodyHome.sendCommand(ON);
-			AnybodyHome_Date.sendCommand(new DateTimeType());
-			//sendTelegram("redminote7", "Ktoś jest w domu!!!")
+	    AnybodyHome.sendCommand(ON);
+	    AnybodyHome_Date.sendCommand(new DateTimeType());
+	    //sendTelegram("redminote7", "Ktoś jest w domu!!!")
     	}
     end
 
