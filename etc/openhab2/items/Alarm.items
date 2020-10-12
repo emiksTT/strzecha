@@ -1,3 +1,4 @@
+// Version 2020
 Switch  Alarm                   "Alarm"                                                             <siren>  (Security)
 String  Alarm_Date              "Alarm [%1$tA, %1$td.%1$tm.%1$tY %1$tT]"                            <siren>  (Security)
 Switch  AlarmStatus             "Alarm status"                                                      <siren>  (Security)
