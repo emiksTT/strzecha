@@ -1,8 +1,0 @@
-
-rule "System start Date"
-when
-    System started
-then
-SystemStart.sendCommand(now.getDayOfWeek);
-Ambilight.sendCommand(OFF);
-end
