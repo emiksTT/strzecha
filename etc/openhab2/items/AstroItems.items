@@ -1,4 +1,4 @@
-Group Astro <sun_clouds> (W66a)
+// Version 2020
 
 Switch      Night_State          "Night"                                           <moon>         (Astro)
 String      Night_State_Date     "Night"                                           <moon>         (Astro)
@@ -9,16 +9,22 @@ String      Daylight_Date        "Daylight"                                     
 Switch      Twilight             "Twilight"                                        <moon>         (Astro)
 String      Twilight_Date        "Twilight"                                        <moon>         (Astro)
 
+Switch      Night                "Night"                                           <moon>         (Astro)
+String      Night_Date           "Night"                                           <moon>         (Astro)
+
+Switch      Dark                 "Dark"                                            <moon>         (Astro)
+String      Dark_Date            "Dark"                                            <moon>         (Astro)
+
 //
 DateTime    Current_DateTime     "Dziś [%1$tA, %1$td.%1$tm.%1$tY]"                 <clock>  (Astro) {channel="ntp:ntp:local:dateTime"}
-//
 DateTime    Sunset_Time          "Zachód słońca [%1$tH:%1$tM]"                     <sun>    (Astro) {channel="astro:sun:home:set#start"}
 DateTime    Sunrise_Time         "Wschód Słońca [%1$tH:%1$tM]"                     <sun>    (Astro) {channel="astro:sun:home:rise#end"}
-DateTime    Evening_Time         "Evening [%1$tH:%1$tM]"                                    (Astro) {channel="astro:sun:minus30:set#start"}
+DateTime    Evening_Time         "Zmierzch [%1$tH:%1$tM]"                                    (Astro) {channel="astro:sun:minus30:set#start"}
 //
-String      Day_Phase            "Phase of Day [MAP(astro.map):%s]"                         (Astro) {channel="astro:sun:home:phase#name"}
+
 
 /*
+String      Day_Phase            "Phase of Day [MAP(astro.map):%s]"                         (Astro) {channel="astro:sun:home:phase#name"}
 String      Season_Name          "Season [MAP(astro.map):%s]"                               (Astro) {channel="astro:sun:home:season#name"}
 String      Zodiac_Sign          "Zodiac [MAP(astro.map):%s]"                      <zodiac> (Astro) {channel="astro:sun:home:zodiac#sign"}
 Number      Sun_Elevation        "Sun Elevation [%.1f °]"                          <sun>    (Astro) {channel="astro:sun:home:position#elevation"}
