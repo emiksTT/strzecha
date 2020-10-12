@@ -1,6 +1,9 @@
+
+// Version 2020  
+
 // Group groupname ["labeltext"] [<iconname>] [(group1, group2, ...)]
 
-Group Strzecha "Nasza Chatka"   <house>
+Group Strzecha "Chatka"   <house>
 
 
 Group Salon               "Salon"                                                <sofa>               (Strzecha)
@@ -32,10 +35,10 @@ Group FireSensor          "Fire Detection"                                      
 Group WaterSensor         "Kitchen, Toilet, Bathroom water sensor"               <water>              (Security)
 Group MagneticSensor      "Door, Window, Fridge Sensor"                          <flow>               (Security)
 Group Camera              "All Cameras"                                          <camera>             (Security)
-Group MiotionSensor       "All Motion Detection Devices"                         <motion>             (Security)
+Group MotionSensor        "All Motion Detection Devices"                         <motion>             (Security)
 
 Group Multimedia          "TV, Chromecast, Music Player"                         <none>               (Strzecha)
-Group Telefon            "Telefony"                                              <screen>             (Multimedia)
+Group Telefon             "Telefony"                                             <screen>             (Multimedia)
 Group Telewizor           "All TV`s"                                             <screen>             (Multimedia)
 Group Music               "All Music PLayer"                                     <receiver>           (Multimedia)
 Group Chromecast          "Chromecast"                                           <mediacontrol>       (Multimedia)
@@ -51,6 +54,7 @@ Group SypialniaLight      "Oświetlenie Sypialni"                               
 
 
 Group Sonoff              "All Sonoff Devices"                                   <light>              (Strzecha)
+Group Shelly              "All Shelly Devices"                                   <light>              (Strzecha)
 
 
 
