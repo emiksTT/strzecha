@@ -1,7 +1,5 @@
-Switch  AlarmUzbrojony          "Alarm uzbrojony"                                                   <siren>  (Security)
-String  AlarmUzbrojony_Date     "Alarm uzbrojony [%1$tA, %1$td.%1$tm.%1$tY %1$tT]"                  <siren>  (Security)
-Switch  AlarmRozbrojony         "Alarm rozbrojony"                                                  <siren>  (Security)
-String  AlarmRozbrojony_Date    "Alarm rozbrojony [%1$tA, %1$td.%1$tm.%1$tY %1$tT]"                 <siren>  (Security)
+Switch  Alarm                   "Alarm uzbrojony"                                                   <siren>  (Security)
+String  Alarm_Date              "Alarm uzbrojony [%1$tA, %1$td.%1$tm.%1$tY %1$tT]"                  <siren>  (Security)
 Switch  AnybodyHome             "Domownicy"                                                         <siren>  (Security)
-String  AnybodyHome_Date        "Domownicy [%1$tA, %1$td.%1$tm.%1$tY %1$tT]"                        <siren>  (Security)
-Switch  hueAlarm                "Hue Alarm"                                                         <siren>  (Security)
+String  AnyBodyHome_Date        "Domownicy [%1$tA, %1$td.%1$tm.%1$tY %1$tT]"                        <siren>  (Security)
+
