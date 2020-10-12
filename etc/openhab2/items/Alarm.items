@@ -3,6 +3,8 @@ Switch  Alarm                   "Alarm"                                         
 String  Alarm_Date              "Alarm [%1$tA, %1$td.%1$tm.%1$tY %1$tT]"                            <siren>  (Security)
 Switch  AlarmStatus             "Alarm status"                                                      <siren>  (Security)
 String  AlarmStatus_Date        "Alarm status [%1$tA, %1$td.%1$tm.%1$tY %1$tT]"                     <siren>  (Security)
-Switch  AnybodyHome             "Domownicy"                                                         <siren>  (Security)
-String  AnybodyHome_Date        "Domownicy [%1$tA, %1$td.%1$tm.%1$tY %1$tT]"                        <siren>  (Security)
+Switch  AlarmAutomaticOFF       "Alarm automatic OFF"                                               <siren>  (Security)
+String  AlarmAutomaticOFF_Date  "Alarm automatic  OFF [%1$tA, %1$td.%1$tm.%1$tY %1$tT]"             <siren>  (Security)
+Switch  AnyBodyHome             "Domownicy"                                                         <siren>  (Security)
+String  AnyBodyHome_Date        "Domownicy [%1$tA, %1$td.%1$tm.%1$tY %1$tT]"                        <siren>  (Security)
 
