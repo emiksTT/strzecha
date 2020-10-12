@@ -5,16 +5,17 @@
 	Item NiuniaTelefonOnline changed
     then
     	if (EmiksTelefonOnline.state == OFF && NiuniaTelefonOnline.state == OFF) {
-    		
-    	    AnybodyHome.sendCommand(OFF)
-	    AnybodyHome_Date.sendCommand(new DateTimeType());
-	    sendTelegram("redminote7", "Nie ma nikogo w domu!!!")
+    	    AlarmStatus.sendCommand(ON);	
+    	    AnyBodyHome.sendCommand(OFF);
+	    AnyBodyHome_Date.sendCommand(new DateTimeType());
+	    sendTelegram("redminote7", "Nie ma nikogo w domu!!!");
     		
     	} else {
     		
-	    AnybodyHome.sendCommand(ON);
-	    AnybodyHome_Date.sendCommand(new DateTimeType());
-	    //sendTelegram("redminote7", "Ktoś jest w domu!!!")
+	    AnyBodyHome.sendCommand(ON);
+	    AlarmStatus.sendCommand(OFF);	
+	    AnyBodyHome_Date.sendCommand(new DateTimeType());
+	    //sendTelegram("redminote7", "Ktoś jest w domu!!!");
     	}
     end
 
