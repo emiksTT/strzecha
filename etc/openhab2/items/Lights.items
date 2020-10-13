@@ -12,7 +12,8 @@ Switch AllLightsBalcony                            "Wszystkie światła na balko
 Switch AllLightsGaraze                             "Wszystkie światła w garazu[(%d)]"                 <light> (Strzecha)          [ "Switchable" ]
 Switch AllLightsBasement                           "Wszystkie światła w piwnicy[(%d)]"                <light> (Strzecha)          [ "Switchable" ]
 Switch AllLightsOutside                            "Wszystkie światła na zewnatrz [(%d)]"             <light> (Strzecha)          [ "Switchable" ]
-
+Switch AllLightsWardrobe                           "Wszystkie światła w garderobie [(%d)]"            <light> (Strzecha)          [ "Switchable" ]
+Switch AllLightsStoreroom                          "Wszystkie światła w spizarni [(%d)]"              <light> (Strzecha)          [ "Switchable" ]
 
 Switch OswietlenieWieczorne           "Oświetlenie wieczorne [(%d)]"     <light> (Strzecha)         
 Switch OswietleniePoranne             "Oświetlenie poranne [(%d)]"       <light> (Strzecha)         
