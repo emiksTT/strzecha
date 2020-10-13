@@ -1,26 +1,27 @@
 // Version 2020
 
-Switch AllLights                                   "Wszystkie światła [(%d)]"                         <light> (Strzecha)          [ "Switchable" ]
-Switch AllLightsSittingRoom                        "Wszystkie światła w salonie [(%d)]"               <light> (Strzecha)          [ "Switchable" ]
-Switch AllLightsKitchen                            "Wszystkie światła w kuchni  [(%d)]"               <light> (Strzecha)          [ "Switchable" ]
-Switch AllLightsOffice                             "Wszystkie światła w biurze [(%d)]"                <light> (Strzecha)          [ "Switchable" ]
-Switch AllLightsBedroom                            "Wszystkie światła w sypialni [(%d)]"              <light> (Strzecha)          [ "Switchable" ]
-Switch AllLightsLobby                              "Wszystkie światła w korytarzu [(%d)]"             <light> (Strzecha)          [ "Switchable" ]
-Switch AllLightsToilet                             "Wszystkie światła w toalecie[(%d)]"               <light> (Strzecha)          [ "Switchable" ]
-Switch AllLightsBathroom                           "Wszystkie światła w lazience[(%d)]"               <light> (Strzecha)          [ "Switchable" ]
-Switch AllLightsBalcony                            "Wszystkie światła na balkonie[(%d)]"              <light> (Strzecha)          [ "Switchable" ]
-Switch AllLightsGaraze                             "Wszystkie światła w garazu[(%d)]"                 <light> (Strzecha)          [ "Switchable" ]
-Switch AllLightsBasement                           "Wszystkie światła w piwnicy[(%d)]"                <light> (Strzecha)          [ "Switchable" ]
-Switch AllLightsOutside                            "Wszystkie światła na zewnatrz [(%d)]"             <light> (Strzecha)          [ "Switchable" ]
-Switch AllLightsWardrobe                           "Wszystkie światła w garderobie [(%d)]"            <light> (Strzecha)          [ "Switchable" ]
-Switch AllLightsStoreroom                          "Wszystkie światła w spizarni [(%d)]"              <light> (Strzecha)          [ "Switchable" ]
+Switch AllLights                                   "Wszystkie światła [(%d)]"                         <light>   (Strzecha)          [ "Switchable" ]
+Switch AllLightsSittingRoom                        "Wszystkie światła w salonie [(%d)]"               <light>   (SittingRoom)       [ "Switchable" ]
+Switch AllLightsKitchen                            "Wszystkie światła w kuchni  [(%d)]"               <light>   (Kitchen)           [ "Switchable" ]
+Switch AllLightsOffice                             "Wszystkie światła w biurze [(%d)]"                <light>   (Office)            [ "Switchable" ]
+Switch AllLightsBedroom                            "Wszystkie światła w sypialni [(%d)]"              <light>   (Bedrom)            [ "Switchable" ]
+Switch AllLightsLobby                              "Wszystkie światła w korytarzu [(%d)]"             <light>   (Lobby)             [ "Switchable" ]
+Switch AllLightsToilet                             "Wszystkie światła w toalecie[(%d)]"               <light>   (Toilet)            [ "Switchable" ]
+Switch AllLightsBathroom                           "Wszystkie światła w lazience[(%d)]"               <light>   (Bathrom)           [ "Switchable" ]
+Switch AllLightsBalcony                            "Wszystkie światła na balkonie[(%d)]"              <light>   (Balcony)           [ "Switchable" ]
+Switch AllLightsGarage                             "Wszystkie światła w garazu[(%d)]"                 <light>   (Garage)            [ "Switchable" ]
+Switch AllLightsBasement                           "Wszystkie światła w piwnicy[(%d)]"                <light>   (Basement)          [ "Switchable" ]
+Switch AllLightsOutside                            "Wszystkie światła na zewnatrz [(%d)]"             <light>   (Outside)           [ "Switchable" ]
+Switch AllLightsWardrobe                           "Wszystkie światła w garderobie [(%d)]"            <light>   (Wardrobe)          [ "Switchable" ]
+Switch AllLightsStoreroom                          "Wszystkie światła w spizarni [(%d)]"              <light>   (Storeroom)         [ "Switchable" ]
 
-Switch OswietlenieWieczorne           "Oświetlenie wieczorne [(%d)]"     <light> (Strzecha)         
-Switch OswietleniePoranne             "Oświetlenie poranne [(%d)]"       <light> (Strzecha)         
-Switch OswietlenieRuchuSypialnia      "Oświetlenie ruchu w sypialni"     <light> (Strzecha)                 { expire="30m,command=OFF" }
-Switch OswietlenieRuchuNocne          "Czasowe oświetlenie w nocy"       <light> (Strzecha)                 { expire="30m,command=OFF" }
-Switch OswietlenieBezRuchuWylacz      "Wylącz oświetlenie po 30min"      <light> (Strzecha)                 { expire="60m,command=OFF" }
-Switch OswietlenieBezRuchuWylaczWieczornoPoranne      "Wylącz oświetlenie  wieczorno poranne po 10min"    <light> (Strzecha)     { expire="30m,command=OFF" }
+Switch MorningLights                               "Oświetlenie poranne [(%d)]"                       <light>   (Strzecha)          [ "Switchable" ]            
+Switch EveningLights                               "Oświetlenie wieczorne [(%d)]"                     <light>   (Strzecha)          [ "Switchable" ]    
+Switch TurnOffAllLights                            "Czasowy wylacznik owietlenia"                     <light>   (Strzecha)          { expire="120m,command=OFF" }
+Switch TurnOffMotionLights                         "Wylącz oświetlenie  po wykrytym ruchu"            <light>   (Strzecha)          { expire="20m,command=OFF" }
+Switch NightTurnOffMotionLights                    "Wylącz oświetlenie  po wykrytym ruchu w nocy"     <light>   (Strzecha)          { expire="10m,command=OFF" }
+
+
 
 
 //Group:Switch:OR(ON, OFF) gLight        "Wszystkie światła [(%d)]"     <light> (Strzecha)                [ "Switchable" ]
