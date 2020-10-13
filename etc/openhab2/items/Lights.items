@@ -1,3 +1,18 @@
+// Version 2020
+
+Switch AllLights                                   "Wszystkie światła [(%d)]"                         <light> (Strzecha)          [ "Switchable" ]
+Switch AllLightsSittingRoom                        "Wszystkie światła w salonie [(%d)]"               <light> (Strzecha)          [ "Switchable" ]
+Switch AllLightsKitchen                            "Wszystkie światła w kuchni  [(%d)]"               <light> (Strzecha)          [ "Switchable" ]
+Switch AllLightsOffice                             "Wszystkie światła w biurze [(%d)]"                <light> (Strzecha)          [ "Switchable" ]
+Switch AllLightsBedroom                            "Wszystkie światła w sypialni [(%d)]"              <light> (Strzecha)          [ "Switchable" ]
+Switch AllLightsLobby                              "Wszystkie światła w korytarzu [(%d)]"             <light> (Strzecha)          [ "Switchable" ]
+Switch AllLightsWC                                 "Wszystkie światła w toalecie[(%d)]"               <light> (Strzecha)          [ "Switchable" ]
+Switch AllLightsBathroom                           "Wszystkie światła w lazience[(%d)]"               <light> (Strzecha)          [ "Switchable" ]
+Switch AllLightsBalcony                            "Wszystkie światła na balkonie[(%d)]"              <light> (Strzecha)          [ "Switchable" ]
+Switch AllLightsGaraze                             "Wszystkie światła w garazu[(%d)]"                 <light> (Strzecha)          [ "Switchable" ]
+Switch AllLightsBasement                           "Wszystkie światła w piwnicy[(%d)]"                <light> (Strzecha)          [ "Switchable" ]
+Switch AllLightsOutside                            "Wszystkie światła na zewnatrz [(%d)]"             <light> (Strzecha)          [ "Switchable" ]
+
 //Switch WszystkieSwiatla               "Wszystkie światła [(%d)]"         <light> (Strzecha)          [ "Switchable" ]
 //Switch WszystkieSwiatla1              "Wszystkie światła1 [(%d)]"        <light> (Strzecha)          [ "Switchable" ]
 
@@ -13,3 +28,17 @@ Switch OswietlenieBezRuchuWylaczWieczornoPoranne      "Wylącz oświetlenie  wie
 
 //Group:Number             Light       "Active Lights [%d]"      <light>        // e.g. "2"
 //Group:Switch:OR(ON,OFF)  Light       "Active Lights [%d]"      <light>        // e.g. ON and "2"
+
+
+
+Switch WszystkieSwiatla               "Wszystkie światła [(%d)]"         <light> (Strzecha)          [ "Switchable" ]
+Switch WszystkieSwiatla1              "Wszystkie światła1 [(%d)]"        <light> (Strzecha)          [ "Switchable" ]
+
+Switch OswietlenieWieczorne           "Oświetlenie wieczorne [(%d)]"     <light> (Strzecha)          [ "Switchable" ]
+Switch OswietleniePoranne             "Oświetlenie poranne [(%d)]"       <light> (Strzecha)          [ "Switchable" ]
+
+
+//Group:Switch:OR(ON, OFF) gLight        "Wszystkie światła [(%d)]"     <light> (Strzecha)                [ "Switchable" ]
+
+Group:Number             Light       "Active Lights [%d]"      <light>        // e.g. "2"
+Group:Switch:OR(ON,OFF)  Light       "Active Lights [%d]"      <light>        // e.g. ON and "2"
