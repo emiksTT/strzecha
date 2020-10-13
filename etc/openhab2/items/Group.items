@@ -3,31 +3,45 @@
 
 // Group groupname ["labeltext"] [<iconname>] [(group1, group2, ...)]
 
-Group Strzecha "Chatka"   <house>
+Group Strzecha            "Chatka"                                               <house>
 
 
-Group Salon               "Salon"                                                <sofa>               (Strzecha)
-Group Korytarz            "Koryatrz"                                             <corridor>           (Strzecha)
-Group Kuchnia             "Kuchnia"                                              <kitchen>            (Strzecha)
-Group Biuro               "Biuro"                                                <office>             (Strzecha)
-Group Toaleta             "Toaleta"                                              <toilet>             (Strzecha)
-Group Lazienka            "Łazienka"                                             <bath>               (Strzecha)
-Group Sypialnia           "Sypialnia"                                            <bedroom>            (Strzecha)
-Group Hol                 "Hol"                                                  <corridor>           (Strzecha)
-Group Balkon              "Balkon"                                               <terrace>            (Strzecha)
-Group Spizarnia           "Spiżarnia"                                            <wardrobe>           (Strzecha)
-Group Garderoba           "Garderoba"                                            <wardrobe>           (Strzecha)
+Group SittingRoom         "Salon"                                                <sofa>               (Strzecha)
+Group Lobby               "Koryatrz"                                             <corridor>           (Strzecha)
+Group Kitchen             "Kuchnia"                                              <kitchen>            (Strzecha)
+Group Office              "Biuro"                                                <office>             (Strzecha)
+Group Toilet              "Toaleta"                                              <toilet>             (Strzecha)
+Group Bathroom            "Łazienka"                                             <bath>               (Strzecha)
+Group Bedroom             "Sypialnia"                                            <bedroom>            (Strzecha)
+Group Balcony             "Balkon"                                               <terrace>            (Strzecha)
+Group Storeroom           "Spiżarnia"                                            <wardrobe>           (Strzecha)
+Group Wardrobe            "Garderoba"                                            <wardrobe>           (Strzecha)
 
-Group Zewnatrz            "Na zewnątrz"                                          <none>               (Strzecha)
-Group Astro               "Astro"                                                <moon>               (Zewnatrz)
-Group Piwnica             "Piwnica"                                              <cellar>             (Zewnatrz)
-Group Garaz               "Garaż"                                                <garage>             (Zewnatrz)
+Group Outside             "Na zewnątrz"                                          <none>               (Strzecha)
+Group Astro               "Astro"                                                <moon>               (Outside)
+Group Basement            "Piwnica"                                              <cellar>             (Outside)
+Group Garage              "Garaż"                                                <garage>             (Outside)
 
-Group Serwerownia         "Serwerownia"                                          <energy>             (Strzecha)
-Group Elektryka           "Elektryka"                                            <energy>             (Strzecha)
-Group:Number:SUM Wattages "Zużycie prądu [%.1f W]"                               <energy>             (Elektryka)
-Group RSSI_Group          "Wifi range"                                           <network>            (Serwerownia)
-Group Server              "Serwery"                                              <network>            (Serwerownia)
+
+Group Elektric                       "Elektryka"                                            <energy>             (Strzecha)
+Group:Number:SUM Wattages            "Zużycie prądu [%.1f W]"                               <energy>             (Elektryka)
+Group LightsPowerConsumption         "Oswietlenie zużycie prądu [%.1f W]"                   <light>              (Elektryka)
+Group DevicesPowerConsumption        "Urzadzenia zużycie prądu [%.1f W]"                    <light>              (Elektryka)
+
+
+Group ServerRoom          "Serwerownia"                                          <energy>             (Strzecha)
+Group RSSI                "Wifi range"                                           <network>            (ServerRoom)
+Group Server              "Serwery"                                              <network>            (ServerRoom)
+Group ServerElectric      "Zuzycie energii"                                      <energy>             (ServerRoom)
+
+Group SmartDevices        "Smart urzadzenia"                                     <network>            (ServerRoom)
+Group Sonoff              "All Sonoff Devices"                                   <light>              (SmartDevices)
+Group Shelly              "All Shelly Devices"                                   <light>              (SmartDevices)
+Group Hue                 "All Hue Devices"                                      <light>              (SmartDevices)
+Group Tradfri             "All Tradfri Devices"                                  <light>              (SmartDevices)
+Group ESP8266             "All ESP8266 Devices"                                  <light>              (SmartDevices)
+Group Arduino             "All Arduino Devices"                                  <light>              (SmartDevices)
+Group Raspberry           "All Raspberry Devices"                                <light>              (SmartDevices)
 
 Group Security            "Security"                                             <alarm>              (Strzecha)
 Group AirSensor           "Air temperature, humidity and quality sensors"        <flow>               (Security)
@@ -38,23 +52,22 @@ Group Camera              "All Cameras"                                         
 Group MotionSensor        "All Motion Detection Devices"                         <motion>             (Security)
 
 Group Multimedia          "TV, Chromecast, Music Player"                         <none>               (Strzecha)
-Group Telefon             "Telefony"                                             <screen>             (Multimedia)
+Group Phone               "Telefony"                                             <screen>             (Multimedia)
 Group Telewizor           "All TV`s"                                             <screen>             (Multimedia)
 Group Music               "All Music PLayer"                                     <receiver>           (Multimedia)
 Group Chromecast          "Chromecast"                                           <mediacontrol>       (Multimedia)
 
 
 
-Group Light               "Light [(%d)]"                                        <light>              (Strzecha)
-Group EveningLighting     "Oświetlenie wieczorne"                               <light>              (Light)
-Group SalonLight          "Oświetlenie"                                         <light>              (Light)
-Group SalonExtraLight     "Oświetlenie dodatkowe salonu"                        <light>              (Light)
-Group KuchniaLight        "Oświetlenie Kuchni"                                  <light>              (Light)
-Group SypialniaLight      "Oświetlenie Sypialni"                                <light>              (Light)
+Group Light                     "Light [(%d)]"                                        <light>              (Strzecha)
+Group EveningLighting           "Oświetlenie wieczorne"                               <light>              (Light)
+Group SittingroomLight          "Oświetlenie"                                         <light>              (Light)
+Group SittingroomExtraLight     "Oświetlenie dodatkowe salonu"                        <light>              (Light)
+Group KuchniaLight              "Oświetlenie Kuchni"                                  <light>              (Light)
+Group SypialniaLight            "Oświetlenie Sypialni"                                <light>              (Light)
 
 
-Group Sonoff              "All Sonoff Devices"                                   <light>              (Strzecha)
-Group Shelly              "All Shelly Devices"                                   <light>              (Strzecha)
+
 
 
 
