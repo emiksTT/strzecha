@@ -1,19 +1,17 @@
 // Version 2020
 
-Switch      Night_State          "Night"                                           <moon>         (Astro)
-String      Night_State_Date     "Night"                                           <moon>         (Astro)
 
 Switch      Daylight             "Daylight"                                        <sun>          (Astro)
 String      Daylight_Date        "Daylight"                                        <sun>          (Astro)
+
+Switch      Dark                 "Dark"                                            <moon>         (Astro)
+String      Dark_Date            "Dark"                                            <moon>         (Astro)
 
 Switch      Twilight             "Twilight"                                        <moon>         (Astro)
 String      Twilight_Date        "Twilight"                                        <moon>         (Astro)
 
 Switch      Night                "Night"                                           <moon>         (Astro)
 String      Night_Date           "Night"                                           <moon>         (Astro)
-
-Switch      Dark                 "Dark"                                            <moon>         (Astro)
-String      Dark_Date            "Dark"                                            <moon>         (Astro)
 
 //
 DateTime    Current_DateTime     "Dziś [%1$tA, %1$td.%1$tm.%1$tY]"                 <clock>  (Astro) {channel="ntp:ntp:local:dateTime"}
