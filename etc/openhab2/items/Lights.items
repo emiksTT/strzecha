@@ -13,8 +13,6 @@ Switch AllLightsGaraze                             "Wszystkie światła w garazu
 Switch AllLightsBasement                           "Wszystkie światła w piwnicy[(%d)]"                <light> (Strzecha)          [ "Switchable" ]
 Switch AllLightsOutside                            "Wszystkie światła na zewnatrz [(%d)]"             <light> (Strzecha)          [ "Switchable" ]
 
-//Switch WszystkieSwiatla               "Wszystkie światła [(%d)]"         <light> (Strzecha)          [ "Switchable" ]
-//Switch WszystkieSwiatla1              "Wszystkie światła1 [(%d)]"        <light> (Strzecha)          [ "Switchable" ]
 
 Switch OswietlenieWieczorne           "Oświetlenie wieczorne [(%d)]"     <light> (Strzecha)         
 Switch OswietleniePoranne             "Oświetlenie poranne [(%d)]"       <light> (Strzecha)         
@@ -29,16 +27,3 @@ Switch OswietlenieBezRuchuWylaczWieczornoPoranne      "Wylącz oświetlenie  wie
 //Group:Number             Light       "Active Lights [%d]"      <light>        // e.g. "2"
 //Group:Switch:OR(ON,OFF)  Light       "Active Lights [%d]"      <light>        // e.g. ON and "2"
 
-
-
-Switch WszystkieSwiatla               "Wszystkie światła [(%d)]"         <light> (Strzecha)          [ "Switchable" ]
-Switch WszystkieSwiatla1              "Wszystkie światła1 [(%d)]"        <light> (Strzecha)          [ "Switchable" ]
-
-Switch OswietlenieWieczorne           "Oświetlenie wieczorne [(%d)]"     <light> (Strzecha)          [ "Switchable" ]
-Switch OswietleniePoranne             "Oświetlenie poranne [(%d)]"       <light> (Strzecha)          [ "Switchable" ]
-
-
-//Group:Switch:OR(ON, OFF) gLight        "Wszystkie światła [(%d)]"     <light> (Strzecha)                [ "Switchable" ]
-
-Group:Number             Light       "Active Lights [%d]"      <light>        // e.g. "2"
-Group:Switch:OR(ON,OFF)  Light       "Active Lights [%d]"      <light>        // e.g. ON and "2"
