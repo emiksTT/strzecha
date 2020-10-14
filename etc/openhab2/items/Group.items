@@ -30,10 +30,10 @@ Group DevicesPowerConsumption        "Urzadzenia zużycie prądu [%.1f W]"      
 
 
 Group Serverroom          "Serwerownia"                                          <energy>             (Strzecha)
-Group Ping                "Ping"                                                 <network>            (ServerRoom)
-Group RSSI                "Wifi range"                                           <network>            (ServerRoom)
-Group Server              "Serwery"                                              <network>            (ServerRoom)
-Group ServerElectric      "Zuzycie energii"                                      <energy>             (ServerRoom)
+Group Ping                "Ping"                                                 <network>            (Serverroom)
+Group RSSI                "Wifi range"                                           <network>            (Serverroom)
+Group Server              "Serwery"                                              <network>            (Serverroom)
+Group ServerElectric      "Zuzycie energii"                                      <energy>             (Serverroom)
 
 Group SmartDevices        "Smart urzadzenia"                                     <network>            (ServerRoom)
 Group Sonoff              "All Sonoff Devices"                                   <light>              (SmartDevices)
