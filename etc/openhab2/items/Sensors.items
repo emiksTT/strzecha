@@ -1,17 +1,21 @@
 
 
 // Water Sensors
-Switch WaterSensor_1                     "Czujnik wody pod zlewem i zmywarką"                                      <water>            (WaterSensor,Security)  //Kitchen     EBC012
-String WaterSensor_1_Date                "Czujnik wody pod zlewem i zmywarką [%1$tA, %1$td.%1$tm.%1$tY %1$tT]"     <water>            (WaterSensor,Security)  //Kitchen     EBC012
+Switch WaterSensor_1                     "Czujnik wody pod zlewem i zmywarką"                                      <water>            (WaterSensor,Security,Kitchen)  //KitchenEBC012
+Switch WaterSensor_1_OFF                 "Czujnik wody wylaczony"                                                  <water>            (WaterSensor,Security,Kitchen) 
+String WaterSensor_1_Date                "Czujnik wody pod zlewem i zmywarką [%1$tA, %1$td.%1$tm.%1$tY %1$tT]"     <water>            (WaterSensor,Security,Kitchen)  //Kitchen     EBC012
 
-Switch WaterSensor_2                     "Czujnik wody pod pralką"                                                 <water>            (WaterSensor,Security)  //Bathroom    01C212
-String WaterSensor_2_Date                "Czujnik wody pod pralką [%1$tA, %1$td.%1$tm.%1$tY %1$tT]"                <water>            (WaterSensor,Security)  //Bathroom    01C212
+Switch WaterSensor_2                     "Czujnik wody pod pralką"                                                 <water>            (WaterSensor,Security,Bathroom)   //Bathroom    01C212
+Switch WaterSensor_2_OFF                 "Czujnik wody wylaczony"                                                  <water>            (WaterSensor,Security,Bathroom) 
+String WaterSensor_2_Date                "Czujnik wody pod pralką [%1$tA, %1$td.%1$tm.%1$tY %1$tT]"                <water>            (WaterSensor,Security,Bathroom)   //Bathroom    01C212
 
-Switch WaterSensor_3                     "Czujnik wody w toalecie"                                                 <water>            (WaterSensor,Security)  
-String WaterSensor_3_Date                "Czujnik wody w toalecie [%1$tA, %1$td.%1$tm.%1$tY %1$tT]"                <water>            (WaterSensor,Security)  
+Switch WaterSensor_3                     "Czujnik wody w toalecie"                                                 <water>            (WaterSensor,Security,Toilet)  
+Switch WaterSensor_3_OFF                 "Czujnik wody wylaczony"                                                  <water>            (WaterSensor,Security,Toilet)
+String WaterSensor_3_Date                "Czujnik wody w toalecie [%1$tA, %1$td.%1$tm.%1$tY %1$tT]"                <water>            (WaterSensor,Security,Toilet)  
 
-Switch WaterSensor_4                     "Czujnik wody pod zlewem łazienka"                                        <water>            (WaterSensor,Security)  
-String WaterSensor_4_Date                "Czujnik wody pod zlewem łazienka [%1$tA, %1$td.%1$tm.%1$tY %1$tT]"       <water>            (WaterSensor,Security)  
+Switch WaterSensor_4                     "Czujnik wody pod zlewem łazienka"                                        <water>            (WaterSensor,Security,Bathroom)  
+Switch WaterSensor_4_OFF                 "Czujnik wody wylaczony"                                                  <water>            (WaterSensor,Security,Bathroom)
+String WaterSensor_4_Date                "Czujnik wody pod zlewem łazienka [%1$tA, %1$td.%1$tm.%1$tY %1$tT]"       <water>            (WaterSensor,Security,Bathroom)  
 
 // Fire detection
 
@@ -21,19 +25,22 @@ String FireSensor_1_Date                 "Czujnik dymu korytarz [%1$tA, %1$td.%1
 // Motion Detection
 
 Switch  Pir_1                            "Czujnik ruchu korytarz"                                                  <motion>           (PIRSensor,Security)    // Koryatrz : EDF91E
+Switch  Pir_1_OFF                        "Wylacz czujnik ruchu"                                                    <motion>           (PIRSensor,Security)
 String  Pir_1_Date                       "Czujnik ruchu korytarz [%1$tA, %1$td.%1$tm.%1$tY %1$tT]"                 <motion>           (PIRSensor,Security)    // Koryatrz : EDF91E
 
-Switch  Pir_2                            "Czujnik ruchu kuchnia"                                                   <motion>           (PIRSensor,Security,Kuchnia)    {mqtt=">[MQTTBroker:stat/KuchniaWemos/POWER1:command:*:default], <[MQTTBroker:KuchniaWemos/stat/POWER1:state:default]" }
-String  Pir_2_Date                       "Czujnik ruchu kuchnia [%1$tA, %1$td.%1$tm.%1$tY %1$tT]"                  <motion>           (PIRSensor,Security,Kuchnia)    //  {mqtt=">[MQTTBroker:stat/WemosTest/POWER:command:*:default], <[MQTTBroker:stat/WemosTest/POWER:state:default]" }
+Switch  Pir_2                            "Czujnik ruchu kuchnia"                                                   <motion>           (PIRSensor,Security,Kitchen)    {mqtt=">[MQTTBroker:stat/KuchniaWemos/POWER1:command:*:default], <[MQTTBroker:KuchniaWemos/stat/POWER1:state:default]" }
+Switch  Pir_2_OFF                        "Wylacz czujnik ruchu"                                                    <motion>           (PIRSensor,Security,Kitchen)
+String  Pir_2_Date                       "Czujnik ruchu kuchnia [%1$tA, %1$td.%1$tm.%1$tY %1$tT]"                  <motion>           (PIRSensor,Security,Kitchen)    //  {mqtt=">[MQTTBroker:stat/WemosTest/POWER:command:*:default], <[MQTTBroker:stat/WemosTest/POWER:state:default]" }
 
-//Switch  Pir_3                            "Czujnik ruchu sypialnia"                 <motion>           (PIRSensor,Security,Sypialnia)    {mqtt=">[MQTTBroker:stat/SypialniaWemos/POWER:command:*:default], <[MQTTBroker:SypialniaWemos/stat/POWER:state:default]" }
-String  Pir_3_Date                       "Czujnik ruchu sypialnia [%1$tA, %1$td.%1$tm.%1$tY %1$tT]"                <motion>           (PIRSensor,Security,Sypialnia)    //  {mqtt=">[MQTTBroker:stat/WemosTest/POWER:command:*:default], <[MQTTBroker:stat/WemosTest/POWER:state:default]" }
+Switch  Pir_3                            "Czujnik ruchu sypialnia"                                                 <motion>           (PIRSensor,Security,Bedroom)    {mqtt=">[MQTTBroker:stat/SypialniaWemos/POWER:command:*:default], <[MQTTBroker:SypialniaWemos/stat/POWER:state:default]" }
+Switch  Pir_3_OFF                        "Wylacz czujnik ruchu"                                                    <motion>           (PIRSensor,Security,Bedroom)
+String  Pir_3_Date                       "Czujnik ruchu sypialnia [%1$tA, %1$td.%1$tm.%1$tY %1$tT]"                <motion>           (PIRSensor,Security,Bedroom)    //  {mqtt=">[MQTTBroker:stat/WemosTest/POWER:command:*:default], <[MQTTBroker:stat/WemosTest/POWER:state:default]" }
 
 // Magnetic Sensor 
 
-Switch Kontaktron_1                      "Drzwi Wejściowe"                                                         <frontdoor>      (MagneticSensor,Strzecha,Security) 
-String Kontaktron_1_Date                 "Drzwi Wejściowe [%1$tA, %1$td.%1$tm.%1$tY %1$tT]"                        <frontdoor>      (MagneticSensor,Strzecha,Security) 
-
+Switch Kontaktron_1                      "Drzwi Wejściowe"                                                         <frontdoor>      (MagneticSensor,Strzecha,Security,Lobby) 
+Switch Kontaktron_1_OFF                  "Kontaktron wylaczony"                                                    <frontdoor>      (MagneticSensor,Strzecha,Security,Lobby) 
+String Kontaktron_1_Date                 "Drzwi Wejściowe [%1$tA, %1$td.%1$tm.%1$tY %1$tT]"                        <frontdoor>      (MagneticSensor,Strzecha,Security,Lobby) 
 
 Switch Kontaktron_2                      "Drzwi Kuchnia"                        <door>           (MagneticSensor,Kuchnia,Security)
 Contact Kontaktron_3                     "Drzwi Salon"                          <door>           (MagneticSensor,Salon,Security)
