@@ -1,13 +1,13 @@
 
 
 // Water Sensors
-Switch WaterSensor_1                     "Czujnik wody pod zlewem i zmywarką"                                      <water>            (WaterSensor,Security,Kitchen)  //KitchenEBC012
+Switch WaterSensor_1                     "Czujnik wody pod zlewem i zmywarką"                                      <water>            (WaterSensor,Security,Kitchen)     //Kitchen EBC012
 Switch WaterSensor_1_OFF                 "Czujnik wody wylaczony"                                                  <water>            (WaterSensor,Security,Kitchen) 
-String WaterSensor_1_Date                "Czujnik wody pod zlewem i zmywarką [%1$tA, %1$td.%1$tm.%1$tY %1$tT]"     <water>            (WaterSensor,Security,Kitchen)  //Kitchen     EBC012
+String WaterSensor_1_Date                "Czujnik wody pod zlewem i zmywarką [%1$tA, %1$td.%1$tm.%1$tY %1$tT]"     <water>            (WaterSensor,Security,Kitchen)     //Kitchen     EBC012
 
-Switch WaterSensor_2                     "Czujnik wody pod pralką"                                                 <water>            (WaterSensor,Security,Bathroom)   //Bathroom    01C212
+Switch WaterSensor_2                     "Czujnik wody pod pralką"                                                 <water>            (WaterSensor,Security,Bathroom)    //Bathroom    01C212
 Switch WaterSensor_2_OFF                 "Czujnik wody wylaczony"                                                  <water>            (WaterSensor,Security,Bathroom) 
-String WaterSensor_2_Date                "Czujnik wody pod pralką [%1$tA, %1$td.%1$tm.%1$tY %1$tT]"                <water>            (WaterSensor,Security,Bathroom)   //Bathroom    01C212
+String WaterSensor_2_Date                "Czujnik wody pod pralką [%1$tA, %1$td.%1$tm.%1$tY %1$tT]"                <water>            (WaterSensor,Security,Bathroom)    //Bathroom    01C212
 
 Switch WaterSensor_3                     "Czujnik wody w toalecie"                                                 <water>            (WaterSensor,Security,Toilet)  
 Switch WaterSensor_3_OFF                 "Czujnik wody wylaczony"                                                  <water>            (WaterSensor,Security,Toilet)
@@ -19,8 +19,9 @@ String WaterSensor_4_Date                "Czujnik wody pod zlewem łazienka [%1$
 
 // Fire detection
 
-Switch FireSensor_1                      "Czujnik dymu korytarz"                                                   <fire>             (FireSensor,Security)   // Smoke Detector Koryatrz : 
-String FireSensor_1_Date                 "Czujnik dymu korytarz [%1$tA, %1$td.%1$tm.%1$tY %1$tT]"                  <fire>             (FireSensor,Security)   // Smoke Detector Koryatrz : 
+Switch FireSensor_1                      "Czujnik dymu korytarz"                                                   <fire>             (FireSensor,Security,Lobby)   // Smoke Detector Koryatrz : 
+Switch FireSensor_1_OFF                  "Czujnik dymu korytarz wylaczony"                                         <fire>             (FireSensor,Security,Lobby)   // Smoke Detector Koryatrz : 
+String FireSensor_1_Date                 "Czujnik dymu korytarz [%1$tA, %1$td.%1$tm.%1$tY %1$tT]"                  <fire>             (FireSensor,Security,Lobby)   // Smoke Detector Koryatrz : 
 
 // Motion Detection
 
@@ -42,27 +43,27 @@ Switch Kontaktron_1                      "Drzwi Wejściowe"                     
 Switch Kontaktron_1_OFF                  "Kontaktron wylaczony"                                                    <frontdoor>      (MagneticSensor,Strzecha,Security,Lobby) 
 String Kontaktron_1_Date                 "Drzwi Wejściowe [%1$tA, %1$td.%1$tm.%1$tY %1$tT]"                        <frontdoor>      (MagneticSensor,Strzecha,Security,Lobby) 
 
-Switch Kontaktron_2                      "Drzwi Kuchnia"                        <door>           (MagneticSensor,Kuchnia,Security)
-Contact Kontaktron_3                     "Drzwi Salon"                          <door>           (MagneticSensor,Salon,Security)
-Contact Kontaktron_4                     "Drzwi Toaleta"                        <door>           (MagneticSensor,Toaleta,Security)
-Contact Kontaktron_5                     "Drzwi Biuro"                          <door>           (MagneticSensor,Biuro,Security)
-Contact Kontaktron_6                     "Drzwi Sypialnia"                      <door>           (MagneticSensor,Sypialnia,Security)
-Contact Kontaktron_7                     "Drzwi Łazienka"                       <door>           (MagneticSensor,Lazienka,Security)
-Contact Kontaktron_8                     "Drzwi Spiżarnia"                      <door>           (MagneticSensor,Spizarnia,Security)
-Contact Kontaktron_9                     "Drzwi Garderoba"                      <door>           (MagneticSensor,Garderoba,Security)
-Contact Kontaktron_10                    "Drzwi Piwnica"                        <door>           (MagneticSensor,Piwnica,Security)
+Switch Kontaktron_2                      "Drzwi Kuchnia"                        <door>           (MagneticSensor,Kitchen,Security)
+Contact Kontaktron_3                     "Drzwi Salon"                          <door>           (MagneticSensor,Sittingroom,Security)
+Contact Kontaktron_4                     "Drzwi Toaleta"                        <door>           (MagneticSensor,Toilet,Security)
+Contact Kontaktron_5                     "Drzwi Biuro"                          <door>           (MagneticSensor,Office,Security)
+Contact Kontaktron_6                     "Drzwi Sypialnia"                      <door>           (MagneticSensor,Bedroom,Security)
+Contact Kontaktron_7                     "Drzwi Łazienka"                       <door>           (MagneticSensor,Bathroom,Security)
+Contact Kontaktron_8                     "Drzwi Spiżarnia"                      <door>           (MagneticSensor,Warehouse,Security)
+Contact Kontaktron_9                     "Drzwi Garderoba"                      <door>           (MagneticSensor,Wardrobe,Security)
+Contact Kontaktron_10                    "Drzwi Piwnica"                        <door>           (MagneticSensor,Basement,Security)
 
-Switch Kontaktron_11                     "Okno Kuchnia"                         <window>         (MagneticSensor,Kuchnia,Security)  {mqtt=">[MQTTBroker:stat/KuchniaWemos/POWER4:command:*:default], <[MQTTBroker:KuchniaWemos/stat/POWER4:state:default]" }
+Switch Kontaktron_11                     "Okno Kuchnia"                         <window>         (MagneticSensor,Kitchen,Security)  {mqtt=">[MQTTBroker:stat/KuchniaWemos/POWER4:command:*:default], <[MQTTBroker:KuchniaWemos/stat/POWER4:state:default]" }
 String Kontaktron_11_Date                "Okno Kuchnia [%1$tA, %1$td.%1$tm.%1$tY %1$tT]"                         <window>         (MagneticSensor,Kuchnia,Security)
 
 Contact Kontaktron_12                    "Okno Salon"                           <window>         (MagneticSensor,Security)
-Contact Kontaktron_13                    "Okno Sypialnia małe"                  <window>         (MagneticSensor,Sypialnia,Security)
-Contact Kontaktron_14                    "Okno Sypialnia duże"                  <window>         (MagneticSensor,Sypialnia,Security)
-Contact Kontaktron_15                    "Okno Łazienka"                        <window>         (MagneticSensor,Lazienka,Security)
-Contact Kontaktron_16                    "Okno Biuro"                           <window>         (MagneticSensor,Biuro,Security)
+Contact Kontaktron_13                    "Okno Sypialnia małe"                  <window>         (MagneticSensor,Bedroom,Security)
+Contact Kontaktron_14                    "Okno Sypialnia duże"                  <window>         (MagneticSensor,Bedroom,Security)
+Contact Kontaktron_15                    "Okno Łazienka"                        <window>         (MagneticSensor,Bathroom,Security)
+Contact Kontaktron_16                    "Okno Biuro"                           <window>         (MagneticSensor,Office,Security)
 
-Switch Kontaktron_21                    "Lodówka otwarta"                      <whitegood>      (MagneticSensor,Kuchnia,Security)  {mqtt=">[MQTTBroker:stat/KuchniaWemos/POWER2:command:*:default], <[MQTTBroker:KuchniaWemos/stat/POWER2:state:default]" }
+Switch Kontaktron_21                    "Lodówka otwarta"                      <whitegood>      (MagneticSensor,Kitchen,Security)  {mqtt=">[MQTTBroker:stat/KuchniaWemos/POWER2:command:*:default], <[MQTTBroker:KuchniaWemos/stat/POWER2:state:default]" }
 String Kontaktron_21_Date               "Lodówka otwarta [%1$tA, %1$td.%1$tm.%1$tY %1$tT]"      <whitegood>      (MagneticSensor,Strzecha,Security) 
 
-Switch Kontaktron_22                    "Zamrażarka otwarta"                   <whitegood>      (MagneticSensor,Kuchnia,Security)  {mqtt=">[MQTTBroker:stat/KuchniaWemos/POWER3:command:*:default], <[MQTTBroker:KuchniaWemos/stat/POWER3:state:default]" }
+Switch Kontaktron_22                    "Zamrażarka otwarta"                   <whitegood>      (MagneticSensor,Kitchen,Security)  {mqtt=">[MQTTBroker:stat/KuchniaWemos/POWER3:command:*:default], <[MQTTBroker:KuchniaWemos/stat/POWER3:state:default]" }
 String Kontaktron_22_Date                "Zamrażarka otwarta [%1$tA, %1$td.%1$tm.%1$tY %1$tT]"   <whitegood>      (MagneticSensor,Strzecha,Security) 
