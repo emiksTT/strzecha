@@ -1,7 +1,7 @@
 // Version 2020
 
 Switch AllLights                                   "Wszystkie światła [(%d)]"                         <light>   (Strzecha)          [ "Switchable" ]
-Switch AllLightsSittingRoom                        "Wszystkie światła w salonie [(%d)]"               <light>   (SittingRoom)       [ "Switchable" ]
+Switch AllLightsSittingRoom                        "Wszystkie światła w salonie [(%d)]"               <light>   (Livingroom)        [ "Switchable" ]
 Switch AllLightsKitchen                            "Wszystkie światła w kuchni  [(%d)]"               <light>   (Kitchen)           [ "Switchable" ]
 Switch AllLightsOffice                             "Wszystkie światła w biurze [(%d)]"                <light>   (Office)            [ "Switchable" ]
 Switch AllLightsBedroom                            "Wszystkie światła w sypialni [(%d)]"              <light>   (Bedrom)            [ "Switchable" ]
