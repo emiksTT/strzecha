@@ -29,7 +29,7 @@ Group LightsPowerConsumption         "Oswietlenie zużycie prądu [%.1f W]"     
 Group DevicesPowerConsumption        "Urzadzenia zużycie prądu [%.1f W]"                    <light>              (Elektryka)
 
 
-Group ServerRoom          "Serwerownia"                                          <energy>             (Strzecha)
+Group Serverroom          "Serwerownia"                                          <energy>             (Strzecha)
 Group RSSI                "Wifi range"                                           <network>            (ServerRoom)
 Group Server              "Serwery"                                              <network>            (ServerRoom)
 Group ServerElectric      "Zuzycie energii"                                      <energy>             (ServerRoom)
