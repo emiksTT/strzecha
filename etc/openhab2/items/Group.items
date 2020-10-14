@@ -14,7 +14,7 @@ Group Toilet              "Toaleta"                                             
 Group Bathroom            "Łazienka"                                             <bath>               (Strzecha)
 Group Bedroom             "Sypialnia"                                            <bedroom>            (Strzecha)
 Group Balcony             "Balkon"                                               <terrace>            (Strzecha)
-Group Storeroom           "Spiżarnia"                                            <wardrobe>           (Strzecha)
+Group Storeroom           "Spiżarnia"                                            <warehouse>           (Strzecha)
 Group Wardrobe            "Garderoba"                                            <wardrobe>           (Strzecha)
 
 Group Outside             "Na zewnątrz"                                          <none>               (Strzecha)
