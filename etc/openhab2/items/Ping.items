@@ -1,31 +1,31 @@
 ///////////////////////////////////    Mobile    /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-Switch     NiuniaTelefonOnline                         "Niunia Huawei_P30 Tel Online"<network>     (Strzecha,Serwerownia)        {channel="network:pingdevice:NiuniaTelefon:online"}
-Number     NiuniaTelefonLatency                        "Latency (ms)"           <network>          (Strzecha,Serwerownia)        {channel="network:pingdevice:NiuniaTelefon:latency"}
-DateTime   NiuniaTelefonLastseen                       "Last seen"              <network>          (Strzecha,Serwerownia)        {channel="network:pingdevice:NiuniaTelefon:lastseen"}
+Switch     NiuniaTelefonOnline                         "Niunia Tel Online"      <network>          (Serverroom,Ping,Phone)        {channel="network:pingdevice:NiuniaTelefon:online"}
+Number     NiuniaTelefonLatency                        "Latency (ms)"           <network>          (Serverroom,Ping,Phone)         {channel="network:pingdevice:NiuniaTelefon:latency"}
+DateTime   NiuniaTelefonLastseen                       "Last seen"              <network>          (Serverroom,Ping,Phone)        {channel="network:pingdevice:NiuniaTelefon:lastseen"}
 
-Switch     EmiksTelefonOnline                          "Emiks RedmiNote7 Tel Online"<network>      (Strzecha,Serwerownia)        {channel="network:pingdevice:EmiksTelefon:online"}
-Number     EmiksTelefonLatency                         "Latency (ms)"           <network>          (Strzecha,Serwerownia)        {channel="network:pingdevice:EmiksTelefon:latency"}
-DateTime   EmiksTelefonLastseen                        "Last seen"              <network>          (Strzecha,Serwerownia)        {channel="network:pingdevice:EmiksTelefon:lastseen"}
+Switch     EmiksTelefonOnline                          "Emiks RedmiNote7 Tel Online"<network>      (Serverroom,Ping,Phone)        {channel="network:pingdevice:EmiksTelefon:online"}
+Number     EmiksTelefonLatency                         "Latency (ms)"           <network>          (Serverroom,Ping,Phone)         {channel="network:pingdevice:EmiksTelefon:latency"}
+DateTime   EmiksTelefonLastseen                        "Last seen"              <network>          (Serverroom,Ping,Phone)        {channel="network:pingdevice:EmiksTelefon:lastseen"}
 
-Switch     GalaxyS5MiniWhiteOnline                     "GalaxyS5MiniWhite Tel Online"<network>     (Strzecha,Serwerownia)        {channel="network:pingdevice:GalaxyS5MiniWhite:online"}
-Number     GalaxyS5MiniWhiteLatency                    "Latency (ms)"           <network>          (Strzecha,Serwerownia)        {channel="network:pingdevice:GalaxyS5MiniWhite:latency"}
-DateTime   GalaxyS5MiniWhiteLastseen                   "Last seen"              <network>          (Strzecha,Serwerownia)        {channel="network:pingdevice:GalaxyS5MiniWhite:lastseen"}
+Switch     GalaxyS5MiniWhiteOnline                     "GalaxyS5MiniWhite Tel Online"<network>     (Serverroom,Ping,Phone)         {channel="network:pingdevice:GalaxyS5MiniWhite:online"}
+Number     GalaxyS5MiniWhiteLatency                    "Latency (ms)"           <network>          (Serverroom,Ping,Phone)         {channel="network:pingdevice:GalaxyS5MiniWhite:latency"}
+DateTime   GalaxyS5MiniWhiteLastseen                   "Last seen"              <network>          (Serverroom,Ping,Phone)         {channel="network:pingdevice:GalaxyS5MiniWhite:lastseen"}
 
-Switch     GalaxyTab2BlackOnline                       "GalaxyTab2Black Tel Online"<network>       (Strzecha,Serwerownia)        {channel="network:pingdevice:GalaxyTab2Black:online"}
-Number     GalaxyTab2BlackLatency                      "Latency (ms)"           <network>          (Strzecha,Serwerownia)        {channel="network:pingdevice:GalaxyTab2Black:latency"}
-DateTime   GalaxyTab2BlackLastseen                     "Last seen"              <network>          (Strzecha,Serwerownia)        {channel="network:pingdevice:GalaxyTab2Black:lastseen"}
+Switch     GalaxyTab2BlackOnline                       "GalaxyTab2Black Tel Online"<network>       (Serverroom,Ping,Phone)        {channel="network:pingdevice:GalaxyTab2Black:online"}
+Number     GalaxyTab2BlackLatency                      "Latency (ms)"           <network>          (Serverroom,Ping,Phone)        {channel="network:pingdevice:GalaxyTab2Black:latency"}
+DateTime   GalaxyTab2BlackLastseen                     "Last seen"              <network>          (Serverroom,Ping,Phone)        {channel="network:pingdevice:GalaxyTab2Black:lastseen"}
 
-Switch     GalaxyAce2Online                            "GalaxyAce2 Tel Online"  <network>          (Strzecha,Serwerownia)        {channel="network:pingdevice:GalaxyAce2:online"}
-Number     GalaxyAce2Latency                           "Latency (ms)"           <network>          (Strzecha,Serwerownia)        {channel="network:pingdevice:GalaxyAce2:latency"}
-DateTime   GalaxyAce2Lastseen                          "Last seen"              <network>          (Strzecha,Serwerownia)        {channel="network:pingdevice:GalaxyAce2:lastseen"}
+Switch     GalaxyAce2Online                            "GalaxyAce2 Tel Online"  <network>          (Serverroom,Ping,Phone)        {channel="network:pingdevice:GalaxyAce2:online"}
+Number     GalaxyAce2Latency                           "Latency (ms)"           <network>          (Serverroom,Ping,Phone)        {channel="network:pingdevice:GalaxyAce2:latency"}
+DateTime   GalaxyAce2Lastseen                          "Last seen"              <network>          (Serverroom,Ping,Phone)        {channel="network:pingdevice:GalaxyAce2:lastseen"}
 
-Switch     GalaxyS5MiniBlackOnline                     "GalaxyS5MiniBlack Tel Online"<network>     (Strzecha,Serwerownia)        {channel="network:pingdevice:GalaxyS5MiniBlack:online"}
-Number     GalaxyS5MiniBlackLatency                    "Latency (ms)"           <network>          (Strzecha,Serwerownia)        {channel="network:pingdevice:GalaxyS5MiniBlack:latency"}
-DateTime   GalaxyS5MiniBlackLastseen                   "Last seen"              <network>          (Strzecha,Serwerownia)        {channel="network:pingdevice:GalaxyS5MiniBlack:lastseen"}
+Switch     GalaxyS5MiniBlackOnline                     "GalaxyS5MiniBlack Tel Online"<network>     (Serverroom,Ping,Phone)        {channel="network:pingdevice:GalaxyS5MiniBlack:online"}
+Number     GalaxyS5MiniBlackLatency                    "Latency (ms)"           <network>          (Serverroom,Ping,Phone)        {channel="network:pingdevice:GalaxyS5MiniBlack:latency"}
+DateTime   GalaxyS5MiniBlackLastseen                   "Last seen"              <network>          (Serverroom,Ping,Phone)        {channel="network:pingdevice:GalaxyS5MiniBlack:lastseen"}
 
-Switch     GalaxyTab2WhiteOnline                       "GalaxyTab2White Tel Online" <network>      (Strzecha,Serwerownia)        {channel="network:pingdevice:GalaxyTab2White:online"}
-Number     GalaxyTab2WhiteLatency                      "Latency (ms)"           <network>          (Strzecha,Serwerownia)        {channel="network:pingdevice:GalaxyTab2White:latency"}
-DateTime   GalaxyTab2WhiteLastseen                     "Last seen"              <network>          (Strzecha,Serwerownia)        {channel="network:pingdevice:GalaxyTab2White:lastseen"}
+Switch     GalaxyTab2WhiteOnline                       "GalaxyTab2White Tel Online" <network>      (Serverroom,Ping,Tablet)       {channel="network:pingdevice:GalaxyTab2White:online"}
+Number     GalaxyTab2WhiteLatency                      "Latency (ms)"           <network>          (Serverroom,Ping,Tablet)       {channel="network:pingdevice:GalaxyTab2White:latency"}
+DateTime   GalaxyTab2WhiteLastseen                     "Last seen"              <network>          (Serverroom,Ping,Tablet)       {channel="network:pingdevice:GalaxyTab2White:lastseen"}
 
 ///////////////////////////////////    Salon     /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 Switch     SalonTVOnline                               "SalonTV Online"         <network>          (Serwerownia,Salon)           {channel="network:servicedevice:SalonTV:online"}
