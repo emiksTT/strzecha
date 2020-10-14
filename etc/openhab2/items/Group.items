@@ -54,6 +54,8 @@ Group MotionSensor        "All Motion Detection Devices"                        
 
 Group Multimedia          "TV, Chromecast, Music Player"                         <none>               (Strzecha)
 Group Phone               "Telefony"                                             <screen>             (Multimedia)
+Group Computer            "Komputery"                                            <screen>             (Multimedia)
+Group Tablet              "Tablety"                                              <screen>             (Multimedia)
 Group TV                  "All TV`s"                                             <screen>             (Multimedia)
 Group Music               "All Music PLayer"                                     <receiver>           (Multimedia)
 Group Chromecast          "Chromecast"                                           <mediacontrol>       (Multimedia)
