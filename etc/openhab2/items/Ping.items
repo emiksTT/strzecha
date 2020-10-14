@@ -1,4 +1,5 @@
-///////////////////////////////////    Mobile    /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+Version 2020
+///////////////////////////////////    Ping    /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 Switch     NiuniaTelefonOnline                         "Niunia Tel Online"      <network>          (Serverroom,Ping,Phone)        {channel="network:pingdevice:NiuniaTelefon:online"}
 Number     NiuniaTelefonLatency                        "Latency (ms)"           <network>          (Serverroom,Ping,Phone)         {channel="network:pingdevice:NiuniaTelefon:latency"}
 DateTime   NiuniaTelefonLastseen                       "Last seen"              <network>          (Serverroom,Ping,Phone)        {channel="network:pingdevice:NiuniaTelefon:lastseen"}
