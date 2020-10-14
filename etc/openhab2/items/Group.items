@@ -6,7 +6,7 @@
 Group Strzecha            "Chatka"                                               <house>
 
 
-Group SittingRoom         "Salon"                                                <sofa>               (Strzecha)
+Group Livingroom         "Salon"                                                <sofa>               (Strzecha)
 Group Lobby               "Koryatrz"                                             <corridor>           (Strzecha)
 Group Kitchen             "Kuchnia"                                              <kitchen>            (Strzecha)
 Group Office              "Biuro"                                                <office>             (Strzecha)
