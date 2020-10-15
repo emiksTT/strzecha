@@ -1,4 +1,4 @@
-
+//Version 2020
 
 // Water Sensors
 Switch WaterSensor_1                     "Czujnik wody pod zlewem i zmywarką"                                      <water>            (WaterSensor,Security,Kitchen)     //Kitchen EBC012
@@ -39,9 +39,9 @@ String  Pir_3_Date                       "Czujnik ruchu sypialnia [%1$tA, %1$td.
 
 // Magnetic Sensor 
 
-Switch Kontaktron_1                      "Drzwi Wejściowe"                                                         <frontdoor>      (MagneticSensor,Strzecha,Security,Lobby) 
-Switch Kontaktron_1_OFF                  "Kontaktron wylaczony"                                                    <frontdoor>      (MagneticSensor,Strzecha,Security,Lobby) 
-String Kontaktron_1_Date                 "Drzwi Wejściowe [%1$tA, %1$td.%1$tm.%1$tY %1$tT]"                        <frontdoor>      (MagneticSensor,Strzecha,Security,Lobby) 
+Switch Kontaktron_1                      "Drzwi Wejściowe"                                                         <frontdoor>      (MagneticSensor,Security,Lobby) 
+Switch Kontaktron_1_OFF                  "Kontaktron wylaczony"                                                    <frontdoor>      (MagneticSensor,Security,Lobby) 
+String Kontaktron_1_Date                 "Drzwi Wejściowe [%1$tA, %1$td.%1$tm.%1$tY %1$tT]"                        <frontdoor>      (MagneticSensor,Security,Lobby) 
 
 Switch Kontaktron_2                      "Drzwi Kuchnia"                        <door>           (MagneticSensor,Kitchen,Security)
 Contact Kontaktron_3                     "Drzwi Salon"                          <door>           (MagneticSensor,Livingroom,Security)
@@ -66,4 +66,4 @@ Switch Kontaktron_21                    "Lodówka otwarta"                      
 String Kontaktron_21_Date               "Lodówka otwarta [%1$tA, %1$td.%1$tm.%1$tY %1$tT]"      <whitegood>      (MagneticSensor,Security,Kitchen) 
 
 Switch Kontaktron_22                    "Zamrażarka otwarta"                   <whitegood>      (MagneticSensor,Kitchen,Security)  {mqtt=">[MQTTBroker:stat/KuchniaWemos/POWER3:command:*:default], <[MQTTBroker:KuchniaWemos/stat/POWER3:state:default]" }
-String Kontaktron_22_Date                "Zamrażarka otwarta [%1$tA, %1$td.%1$tm.%1$tY %1$tT]"   <whitegood>      (MagneticSensor,Security,Kitchen) 
+String Kontaktron_22_Date               "Zamrażarka otwarta [%1$tA, %1$td.%1$tm.%1$tY %1$tT]"   <whitegood>      (MagneticSensor,Security,Kitchen) 
