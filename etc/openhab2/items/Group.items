@@ -24,6 +24,7 @@ Group Garage              "Garaż"                                              
 
 
 Group Elektric                       "Elektryka"                                            <energy>             (Strzecha)
+Group SonoffPOW                      "Zużycie prądu [%.1f W]"                               <energy>             (Elektryka)
 Group:Number:SUM Wattages            "Zużycie prądu [%.1f W]"                               <energy>             (Elektryka)
 Group LightsPowerConsumption         "Oswietlenie zużycie prądu [%.1f W]"                   <light>              (Elektryka)
 Group DevicesPowerConsumption        "Urzadzenia zużycie prądu [%.1f W]"                    <light>              (Elektryka)
@@ -64,10 +65,10 @@ Group Chromecast          "Chromecast"                                          
 
 Group Light                     "Light [(%d)]"                                        <light>              (Strzecha)
 Group EveningLighting           "Oświetlenie wieczorne"                               <light>              (Light)
-Group SittingroomLight          "Oświetlenie"                                         <light>              (Light)
-Group SittingroomExtraLight     "Oświetlenie dodatkowe salonu"                        <light>              (Light)
-Group KuchniaLight              "Oświetlenie Kuchni"                                  <light>              (Light)
-Group SypialniaLight            "Oświetlenie Sypialni"                                <light>              (Light)
+Group LivingroomLight           "Oświetlenie"                                         <light>              (Light)
+Group LivingroomExtraLight      "Oświetlenie dodatkowe salonu"                        <light>              (Light)
+Group KitchenLight              "Oświetlenie Kuchni"                                  <light>              (Light)
+Group BedroomLight              "Oświetlenie Sypialni"                                <light>              (Light)
 
 
 
