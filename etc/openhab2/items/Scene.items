@@ -1,2 +1,10 @@
+// Version 2020
 Switch Film              "Scena Film"                 [ "Switchable" ] 
-Switch Telewizja         "Scena Telewizja"            [ "Switchable" ] 
+Switch Game              "Scena Gra"                  [ "Switchable" ] 
+Switch Television        "Scena Telewizja"            [ "Switchable" ] 
+Switch TVseries          "Scena Serial"               [ "Switchable" ] 
+Switch Music             "Scena Music"                [ "Switchable" ] 
+Switch Radio             "Scena Radio"                [ "Switchable" ] 
+Switch Volumio           "Scena Volumio"              [ "Switchable" ] 
+
+Switch SceneOff          "Scena Wylacz"               [ "Switchable" ] 
