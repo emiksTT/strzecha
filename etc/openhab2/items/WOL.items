@@ -1,8 +1,16 @@
 
-
+// Version 2020
 Switch MastahNetServer   "MastahNet Server"   (Server)  [ "Switchable" ]  { wol="192.168.10.255#00:23:7d:ba:a3:68" }
-Switch SalonTV           "Telewizor Salon"    (Server)  [ "Switchable" ]  { wol="192.168.10.255#70:af:24:11:c8:a4" }
+Switch NAS               "Dysk sieciowy"      (Server)  [ "Switchable" ]  { wol="192.168.10.255#00:XXXXXXXXXXXXXX" }
 
+
+
+
+
+
+
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 /*
 Wake-on-LAN Binding
 The Wake-on-LAN binding allows you to turn on or wake up a computer by sending it a network message.
