@@ -1,5 +1,5 @@
 Switch      Yamaha_Power           "Wzmacniacz [%s]"           <switch>             [ "Switchable" ]       { channel="yamahareceiver:zone:9ab0c000_f668_11de_9976_00a0decead8a:Main_Zone:zone_channels#power" }
-Dimmer      Yamaha_Volume          "Wzmacniacz Volume [%.1f %%]" <soundvolume>      [ "Dimmable"   ]       { channel="yamahareceiver:zone:9ab0c000_f668_11de_9976_00a0decead8a:Main_Zone:zone_channels#volume" }
+Dimmer      Yamaha_Volume          "Volume [%.1f %%]"          <soundvolume>      [ "Dimmable"   ]       { channel="yamahareceiver:zone:9ab0c000_f668_11de_9976_00a0decead8a:Main_Zone:zone_channels#volume" }
 Switch      Yamaha_Mute            "Wycisz wzmacniacz [%s]"    <soundvolume_mute>   [ "Switchable" ]       { channel="yamahareceiver:zone:9ab0c000_f668_11de_9976_00a0decead8a:Main_Zone:zone_channels#mute" }
 String      Yamaha_Input           "Input [%s]"                <video>                                     { channel="yamahareceiver:zone:9ab0c000_f668_11de_9976_00a0decead8a:Main_Zone:zone_channels#input" }
 String      Yamaha_Surround        "Surround [%s]"             <video>                                     { channel="yamahareceiver:9ab0c000_f668_11de_9976_00a0decead8a:Main_Zone:zone_channels#surroundProgram" }
@@ -21,7 +21,7 @@ Switch      Yamaha_Dialogue_Level  "Dialogue Level [%d]"       <soundvolume>    
 
 
 
-
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 /*
 Yamaha Receiver Binding
