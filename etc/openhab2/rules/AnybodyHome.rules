@@ -9,13 +9,13 @@
     	    AnyBodyHome.sendCommand(OFF);
 	    AnyBodyHome_Date.sendCommand(new DateTimeType());
 	    sendTelegram("redminote7", "Nie ma nikogo w domu!!!");
+	    //sendTelegram("NiuniaPhone", "Nie ma nikogo w domu!!!");
     		
     	} else {
     		
 	    AnyBodyHome.sendCommand(ON);
 	    AlarmStatus.sendCommand(OFF);	
 	    AnyBodyHome_Date.sendCommand(new DateTimeType());
-	    //sendTelegram("redminote7", "Ktoś jest w domu!!!");
     	}
     end
 
