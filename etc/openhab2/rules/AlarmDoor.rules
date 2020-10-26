@@ -29,8 +29,8 @@ then
     
     	if(AnyBodyHome.state == OFF && Dark.state == ON)
     	{
-    	//Kuchnia_LED_Power.sendCommand(ON)
-    	//Salon_LED_Power.sendCommand(ON)
+    	Kuchnia_Pasek_LED_Power.sendCommand(ON)
+    	Salon_Lampa_LED_Power.sendCommand(ON)
     	}
     }
     //////////////////////////////////////////// Sensor reciver signl : Door Closed  //////////////////////////////////////////////////////////
@@ -44,7 +44,8 @@ then
 		//sendTelegram("niunia", "Front Door closed!"); 
 		//sendTelegram("emiks", "Front Door closed!"); 
 
-        if ( Dark.state == ON )  {Korytarz_Pasek_LED_Power.sendCommand(ON)} 
+        if ( Dark.state == ON ) 
+	{Korytarz_Pasek_LED_Power.sendCommand(ON)} 
         else  {Korytarz_Pasek_LED_Power.sendCommand(OFF)} 
     }
 end
