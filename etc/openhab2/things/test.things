@@ -1,0 +1,17 @@
+Bridge mqtt:broker:MQTTBroker [ host="192.168.10.12", secure=false, username="openhabian", password="jajko22"] {
+    
+  Thing topic Biuro_Lampa "Biuro Lampa" @ "Biuro" {
+    Channels:
+      Type switch : PowerSwitch                  [stateTopic="stat/Biuro_Lampa/POWER" , commandTopic="cmnd/Biuro_Lampa/POWER", on="ON", off="OFF"]
+      Type string : Version                      [stateTopic="stat/Biuro_Lampa/STATUS2", transformationPattern="JSONPATH:$.StatusFWR.Version"]
+      Type number : rssi                         [stateTopic="tele/Biuro_Lampa/STATE", transformationPattern="JSONPATH:$.Wifi.RSSI"]
+      }
+  Thing topic Biuro_Lampka "Biuro Lampka" @ "Biuro" {
+    Channels:
+      Type switch : PowerSwitch                  [stateTopic="stat/Biuro_Lampka/POWER", commandTopic="cmnd/Biuro_Lampka/POWER", on="ON", off="OFF" ]
+      Type string : Version                      [stateTopic="stat/Biuro_Lampka/STATUS2", transformationPattern="JSONPATH:$.StatusFWR.Version"]
+      Type number : Biuro_Lampka_Temp            [stateTopic="tele/Biuro_Lampka/SENSOR", transformationPattern="tele/Biuro_Lampka/SENSOR:state:JSONPATH($.BME280.Temperature)"]
+      Type number : Humidity                     [stateTopic="tele/Biuro_Lampka/SENSOR", transformationPattern="JSONPATH:$.BME280.Humidity"]
+   }
+   
+}
