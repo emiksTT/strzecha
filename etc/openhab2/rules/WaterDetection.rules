@@ -1,8 +1,6 @@
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////   Water Detection   /////////////////////////////////////////////////////////////////////////
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-// Veriosn 2020
-
 rule "RF Bridge sensor triggered"
 when
    Item SonoffBridge_RfReceive received update
@@ -19,8 +17,8 @@ if(SonoffBridge_RfReceive.state == 'EBC012')
         WaterSensor_1_Date.sendCommand(new DateTimeType())
         sendTelegram("redminote7", "Water Detection Kitchen: Leak under the sink dishwasher  !!!")
         //sendTelegram("niunia", "Water Detection Kitchen : Leak under the sink / dishwasher  !!!"); 
-	//sendTelegram("emiks", "Water Detection Kitchen: Leak under the sink / dishwasher  !!!");
-        
+		//sendTelegram("emiks", "Water Detection Kitchen: Leak under the sink / dishwasher  !!!");
+        //PhilipsTV_Ambilight_Power.sendCommand(ON)
         
 
     }
@@ -34,8 +32,8 @@ if(SonoffBridge_RfReceive.state == '01C212')
         WaterSensor_2_Date.sendCommand(new DateTimeType())
         sendTelegram("redminote7", "Water Detection Bathroom : Leakage under the washing machine !!!")
         //sendTelegram("niunia", "Water Detection Bathroom : Leakage under the washing machine !!!"); 
-	//sendTelegram("emiks", "Water Detection Bathroom : Leakage under the washing machine !!!");  
-        
+		//sendTelegram("emiks", "Water Detection Bathroom : Leakage under the washing machine !!!");  
+        //PhilipsTV_Ambilight_Power.sendCommand(ON)
          
 
     }
@@ -48,8 +46,8 @@ if(SonoffBridge_RfReceive.state == '78CE14')
         WaterSensor_3_Date.sendCommand(new DateTimeType())
         sendTelegram("redminote7", "Water Detection Bathroom: Leak under the sink  !!!")
         //sendTelegram("niunia", "Water Detection Bathroom : Leak under the sink  !!!"); 
-	//sendTelegram("emiks", "Water Detection Bathroom : Leak under the sink  !!!");  
-        
+		//sendTelegram("emiks", "Water Detection Bathroom : Leak under the sink  !!!");  
+        //PhilipsTV_Ambilight_Power.sendCommand(ON)
         
 
     }
@@ -63,8 +61,8 @@ if(SonoffBridge_RfReceive.state == '61B013')
         WaterSensor_4_Date.sendCommand(new DateTimeType())
         sendTelegram("redminote7", "Water Detection Toilet : Leakage under the Toilet or Sink !!!")
         //sendTelegram("niunia", "Water Detection Toilet : Leakage under the Toilet or Sink !!!"); 
-	//sendTelegram("emiks", "Water Detection Toilet : Leakage under the Toilet or Sink !!!");  
-        
+		//sendTelegram("emiks", "Water Detection Toilet : Leakage under the Toilet or Sink !!!");  
+        //PhilipsTV_Ambilight_Power.sendCommand(ON)
         
     }
 
