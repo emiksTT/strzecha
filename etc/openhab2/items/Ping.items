@@ -1,12 +1,12 @@
-Version 2020
+//Version 2021
 ///////////////////////////////////    Ping    /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-Switch     NiuniaTelefonOnline                         "Niunia Tel Online"      <network>          (Serverroom,Ping,Phone)        {channel="network:pingdevice:NiuniaTelefon:online"}
-Number     NiuniaTelefonLatency                        "Latency (ms)"           <network>          (Serverroom,Ping,Phone)        {channel="network:pingdevice:NiuniaTelefon:latency"}
-DateTime   NiuniaTelefonLastseen                       "Last seen"              <network>          (Serverroom,Ping,Phone)        {channel="network:pingdevice:NiuniaTelefon:lastseen"}
+Switch     NiuniaTelefonOnline                         "Niunia Tel Online"      <network>          (Serverroom,Ping,Phone)        {channel="network:pingdevice:Huawei_P30:online"}
+Number     NiuniaTelefonLatency                        "Latency (ms)"           <network>          (Serverroom,Ping,Phone)        {channel="network:pingdevice:Huawei_P30:latency"}
+DateTime   NiuniaTelefonLastseen                       "Last seen"              <network>          (Serverroom,Ping,Phone)        {channel="network:pingdevice:Huawei_P30:lastseen"}
 
-Switch     EmiksTelefonOnline                          "Emiks Tel Online"       <network>          (Serverroom,Ping,Phone)        {channel="network:pingdevice:EmiksTelefon:online"}
-Number     EmiksTelefonLatency                         "Latency (ms)"           <network>          (Serverroom,Ping,Phone)        {channel="network:pingdevice:EmiksTelefon:latency"}
-DateTime   EmiksTelefonLastseen                        "Last seen"              <network>          (Serverroom,Ping,Phone)        {channel="network:pingdevice:EmiksTelefon:lastseen"}
+Switch     EmiksTelefonOnline                          "Emiks Tel Online"       <network>          (Serverroom,Ping,Phone)        {channel="network:pingdevice:RedmiNote7:online"}
+Number     EmiksTelefonLatency                         "Latency (ms)"           <network>          (Serverroom,Ping,Phone)        {channel="network:pingdevice:RedmiNote7:latency"}
+DateTime   EmiksTelefonLastseen                        "Last seen"              <network>          (Serverroom,Ping,Phone)        {channel="network:pingdevice:RedmiNote7:lastseen"}
 
 Switch     GalaxyS5MiniWhiteOnline                     "GalaxyS5MiniWhite Tel Online"<network>     (Serverroom,Ping,Phone)        {channel="network:pingdevice:GalaxyS5MiniWhite:online"}
 Number     GalaxyS5MiniWhiteLatency                    "Latency (ms)"           <network>          (Serverroom,Ping,Phone)        {channel="network:pingdevice:GalaxyS5MiniWhite:latency"}
@@ -27,10 +27,6 @@ DateTime   GalaxyS5MiniBlackLastseen                   "Last seen"              
 Switch     GalaxyTab2WhiteOnline                       "GalaxyTab2White Tel Online" <network>      (Serverroom,Ping,Tablet)       {channel="network:pingdevice:GalaxyTab2White:online"}
 Number     GalaxyTab2WhiteLatency                      "Latency (ms)"           <network>          (Serverroom,Ping,Tablet)       {channel="network:pingdevice:GalaxyTab2White:latency"}
 DateTime   GalaxyTab2WhiteLastseen                     "Last seen"              <network>          (Serverroom,Ping,Tablet)       {channel="network:pingdevice:GalaxyTab2White:lastseen"}
-
-Switch     GalaxyTab2BlackOnline                       "GalaxyTab2Black Tel Online" <network>      (Serverroom,Ping,Tablet)       {channel="network:pingdevice:GalaxyTab2Black:online"}
-Number     GalaxyTab2BlackLatency                      "Latency (ms)"           <network>          (Serverroom,Ping,Tablet)       {channel="network:pingdevice:GalaxyTab2Black:latency"}
-DateTime   GalaxyTab2BlackLastseen                     "Last seen"              <network>          (Serverroom,Ping,Tablet)       {channel="network:pingdevice:GalaxyTab2Black:lastseen"}
 
 ///////////////////////////////////    Salon     /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 Switch     SalonTVOnline                               "SalonTV Online"         <network>          (Serverroom,Livingroom)       {channel="network:servicedevice:SalonTV:online"}
@@ -70,9 +66,17 @@ Switch     MastahGameServerOnline                      "Mastah Online"          
 Number     MastahGameServerLatency                     "Latency (ms)"           <network>          (Serverroom,Server)          {channel="network:servicedevice:MastahGameServer:latency"}
 DateTime   MastahGameServerLastseen                    "Last seen"              <network>          (Serverroom,Server)          {channel="network:servicedevice:MastahGameServer:lastseen"}
 ///////////////////////////////////    Biuro     /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-Switch     Emiks_Machine_LANOnline                     "Komputer Online"         <network>          (Serverroom,Office)          {channel="network:servicedevice:Emiks_Machine_LAN:online"}
+Switch     Emiks_Machine_LANOnline                     "Komputer LAN Online"     <network>          (Serverroom,Office)          {channel="network:servicedevice:Emiks_Machine_LAN:online"}
 Number     Emiks_Machine_LANLatency                    "Latency (ms)"            <network>          (Serverroom,Office)          {channel="network:servicedevice:Emiks_Machine_LAN:latency"}
 DateTime   Emiks_Machine_LANLastseen                   "Last seen"               <network>          (Serverroom,Office)          {channel="network:servicedevice:Emiks_Machine_LAN:lastseen"}
+
+Switch     Emiks_Machine_WANOnline                     "Komputer WAN Online"     <network>          (Serverroom,Office)          {channel="network:servicedevice:Emiks_Machine_WAN:online"}
+Number     Emiks_Machine_WANLatency                    "Latency (ms)"            <network>          (Serverroom,Office)          {channel="network:servicedevice:Emiks_Machine_WAN:latency"}
+DateTime   Emiks_Machine_WANLastseen                   "Last seen"               <network>          (Serverroom,Office)          {channel="network:servicedevice:Emiks_Machine_WAN:lastseen"}
+
+Switch     Emiks_Machine_WLANOnline                     "Komputer WLAN Online"   <network>          (Serverroom,Office)          {channel="network:servicedevice:Emiks_Machine_WLAN:online"}
+Number     Emiks_Machine_WLANLatency                    "Latency (ms)"           <network>          (Serverroom,Office)          {channel="network:servicedevice:Emiks_Machine_WLAN:latency"}
+DateTime   Emiks_Machine_WLANLastseen                   "Last seen"              <network>          (Serverroom,Office)          {channel="network:servicedevice:Emiks_Machine_WLAN:lastseen"}
 
 Switch     Hp3050AOnline                               "Drukarka Online"         <network>          (Serverroom,Office)          {channel="network:servicedevice:Hp3050A:online"}
 Number     Hp3050ALatency                              "Latency (ms)"            <network>          (Serverroom,Office)          {channel="network:servicedevice:Hp3050A:latency"}
